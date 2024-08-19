@@ -1,6 +1,34 @@
-# React + Vite
+# Banco universitario
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Banco universitario para estudiantes de la UCLA. Proyecto con fines educativos, para la materia laboratorio II.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Format with [Prettier](https://prettier.io/)
+
+```sh
+npm run format
+```
 
 Currently, two official plugins are available:
 
