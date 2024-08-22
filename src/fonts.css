@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Montserrat-Alternates";
+    font-weight: 400;
+    font-style: normal;
+    src: url("./assets/fonts/Montserrat\ Alternates\ Regular.ttf") format('truetype');
+}
+  
+@font-face {
+    font-family: "Montserrat-Alternates";
+    font-weight: 700;
+    font-style: normal;
+    src: url("./assets/fonts/MontserratAlternates-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Montserrat-Alternates";
+    font-weight: 900;
+    font-style: normal;
+    src: url("./assets/fonts/MontserratAlternates-Black.ttf") format('truetype');
+}
