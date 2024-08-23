@@ -1,0 +1,98 @@
+.container{
+    width: 1005px;
+    height: 630px;
+    top: 15px;
+    position: relative;
+}
+
+.containerServ1{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+.containerServ2{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 100px;
+    left: 435px;
+}
+
+.containerServ3{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 100px;
+    right: 150px;
+}
+
+.containerServ4{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+.containerServ5{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 350px;
+    left: 435px;
+}
+
+.containerServ6{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 350px;
+    right: 150px;
+}
+
+.circle{
+    background-color: #49beb7;
+    border-radius: 80px;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+}
+
+.img{
+    width: 90%;
+}
+
+.titleSeccion2{
+    font-family: 'Montserrat-Alternates';
+    text-align: center;
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: 'Montserrat-Alternates';
+    src: url('../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
+}
+
+.text{
+    font-family: 'Montserrat-Alternates';
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.circle:hover{
+    background-color:#085f63;
+    transform: scale(1.2);
+}
+
+.circle{
+    transition: transform 0.1s;
+}
+
+.text:hover{
+    color: #085f63;
+    cursor: pointer;
+}
