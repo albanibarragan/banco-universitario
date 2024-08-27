@@ -1,18 +1,22 @@
+/*import { NavLink } from "react-router-dom";*/
 import logo from "../../assets/img/logo-no-background.png";
+import styles from "./Navbar.module.css";
+/*import { Link } from "react-router-dom";*/
+/*import Services from "../Services/Services";*/
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <div className="container">
-          <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" style={{ height: "40px" }} />
-          </a>
+          <div className={styles.nav} href="#">
+            <img src={logo} alt="logo" className={styles.img} />
+          </div>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className={styles.text}>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a href="#services">
                 Servicios
               </a>
             </li>
@@ -26,17 +30,15 @@ function Navbar() {
                 Sucursales
               </a>
             </li>
-          </ul>
-          <form className="d-flex" role="search">
-            <button className="btn btn-outline-success me-2" type="submit">
-              Ingresar
-            </button>
-          </form>
-          <form className="d-flex" role="search">
-            <button className="btn btn-outline-success" type="submit">
-              Registro
-            </button>
-          </form>
+          </div>
+          <div className={styles.buttons}>
+              <button className={styles.button} type="submit">
+                Ingresar
+              </button>
+              <button className="btn btn-outline-success" type="submit">
+                Registro
+              </button>
+          </div>
         </div>
       </div>
     </nav>

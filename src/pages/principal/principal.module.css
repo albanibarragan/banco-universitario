@@ -1,3 +1,13 @@
+.mensajeCentral{
+    font-size: 20px;
+    align-self: center;
+}
+
+.imgPrincipal{
+    width: 50%;
+    right: 50%;
+}
+
 .container{
     width: 1005px;
     height: 630px;

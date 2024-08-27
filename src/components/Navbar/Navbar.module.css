@@ -1,0 +1,27 @@
+.nav{
+    width: 300px;
+}
+
+.img{
+    max-width: 100%;
+}
+
+.text{
+    font-family: 'Montserrat-Alternates';
+}
+
+@font-face{
+    font-family: 'Montserrat-Alternates';
+    src: url('../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
+}
+
+.buttons{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+
+}
+
+.button{
+    margin-left: 100px;
+}

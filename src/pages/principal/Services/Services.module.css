@@ -1,0 +1,22 @@
+.title{
+    font-family: 'Montserrat-Alternates';
+    text-align: center;
+    font-weight: bold;
+    color: #085f63;
+}
+
+@font-face{
+    font-family: 'Montserrat-Alternates';
+    src: url('../../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
+}
+
+.img{
+    width: 70%;
+    align-self: center;
+}
+
+.parrafo{
+   font-family: 'Montserrat-Alternates';
+   text-align: center; 
+   font-size: 20px;
+}
