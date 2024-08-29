@@ -21,6 +21,7 @@
     position: absolute;
     top: 100px;
     left: 150px;
+    text-align: center;
 }
 
 .containerServ2{
@@ -29,6 +30,7 @@
     position: absolute;
     top: 100px;
     left: 435px;
+    text-align: center;
 }
 
 .containerServ3{
@@ -37,6 +39,7 @@
     position: absolute;
     top: 100px;
     right: 150px;
+    text-align: center;
 }
 
 .containerServ4{
@@ -45,6 +48,7 @@
     position: absolute;
     top: 350px;
     left: 150px;
+    text-align: center;
 }
 
 .containerServ5{
@@ -53,6 +57,7 @@
     position: absolute;
     top: 350px;
     left: 435px;
+    text-align: center;
 }
 
 .containerServ6{
@@ -61,6 +66,7 @@
     position: absolute;
     top: 350px;
     right: 150px;
+    text-align: center;
 }
 
 .circle{

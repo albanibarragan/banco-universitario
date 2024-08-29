@@ -10,9 +10,17 @@
     src: url('../../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
 }
 
+/*.conten{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}*/
+
 .img{
-    width: 70%;
-    align-self: center;
+    display: block;
+    width: 60%;
+    margin: auto;
+    width: 400px;
 }
 
 .parrafo{
