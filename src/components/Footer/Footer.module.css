@@ -1,0 +1,15 @@
+@font-face{
+    font-family: 'Montserrat-Alternates';
+    src: url('../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
+}
+
+.Footer{
+    background-color: #085f63;
+    padding: 15px;
+    font-family: 'Montserrat-Alternates';
+    color: #ffffff;
+}
+
+.iconos{
+    width: 50px;
+}

@@ -9,6 +9,7 @@ import icon3 from "../../assets/img/iconservice3.png";
 import icon4 from "../../assets/img/iconservice4.png";
 import icon5 from "../../assets/img/iconservice5.png";
 import icon6 from "../../assets/img/iconservice6.png";
+import Footer from "../../components/Footer/Footer";
 
 function Principal() {
   return (
@@ -20,13 +21,11 @@ function Principal() {
           <p>Tu banco Universitario comprometido con tu futuro</p>
           <p>financiero. ¡Cada dia mas cerca de ti!</p>
         </div>
-        <div className="container-sm nav justify-content-end">
-          <a className={styles.imgPrincipal}>
+        <div className={styles.imgPrincipal}>
             <img src={imagen} alt="imagen" />
-          </a>
         </div>
+        <h1 className={styles.titleSeccion2}>Nuestros Servicios</h1>
         <div className={styles.container} id="services">
-          <h1 className={styles.titleSeccion2}>Nuestros Servicios</h1>
           <div className={styles.containerServ1}>
             <div className={styles.circle}>
               <img src={icon1} className={styles.img}></img>
@@ -75,6 +74,7 @@ function Principal() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
