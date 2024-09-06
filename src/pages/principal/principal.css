@@ -1,0 +1,29 @@
+.section-start{
+    flex-direction: row;
+    display: flex;
+    padding-top: 4rem;
+    margin: 0 auto;
+    height: auto;
+}
+
+.text-section{
+    background-color: blueviolet;
+    width: 50%;
+    text-align: center;
+}
+
+hr{
+    width: 50%;
+    align-items: center;
+}
+
+.img-section{
+    background-color: purple;
+    width: 70%;
+    
+}
+
+.logo{
+    width: 80%;
+
+}
