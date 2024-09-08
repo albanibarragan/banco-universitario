@@ -18,11 +18,14 @@ function Principal() {
 
       <div className="container-fluid">
         <div className={styles.mensajeCentral}>
-          <p>Tu banco Universitario comprometido con tu futuro</p>
-          <p>financiero. ¡Cada dia mas cerca de ti!</p>
-        </div>
-        <div className={styles.imgPrincipal}>
+          <div className={styles.titulos}>
+            <h1>Tu banco Universitario</h1>
+            <h2>Comprometido con tu futuro financiero.</h2>
+            <h3>¡Cada dia mas cerca de ti!</h3>
+          </div>
+          <div className={styles.imgPrincipal}>
             <img src={imagen} alt="imagen" />
+          </div>
         </div>
         <h1 className={styles.titleSeccion2}>Nuestros Servicios</h1>
         <div className={styles.container} id="services">
