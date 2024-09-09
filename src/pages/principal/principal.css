@@ -1,29 +1,89 @@
 .section-start{
     flex-direction: row;
     display: flex;
-    padding-top: 4rem;
     margin: 0 auto;
     height: auto;
 }
 
 .text-section{
-    background-color: blueviolet;
-    width: 50%;
+    width: 45%;
     text-align: center;
+    margin-top: 10%;
+    color:#085f63 ;
 }
 
 hr{
     width: 50%;
     align-items: center;
+    border: 3px solid #085f63 ;
 }
 
 .img-section{
-    background-color: purple;
-    width: 70%;
-    
+    width: 55%;
 }
 
 .logo{
     width: 80%;
 
+}
+
+.section-service{
+    margin: 0 auto;
+    height: auto;
+}
+
+.container-service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 10%;
+}
+
+.service {
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    margin: 10px; /* Espacio alrededor de cada ítem */
+}
+
+.service-circle{
+    background-color: #49beb7;
+    border-radius: 80px;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.icon-service{
+    width: 90%;
+}
+
+.title-service{
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.text-service{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    color: #000000;
+}
+
+.circle:hover{
+    background-color:#085f63;
+    transform: scale(1.2);
+}
+
+.circle{
+    transition: transform 0.1s;
+}
+
+.text-service:hover{
+    color: #085f63;
+    cursor: pointer;
 }

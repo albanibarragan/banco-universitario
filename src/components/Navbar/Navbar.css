@@ -1,11 +1,50 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
 .header-logo{
     display: block;
-    width: 800px;
-    margin: 10px
+    width: 600px;
+    margin: 7px;
 }
 
 .logo{
-    height: 100%;
     width: 100%;
 }
 
+.nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-items > li a{
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 8px;
+    
+}
+
+.nav-buttons > button{
+    margin: 8px;
+}
+
+.btn1{
+    color: #085f63;
+    border: 1px solid #085f63;
+}
+
+.btn2{
+    background-color: #085f63;
+    color: #fff;
+}
