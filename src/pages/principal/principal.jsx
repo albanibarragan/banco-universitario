@@ -1,4 +1,5 @@
-import "./principal.css";
+import imagen from "../../assets/img/ladyimg.png";
+import styles from "./principal.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import imgLady from "../../assets/img/lady.png";
 import Footer from "../../components/Footer/Footer";

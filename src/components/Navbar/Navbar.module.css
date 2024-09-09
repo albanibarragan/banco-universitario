@@ -1,0 +1,121 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #085f63;
+}
+
+
+.Navbar_items{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Montserrat-Alternates';
+    align-items: center;
+    color: #085f63;
+    width: 50%;
+}
+
+.nav{
+    width: 300px;
+}
+
+.img{
+    max-width: 100%;
+}
+
+@font-face{
+    font-family: 'Montserrat-Alternates';
+    src: url('../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
+}
+
+.text{
+    font-family: 'Montserrat-Alternates';
+    color: black;
+}
+
+.btn{
+    display: flex;
+    background-color: #085f63;
+    font-family: 'Montserrat-Alternates';
+    color: #ffffff;
+    border-radius: 7px;
+    width: 80px;
+    height: 30px;
+}
+
+.icons{
+    width: 30px;
+}
+
+.IconMenuMovil{
+    display: none;
+}
+
+/* Media Queries for Responsives */
+
+/* For movil screens */
+@media (max-width: 380px) {
+    .Navbar{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 7%;
+        align-items: center;
+        color: #085f63;
+    }
+
+    .nav{
+        width: 65%;
+    }
+
+    .img{
+        max-width: 100%;
+    }
+
+    /*.btn{
+        background-color: #085f63;
+        font-family: 'Montserrat-Alternates';
+        color: #ffffff;
+        border-radius: 7px;
+        width: 80px;
+        height: 30px;
+    }*/
+
+    .icons{
+        width: 30px;
+    }
+
+    .IconMenuMovil{
+        display: flex;
+    }
+
+    .Navbar_items{
+        display: none;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .Navbar_items_open{
+        position: absolute;
+        padding-top: 5%;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        font-family: 'Montserrat-Alternates';
+        background-color: #49beb7;
+        width: 100%;
+        height: 200px;
+    }
+
+       .Navbar_items_open a{ 
+        font-size: 20px;
+        margin: 2%;    
+        font-family: 'Montserrat-Alternates';
+        color: #ffffff;
+        padding: 2%;
+    }
+
+}

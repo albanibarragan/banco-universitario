@@ -2,6 +2,11 @@ import logo from '../../assets/img/logo-no-background.png';
 import './Navbar.css';
 
 function Navbar() {
+
+  const [menuMovil, SetMenuMovil] = useState(false);/*crear estado para funcion booleana RESPONSIVE*/
+  const CambioMenuMovil = () => {
+    SetMenuMovil(!menuMovil);
+  }; /*funcion para mostrar icono RESPONSIVE*/
   return (
     <header>
       <a className="header-logo">
