@@ -27,9 +27,9 @@ function Principal() {
             <img className="logo" src={imgLady} alt="Imagen de una mujer" />
           </div>
         </section>
-        <section className="section-service">
+        <section className="section-service" id="services">
           <h2 className="title-service">Nuestros Servicios</h2>
-          <div className="container-service" id="services">
+          <div className="container-service">
             <div className="service">
               <div className="service-circle">
                 <img src={icon1} className="icon-service"></img>

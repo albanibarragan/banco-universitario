@@ -1,12 +1,13 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Services.module.css";
 import imagen from "../../../assets/img/1service1.jpg"
+import Footer from "../../../components/Footer/Footer";
 
 function Service1() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className={styles.container}>
         <div className={styles.title}>
           <h1>Transferencias entre estudiantes sin comision</h1>
         </div>
@@ -20,6 +21,7 @@ function Service1() {
           más para realizar sus pagos y transacciones.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

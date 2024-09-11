@@ -1,12 +1,13 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Services.module.css";
 import imagen from "../../../assets/img/4service4.jpeg";
+import Footer from "../../../components/Footer/Footer";
 
 function Service4() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className={styles.container}>
         <div className={styles.title}>
           <h1>Pago de matrícula estudiantil</h1>
         </div>
@@ -19,6 +20,7 @@ function Service4() {
           estudiantes realizar sus pagos en cualquier momento que lo necesiten.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }
