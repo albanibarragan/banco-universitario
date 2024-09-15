@@ -6,16 +6,24 @@
 }
 
 .text-section{
+    font-size: 80%;
     width: 45%;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 8%;
+    margin-left: 5%;
     color:#085f63 ;
 }
 
+.text-section h1{
+    line-height: 70px;
+}
+
 hr{
-    width: 50%;
+    width: 60%;
     align-items: center;
-    border: 3px solid #085f63 ;
+    border: 3px solid #000000 ;
+    margin-top: 5%;
+    margin-bottom: 7%;
 }
 
 .img-section{
@@ -33,19 +41,30 @@ hr{
 }
 
 .container-service{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Espacio entre los elementos */
-    align-items: center; /* Alinea los elementos verticalmente */
-    padding: 15px; /* Espaciado interno */
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
+    align-items: center;
+    justify-content: center;/* Espacio entre los elementos */
+    justify-items: center;
+    gap: 25% 8%;
+    padding: 15px; /* Espaciado interno */ 
     margin-bottom: 10%;
+    box-sizing: border-box;
 }
 
 .service {
     width: 140px;
     height: 140px;
     text-align: center;
-    margin: 10px; /* Espacio alrededor de cada ítem */
+    align-items: center;
+    align-self: center;
+    position:relative;
+    margin: 5px; /* Espacio alrededor de cada ítem */
+    box-sizing: border-box;
 }
 
 .service-circle{
@@ -68,22 +87,349 @@ hr{
 }
 
 .text-service{
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     color: #000000;
 }
 
-.circle:hover{
+.service-circle:hover{
     background-color:#085f63;
     transform: scale(1.2);
 }
 
-.circle{
+.service-circle{
     transition: transform 0.1s;
 }
 
 .text-service:hover{
     color: #085f63;
     cursor: pointer;
+}
+
+/*SECCION QUIENES SOMOS*/
+
+.section-quienessomos{
+    margin: 0 auto;
+    height: auto;
+}
+
+.container-quienes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-auto-rows: 100px;*/
+    align-content: center;
+    align-items: center;
+    justify-content: center;/* Espacio entre los elementos */
+    justify-items: center;
+    gap: 8% 3%;
+    padding: 50px; /* Espaciado interno */ 
+    margin-top: 1%;
+    margin-bottom: 10%;
+    box-sizing: border-box;
+}
+
+.mision,
+.vision{
+    width: 400px;
+    height: 300px;
+    background-color: #49beb7;
+    border-radius: 15%;
+    border: 2px solid #085f63;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    padding: 5%;
+}
+
+.mision p,
+.vision p{
+    font-weight: 550;
+    margin-bottom: 5%;
+    line-height: 200%;
+}
+
+.objetivos{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /*grid-row-start: 1;*/
+    grid-row-end: 3;
+    width: 860px;
+    height: 300px;
+    background-color: #49beb7;
+    border-radius: 8%;
+    border: 2px solid #085f63;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    padding: 3%;
+}
+
+.objetivos p{
+    font-weight: 550;
+    margin-bottom: 5%;
+    line-height: 200%;
+}
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small screens */
+@media (max-width: 853px) {
+
+    /*/responsive seccion services para tablets*/
+
+    .container-service {
+        display: grid;
+        margin-left: 2%;
+        margin-right: 2%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+        align-items: center;
+        justify-content: center;/* Espacio entre los elementos */
+        justify-items: center;
+        gap: 4% 2%;
+        padding: 15px; /* Espaciado interno */ 
+        margin-bottom: 10%;
+        box-sizing: border-box;
+    }
+
+    .service {
+        width: 100%;
+        max-width: 200px;
+        margin: 20px auto;
+    }
+
+    .service-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .text-service {
+        font-size: 18px;
+    }
+
+    .text:hover{
+        color: #085f63;
+        cursor: pointer;
+    }
+
+    /*responsive seccion quenes somos pra tablets*/
+
+    .container-quienes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /*grid-auto-rows: 100px;*/
+        align-content: center;
+        align-items: center;
+        justify-content: center;/* Espacio entre los elementos */
+        justify-items: center;
+        gap: 5% 0%;
+        padding: 50px; /* Espaciado interno */ 
+        margin-top: 1%;
+        margin-bottom: 10%;
+        box-sizing: border-box;
+    }
+
+    .mision,
+    .vision{
+        width: 300px;
+        height: 200px;
+        background-color: #49beb7;
+        border-radius: 15%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        padding: 5%;
+    }
+
+    .mision p,
+    .vision p{
+        font-weight: 500;
+        margin-bottom: 3%;
+        line-height: 150%; /*interlineado*/
+    }
+
+    .mision h2,
+    .vision h2{
+        margin: 3%;
+    }
+
+    .objetivos{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        /*grid-row-start: 1;*/
+        grid-row-end: 3;
+        width: 660px;
+        height: 200px;
+        background-color: #49beb7;
+        border-radius: 8%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        padding: 3%;
+    }
+
+    .objetivos p{
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 2%;
+        line-height: 150%;
+    }
+
+    .objetivos h2{
+        margin: 2%;
+    }
+
+
+}
+
+/* For mobile (telefono convencional) screens */
+@media (max-width: 380px) {
+    .mensajeCentral {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        font-family: 'Montserrat-Alternates';
+    }
+
+    .titulos {
+        text-align: center;
+        margin-top: 1%;
+        color:#085f63 
+    }
+
+    .imgPrincipal {
+        width: 90%;
+    }
+
+    /*responsive seccion services telefono*/
+    
+    .container-service {
+        display: grid;
+        margin-left: 2%;
+        margin-right: 2%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-content: center;
+        align-items: center;
+        justify-content: center;/* Espacio entre los elementos */
+        justify-items: center;
+        gap: 4% 3%;
+        padding: 15px; /* Espaciado interno */ 
+        margin-bottom: 10%;
+        box-sizing: border-box;
+    }
+
+    .service {
+       width: 100%;
+       max-width: 150px;
+       margin: 5px auto;
+       padding: 2%;
+    }
+
+    .service-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text-service {
+        font-size: 10px;
+        line-height: 1%;
+    }
+
+    .text-service:hover{
+        color: #085f63;
+        cursor: pointer;
+    }
+
+    .service-circle:hover{
+        background-color:#085f63;
+        transform: scale(1.2);
+    }
+
+    .service-circle{
+        transition: transform 0.1s;
+    }
+
+    /*responsive seccion quienes somos telefono*/
+
+    .container-quienes{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;/* Espacio entre los elementos */
+        justify-items: center; 
+        margin-top: 0%;
+        margin-bottom: 10%;
+        box-sizing: border-box;
+    }
+
+    .mision h2,
+    .vision h2{
+        margin: 3%;
+    }
+
+    .mision,
+    .vision{
+        display:flex;
+        flex-direction: column;
+        width: 250px;
+        height: 210px;
+        background-color: #49beb7;
+        border-radius: 8%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        /*padding: 5%;*/
+        margin: 15px;
+    }
+
+    .mision p,
+    .vision p{
+        font-weight: 500;
+        font-size: 13px;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        line-height: 180%;
+    }
+
+    .objetivos{
+        display:flex;
+        flex-direction: column;
+        width: 250px;
+        height: 240px;
+        background-color: #49beb7;
+        border-radius: 8%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        /*padding: 5%;*/
+        margin: 15px;
+    }
+
+    .objetivos h2{
+        margin: 3%;
+    }
+
+    .objetivos p{
+        font-weight: 500;
+        font-size: 10px;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        line-height: 150%;
+    }
 }

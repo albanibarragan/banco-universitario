@@ -27,9 +27,9 @@ function Principal() {
             <img className="logo" src={imgLady} alt="Imagen de una mujer" />
           </div>
         </section>
-        <section className="section-service">
+        <section className="section-service" id="services">
           <h2 className="title-service">Nuestros Servicios</h2>
-          <div className="container-service" id="services">
+          <div className="container-service">
             <div className="service">
               <div className="service-circle">
                 <img src={icon1} className="icon-service"></img>
@@ -77,6 +77,42 @@ function Principal() {
               <p className="text-service">
                 Consulta de movimientos y ¡mucho mas!
               </p>
+            </div>
+          </div>
+        </section>
+        <section className="section-quienessomos" id="quienes">
+          <h2 className="title-service">¿Quienes somos?</h2>
+          <div className="container-quienes">
+            <div className="mision">
+              <h2>Mision</h2>
+              <p>
+                Somos una institución financiera comprometida con los
+                estudiantes universitarios, brindando soluciones financieras
+                ágiles y eficientes.
+              </p>
+              <NavLink to="quienes/mision">ver mas...</NavLink>
+            </div>
+            <div className="vision">
+              <h2>Vision</h2>
+              <p>
+                Queremos ser la mejor opción financiera para estudiantes
+                universitarios en el país. Deseamos ser reconocidos por nuestros
+                servicios innovadores.
+              </p>
+              <NavLink to="quienes/vision">ver mas...</NavLink>
+            </div>
+            <div className="objetivos">
+              <h2>Objetivos</h2>
+              <p>
+                Brindar a los estudiantes universitarios un servicio eficiente y
+                de calidad en la gestión de sus recursos financieros, a través
+                de nuestros canales digitales y nuestros puntos de atención
+                presencial. Fomentar el uso de nuestras plataformas digitales
+                para hacer transferencias entre estudiantes sin comisión,
+                depósitos y retiros en efectivo, ofreciendo herramientas
+                tecnológicas fáciles y seguras...
+              </p>
+              <NavLink to="quienes/objetivos">ver mas...</NavLink>
             </div>
           </div>
         </section>
