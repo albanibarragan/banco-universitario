@@ -1,3 +1,8 @@
+.container{
+    margin-top: 4%;
+    margin-bottom: 15%;
+}
+
 .title{
     font-family: 'Montserrat-Alternates';
     text-align: center;
@@ -10,12 +15,6 @@
     src: url('../../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
 }
 
-/*.conten{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}*/
-
 .img{
     display: block;
     width: 60%;
@@ -25,6 +24,64 @@
 
 .parrafo{
    font-family: 'Montserrat-Alternates';
-   text-align: center; 
+   text-align: justify; 
    font-size: 20px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets screem */
+@media (max-width: 860px) {
+    .title h1{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 550;
+        color: #085f63;
+    }
+        
+    .container{
+        padding: 10%;
+    }
+
+    .img{
+        display: block;
+        width: 50%;
+        margin: auto;
+        width: 250px;
+    }
+
+    .parrafo{
+        margin-top: 6%;
+        text-align: justify; 
+        font-size: 16px;
+        font-weight: 550;
+    }
+}
+
+
+/* For movil screem */
+@media (max-width: 360px) {
+    .title h1{
+        font-size: 20px;
+        text-align: center;
+        /*font-weight: bold;*/
+        color: #085f63;
+    }
+    .container{
+        padding: 10%;
+    }
+
+    .img{
+        display: block;
+        width: 50%;
+        margin: auto;
+        width: 250px;
+    }
+
+    .parrafo{
+        margin-top: 6%;
+        text-align: justify; 
+        font-size: 16px;
+        font-weight: 550;
+    }
 }

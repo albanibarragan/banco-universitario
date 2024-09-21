@@ -1,12 +1,13 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Services.module.css";
 import imagen from "../../../assets/img/5service5.jpeg";
+import Footer from "../../../components/Footer/Footer";
 
 function Service5() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className={styles.container}>
         <div className={styles.title}>
           <h1>Cobro de becas estudiantiles</h1>
         </div>
@@ -19,6 +20,7 @@ function Service5() {
           fondos de manera rápida y segura.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

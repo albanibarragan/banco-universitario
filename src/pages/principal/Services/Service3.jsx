@@ -1,12 +1,13 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Services.module.css";
 import imagen from "../../../assets/img/3service3.jpeg";
+import Footer from "../../../components/Footer/Footer";
 
 function Service3() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className={styles.container}>
         <div className={styles.title}>
           <h1>Retiros en efectivo</h1>
         </div>
@@ -18,6 +19,7 @@ function Service3() {
           tranquilidad de que sus fondos están seguros y protegidos.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

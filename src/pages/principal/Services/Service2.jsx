@@ -1,12 +1,13 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Services.module.css";
 import imagen from "../../../assets/img/2service2.jpeg";
+import Footer from "../../../components/Footer/Footer";
 
 function Service2() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className={styles.container}>
         <div className={styles.title}>
           <h1>Depósitos en efectivo</h1>
         </div>
@@ -19,6 +20,7 @@ function Service2() {
           cualquier momento que lo necesiten.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }
