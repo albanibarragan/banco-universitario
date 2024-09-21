@@ -16,8 +16,8 @@ function Navbar() {
       </ul>
    </nav>
    <div className="nav-buttons">
-      <button className="btn1">Registrarse</button>
-      <button className="btn2">Iniciar sesion</button>
+      <button className="btn1">Iniciar sesión</button>
+      <button className="btn2">Registrar</button>
     </div>
    </header>
   );
