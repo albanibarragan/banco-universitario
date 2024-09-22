@@ -6,16 +6,17 @@
 }
 
 .text-section{
-    font-size: 80%;
     width: 45%;
     text-align: center;
     margin-top: 8%;
-    margin-left: 5%;
     color:#085f63 ;
 }
 
 .text-section h1{
     line-height: 70px;
+}
+.text-section h2{
+font-size: 32px;
 }
 
 hr{

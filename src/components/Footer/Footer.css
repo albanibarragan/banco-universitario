@@ -4,9 +4,8 @@ footer{
     padding: 10px;
 }
 
-h1{
-    margin-top: 3%;
-    font-size: 40px;
+footer h1{
+    margin: 10px;
 }
 
 .content{
