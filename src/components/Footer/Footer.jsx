@@ -18,8 +18,7 @@ function Footer() {
         <section className="section-info">
           <ul className="info-list">
             <li>
-              <img src={iconodireccion} className="icono-info"></img>
-              <a href="">
+              <img src={iconodireccion} className="icono-info"></img><a href="">
                 Av. Universidad, Edificio Banco Universitario, piso 12, Caracas,
                 Venezuela.
               </a>

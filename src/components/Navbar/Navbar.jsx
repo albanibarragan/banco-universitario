@@ -20,6 +20,7 @@ function Navbar() {
       <button className="btn2">Registrar</button>
     </div>
    </header>
+   
   );
 }
 
