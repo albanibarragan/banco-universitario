@@ -1,5 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar";
-import imagen from "../../../assets/img/Mision";
+import styles from "./Quienes-somos.module.css";
+import imagen from "../../../assets/img/mision.jpeg";
 
 function Mision() {
     return (
@@ -7,7 +8,7 @@ function Mision() {
         <Navbar />
         <div>
         <div className={styles.title}>
-            <h1>Somos una institución financiera comprometida con apoyar el desarrollo académico y profesional de los estudiantes universitarios.</h1>
+            <h1> Misión </h1>
           </div>
         <img src={imagen} className={styles.img}></img>
         <p className={styles.parrafo}>

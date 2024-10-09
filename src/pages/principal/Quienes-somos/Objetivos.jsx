@@ -1,5 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar";
-import imagen from "../../../assets/img/Objetivos";
+import styles from "./Quienes-somos.module.css";
+import imagen from "../../../assets/img/objetivo.jpg";
 
 function Objetivos() {
     return (
@@ -7,8 +8,7 @@ function Objetivos() {
         <Navbar />
         <div>
         <div className={styles.title}>
-            <h1>Brindar a los estudiantes universitarios un servicio eficiente y
-            de calidad</h1>
+            <h1>Objetivos</h1>
           </div>
           <img src={imagen} className={styles.img}></img>
           <p className={styles.parrafo}>

@@ -90,7 +90,7 @@ function Principal() {
                 estudiantes universitarios, brindando soluciones financieras
                 ágiles y eficientes.
               </p>
-              <NavLink to="Quienes-somos/mision">ver mas...</NavLink>
+              <NavLink to="Quienes-somos/Mision">ver mas...</NavLink>
             </div>
             <div className="vision">
               <h2>Vision</h2>
@@ -99,7 +99,7 @@ function Principal() {
                 universitarios en el país. Deseamos ser reconocidos por nuestros
                 servicios innovadores.
               </p>
-              <NavLink to="Quienes-somos/vision">ver mas...</NavLink>
+              <NavLink to="Quienes-somos/Vision">ver mas...</NavLink>
             </div>
             <div className="objetivos">
               <h2>Objetivos</h2>
@@ -112,7 +112,7 @@ function Principal() {
                 depósitos y retiros en efectivo, ofreciendo herramientas
                 tecnológicas fáciles y seguras...
               </p>
-              <NavLink to="Quienes-somos/objetivos">ver mas...</NavLink>
+              <NavLink to="Quienes-somos/Objetivos">ver mas...</NavLink>
             </div>
           </div>
         </section>
