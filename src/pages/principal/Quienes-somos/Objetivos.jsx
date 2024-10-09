@@ -1,23 +1,17 @@
 import Navbar from "../../../components/Navbar/Navbar";
-import imagen from "../../../assets/img/quienessomos.jpg"
+import imagen from "../../../assets/img/Objetivos";
 
 function Objetivos() {
     return (
       <div>
         <Navbar />
         <div>
-      <div style={{
-        border: "2px solid green #085f63", 
-        padding: "20px", 
-        borderRadius: "10px", 
-        backgroundColor: "#49beb7", 
-        margin: "20px 0"
-      }}></div>
-          <div style={{ fontSize: "24px", fontWeight: "bold", marginBottom: "10px" }}>
+        <div className={styles.title}>
             <h1>Brindar a los estudiantes universitarios un servicio eficiente y
             de calidad</h1>
           </div>
-          <p style={{ fontSize: "16px", marginBottom: "20px" }}>
+          <img src={imagen} className={styles.img}></img>
+          <p className={styles.parrafo}>
           Brindar a los estudiantes universitarios un servicio eficiente y
                 de calidad en la gestión de sus recursos financieros, a través
                 de nuestros canales digitales y nuestros puntos de atención
@@ -26,7 +20,6 @@ function Objetivos() {
                 depósitos y retiros en efectivo, ofreciendo herramientas
                 tecnológicas fáciles y seguras...
           </p>
-          <img src={imagen} style={{ width: "100%", height: "auto", display: "block", marginTop: "20px" }} alt="Quienes somos" />
           </div>
           </div>
           );
