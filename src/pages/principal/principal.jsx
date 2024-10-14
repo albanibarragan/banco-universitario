@@ -80,6 +80,42 @@ function Principal() {
             </div>
           </div>
         </section>
+        <section className="section-quienessomos" id="quienes">
+          <h2 className="title-quienes">¿Quienes somos?</h2>
+          <div className="container-quienes">
+            <div className="mision">
+              <h2>Mision</h2>
+              <p>
+                Somos una institución financiera comprometida con los
+                estudiantes universitarios, brindando soluciones financieras
+                ágiles y eficientes.
+              </p>
+              <NavLink to="Quienes-somos/Mision">ver mas...</NavLink>
+            </div>
+            <div className="vision">
+              <h2>Vision</h2>
+              <p>
+                Queremos ser la mejor opción financiera para estudiantes
+                universitarios en el país. Deseamos ser reconocidos por nuestros
+                servicios innovadores.
+              </p>
+              <NavLink to="Quienes-somos/Vision">ver mas...</NavLink>
+            </div>
+            <div className="objetivos">
+              <h2>Objetivos</h2>
+              <p>
+                Brindar a los estudiantes universitarios un servicio eficiente y
+                de calidad en la gestión de sus recursos financieros, a través
+                de nuestros canales digitales y nuestros puntos de atención
+                presencial. Fomentar el uso de nuestras plataformas digitales
+                para hacer transferencias entre estudiantes sin comisión,
+                depósitos y retiros en efectivo, ofreciendo herramientas
+                tecnológicas fáciles y seguras...
+              </p>
+              <NavLink to="Quienes-somos/Objetivos">ver mas...</NavLink>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
