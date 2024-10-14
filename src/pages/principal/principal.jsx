@@ -80,6 +80,7 @@ function Principal() {
             </div>
           </div>
         </section>
+        <section className="sucursales"></section>
       </main>
       <Footer />
     </div>

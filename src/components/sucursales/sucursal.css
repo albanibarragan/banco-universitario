@@ -1,0 +1,28 @@
+.container-sucursales{
+    text-align: center;
+    background-color: aqua;
+}
+
+.sucursal-info{
+    display: grid;
+    grid-template-columns: 550px auto 550px;
+    align-items: center;
+    background-color: #f50f0f;
+    grid-column-gap: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.sucursal-info1{
+    text-align: end;
+    margin: 60px;
+}
+
+.sucursal-info2{
+    text-align: left;
+    margin: 60px;
+}
+
+.img-mapa{
+    height: 400px;
+}
