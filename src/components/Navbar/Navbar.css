@@ -1,11 +1,7 @@
 header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
-}
-.IconMenuMovil{
-    display: none;
+    justify-content: space-between;  
 }
 
 .header-logo{
@@ -14,32 +10,50 @@ header{
     margin: 7px;
 }
 
-.logo{
+.logo-nav{
     width: 100%;
+}
+
+.icons-nav{
+    width: 30px;
+}
+
+.IconMenuMovil{
+    display: none;
 }
 
 .nav-items{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 5rem;
+}
+
+.nav-items > li a{
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 0 8px;
+    list-style: none;
+    
+}
+
+.nav-buttons > button{
+    margin: 8px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #085f63;
+    margin-right: 5rem;
 }
 
 ul{
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.nav-items > li a{
-    color: #000;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 0 8px;
-    
-}
-
-.nav-buttons > button{
-    margin: 8px;
 }
 
 .btn1{
@@ -52,68 +66,138 @@ ul{
     color: #fff;
 }
 
-/* Media Queries for Responsives */
-@media (max-width: 380px) {
-    .navbar{
+@media (max-width: 853px) {
+    .header-logo{
+        display: block;
+        width: 400px;
+        margin: 7px;
+    }
+    
+    .icons-nav{
+        width: 60px;
+    margin-right: 20px;
+    }
+
+    .IconMenuMovil{
         display: flex;
-        justify-content: space-around;
-        margin-top: 7%;
-        align-items: center;
+        margin: 0;
+    }
+
+    .navbar {
+        display: flex;
         color: #085f63;
+        margin: 0;
+        flex-direction: column;
+    }
+    
+    .nav-items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
-    .nav{
-        width: 65%;
-    }
-
-    .logo{
-        max-width: 100%;
-    }
-
-    /*.btn{
+    .nav-items > li a{
+        color: #000;
+        font-size: 18px;
+        padding: 0 8px;
+        list-style: none;
         
-        font-family: 'Montserrat-Alternates';
+    }
+
+    .nav-buttons button{
+        background-color: #085f63;
         color: #ffffff;
         border-radius: 7px;
-        width: 80px;
-        height: 30px;
-    }*/
+        width: 100%;
+    }
 
-    .icons{
+    .Navbar_items_open {
+        position: absolute;
+        padding-top: 1rem;
+        top: 5rem;
+        align-content: center;
+        background-color: #49beb7;
+        width: 100%;
+        height: 100%;
+      }
+    
+    .nav-buttons{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Navbar_items_close{
+        display: none;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .header-logo{
+        display: block;
+        width: 300px;
+        margin: 3px;
+    }
+
+    
+    .icons-nav{
         width: 30px;
     }
 
     .IconMenuMovil{
         display: flex;
+        margin-right: 3px;
     }
 
-    .nav-items{
-        display: none;
-    }
-
-    .btn{
-        display: none;
-    }
-
-    .Navbar_items_open{
-        position: absolute;
-        padding-top: 5%;
-        top: 10%;
+    .navbar{
         display: flex;
+        color: #085f63;
         flex-direction: column;
+        margin: 0;
+    }
+
+    .nav-items {
+        display: flex;
         align-items: center;
+        flex-direction: column;
+    }
+
+    .nav-items > li a{
+        color: #000;
+        font-size: 18px;
+        padding: 0 8px;
+        list-style: none;
+        
+    }
+
+    .Navbar_items_open {
+        position: absolute;
+        padding-top: 1rem;
+        top: 4rem;
+
         align-content: center;
-        font-family: 'Montserrat-Alternates';
         background-color: #49beb7;
         width: 100%;
-        height: 200px;
+        height: auto;
     }
 
-       .Navbar_items_open a{ 
-        font-size: 20px;
-        margin: 2%;    
-        font-family: 'Montserrat-Alternates';
+    .Navbar_items_close{
+        display: none;
+    }
+
+    
+    .nav-buttons{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nav-buttons button{
+        background-color: #085f63;
         color: #ffffff;
-        padding: 2%;
+        border-radius: 7px;
+        width: 100%;
+
     }
 }

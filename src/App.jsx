@@ -8,8 +8,6 @@ import Service5 from "./pages/principal/Services/Service5";
 import Mision from "./pages/principal/Quienes-somos/Mision";
 import Vision from "./pages/principal/Quienes-somos/Vision";
 import Objetivos from "./pages/principal/Quienes-somos/Objetivos";
-import Sucursal from "./components/sucursales/sucursal";
-import LoginForm from "./components/Forms/LoginForm";
 
 
 

@@ -1,6 +1,5 @@
 import "./principal.css";
 import Navbar from "../../components/Navbar/Navbar";
-import imgLady from "../../assets/img/lady.png";
 import Footer from "../../components/Footer/Footer";
 import icon1 from "../../assets/img/iconservice1.png";
 import icon2 from "../../assets/img/iconservice2.png";
@@ -10,24 +9,15 @@ import icon5 from "../../assets/img/iconservice5.png";
 import icon6 from "../../assets/img/iconservice6.png";
 import { NavLink, /*Routes, Route*/ } from "react-router-dom";
 import Sucursal from "../../components/sucursales/Sucursal";
+import Start from "../../components/Secciones principales/Start";
+
 
 function Principal() {
   return (
     <div>
       <Navbar />
       <main>
-        <section className="section-start">
-          <div className="text-section">
-            <h1>
-              Tu banco universitario comprometido con tu futuro financiero
-            </h1>
-            <hr />
-            <h2>¡Cada día más cerca de ti!</h2>
-          </div>
-          <div className="img-section">
-            <img className="logo" src={imgLady} alt="Imagen de una mujer" />
-          </div>
-        </section>
+        <Start />
         <section className="section-service" id="services">
           <h2 className="title-service">Nuestros Servicios</h2>
           <div className="container-service">
@@ -119,7 +109,7 @@ function Principal() {
           </div>
         </section>
         <section className="sucursales">
-          <Sucursal />
+         <Sucursal />
         </section>
       </main>
       <Footer />
