@@ -15,6 +15,7 @@
 .text-section h1{
     line-height: 70px;
 }
+
 .text-section h2{
 font-size: 32px;
 }
@@ -48,11 +49,9 @@ hr{
     grid-template-columns: auto auto auto;
     align-items: center;
     justify-items: center;
-    background-color: #f50f0f;
 }
 
 .service {
-    background-color: #ffa600;
     box-sizing: border-box;
     width: 250px;
     height: 250px;
@@ -107,7 +106,7 @@ hr{
     text-align: center;
     font-weight: 700;
     font-size: 45px;
-    margin-bottom: 0.5%;
+    margin-bottom: 1rem;
 }
 
 .section-quienessomos{
@@ -126,7 +125,6 @@ hr{
     gap: 8% 3%;
     padding: 50px; /* Espaciado interno */ 
     margin-top: 1%;
-    margin-bottom: 10%;
     box-sizing: border-box;
 }
 
@@ -153,7 +151,6 @@ hr{
 .objetivos{
     grid-column-start: 1;
     grid-column-end: 4;
-    /*grid-row-start: 1;*/
     grid-row-end: 3;
     width: 860px;
     height: 300px;
@@ -172,18 +169,21 @@ hr{
     line-height: 200%;
 }
 
-
+.sucursales{
+    margin: 5rem 0;
+    height: auto;
+}
 
 /* Media Queries for Responsiveness */
 
 /* For tablets and small screens */
 @media (max-width: 853px) {
-   /* .section-start{
+   .section-start{
         flex-direction: row;
         display: flex;
         margin: 0 auto;
         height: auto;
-    }*/
+    }
     
     /*servicios*/
 

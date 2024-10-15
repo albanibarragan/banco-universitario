@@ -9,6 +9,7 @@ import icon4 from "../../assets/img/iconservice4.png";
 import icon5 from "../../assets/img/iconservice5.png";
 import icon6 from "../../assets/img/iconservice6.png";
 import { NavLink, /*Routes, Route*/ } from "react-router-dom";
+import Sucursal from "../../components/sucursales/Sucursal";
 
 function Principal() {
   return (
@@ -80,6 +81,7 @@ function Principal() {
             </div>
           </div>
         </section>
+        
         <section className="section-quienessomos" id="quienes">
           <h2 className="title-quienes">¿Quienes somos?</h2>
           <div className="container-quienes">
@@ -115,6 +117,9 @@ function Principal() {
               <NavLink to="Quienes-somos/Objetivos">ver mas...</NavLink>
             </div>
           </div>
+        </section>
+        <section className="sucursales">
+          <Sucursal />
         </section>
       </main>
       <Footer />
