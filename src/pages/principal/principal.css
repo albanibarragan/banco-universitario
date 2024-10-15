@@ -35,6 +35,9 @@ hr{
     width: 80%;
 }
 
+
+/*SECCION SERVICES */
+
 .section-service{
     margin: 0 auto;
     height: auto;
@@ -98,6 +101,79 @@ hr{
     cursor: pointer;
 }
 
+/*SECCION QUIENES SOMOS*/
+
+.title-quienes{
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom: 0.5%;
+}
+
+.section-quienessomos{
+    margin: 0 auto;
+    height: auto;
+}
+
+.container-quienes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-auto-rows: 100px;*/
+    align-content: center;
+    align-items: center;
+    justify-content: center;/* Espacio entre los elementos */
+    justify-items: center;
+    gap: 8% 3%;
+    padding: 50px; /* Espaciado interno */ 
+    margin-top: 1%;
+    margin-bottom: 10%;
+    box-sizing: border-box;
+}
+
+.mision,
+.vision{
+    width: 400px;
+    height: 300px;
+    background-color: #49beb7;
+    border-radius: 15%;
+    border: 2px solid #085f63;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    padding: 5%;
+}
+
+.mision p,
+.vision p{
+    font-weight: 550;
+    margin-bottom: 5%;
+    line-height: 200%;
+}
+
+.objetivos{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /*grid-row-start: 1;*/
+    grid-row-end: 3;
+    width: 860px;
+    height: 300px;
+    background-color: #49beb7;
+    border-radius: 8%;
+    border: 2px solid #085f63;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    padding: 3%;
+}
+
+.objetivos p{
+    font-weight: 550;
+    margin-bottom: 5%;
+    line-height: 200%;
+}
+
+
+
 /* Media Queries for Responsiveness */
 
 /* For tablets and small screens */
@@ -110,6 +186,9 @@ hr{
     }*/
     
     /*servicios*/
+
+    /*RESPONSIVE SECCION SERVICES PARA TABLETS*/
+
     .container-service {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -139,6 +218,76 @@ hr{
     }
 
     
+
+     /*responsive seccion quenes somos pra tablets*/
+
+    .container-quienes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /*grid-auto-rows: 100px;*/
+        align-content: center;
+        align-items: center;
+        justify-content: center;/* Espacio entre los elementos */
+        justify-items: center;
+        gap: 5% 0%;
+        padding: 50px; /* Espaciado interno */ 
+        margin-top: 1%;
+        margin-bottom: 10%;
+        box-sizing: border-box;
+    }
+
+    .mision,
+    .vision{
+        width: 300px;
+        height: 200px;
+        background-color: #49beb7;
+        border-radius: 15%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        padding: 5%;
+    }
+
+    .mision p,
+    .vision p{
+        font-weight: 500;
+        margin-bottom: 3%;
+        line-height: 150%; /*interlineado*/
+    }
+
+    .mision h2,
+    .vision h2{
+        margin: 3%;
+    }
+
+    .objetivos{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        /*grid-row-start: 1;*/
+        grid-row-end: 3;
+        width: 660px;
+        height: 200px;
+        background-color: #49beb7;
+        border-radius: 8%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        padding: 3%;
+    }
+
+    .objetivos p{
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 2%;
+        line-height: 150%;
+    }
+
+    .objetivos h2{
+        margin: 2%;
+    }
+
 }
 
 
@@ -177,6 +326,28 @@ hr{
 }
     
     /*seccion de servicio*/
+    .mensajeCentral {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        font-family: 'Montserrat-Alternates';
+    }
+
+    .titulos {
+        text-align: center;
+        margin-top: 1%;
+        color:#085f63 
+    }
+
+    .imgPrincipal {
+        width: 90%;
+    }
+
+    /*RESPONSIVE SECCION SERVICES PARA TELEFONO*/
+
     .container-service {
         display: grid;
         grid-template-columns: auto auto ;
@@ -218,5 +389,76 @@ hr{
         text-align: center;
         font-weight: 700;
         font-size: 30px;
+    }
+
+    /*RESPONSIVE SECCION QUIENES-SOMOS TELEFONO*/
+
+    .container-quienes{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;/* Espacio entre los elementos */
+        justify-items: center; 
+        margin-top: 0;
+        margin-bottom: 10%;
+        box-sizing: border-box;
+    }
+
+    .mision h2,
+    .vision h2{
+        margin: 3%;
+    }
+
+    .mision,
+    .vision{
+        display:flex;
+        flex-direction: column;
+        width: 250px;
+        height: 210px;
+        background-color: #49beb7;
+        border-radius: 8%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        /*padding: 5%;*/
+        margin: 15px;
+    }
+
+    .mision p,
+    .vision p{
+        font-weight: 500;
+        font-size: 13px;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        line-height: 180%;
+    }
+
+    .objetivos{
+        display:flex;
+        flex-direction: column;
+        width: 250px;
+        height: 240px;
+        background-color: #49beb7;
+        border-radius: 8%;
+        border: 2px solid #085f63;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        /*padding: 5%;*/
+        margin: 15px;
+    }
+
+    .objetivos h2{
+        margin: 3%;
+    }
+
+    .objetivos p{
+        font-weight: 500;
+        font-size: 10px;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        line-height: 150%;
     }
 }
