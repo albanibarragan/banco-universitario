@@ -161,6 +161,7 @@ ul{
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin: 0;
     }
 
     .nav-items > li a{
@@ -172,14 +173,12 @@ ul{
     }
 
     .Navbar_items_open {
-        position: absolute;
+        position: fixed;
         padding-top: 1rem;
-        top: 4rem;
-
+        top: 3rem;
         align-content: center;
         background-color: #49beb7;
-        width: 100%;
-        height: auto;
+        width: 90%;
     }
 
     .Navbar_items_close{
