@@ -10,7 +10,7 @@ function Vision() {
         {" "}
         {/* Agregué un contenedor para wrappear el contenido */}
         <div className={styles.title}>
-          <h1> Vision </h1>
+          <h1> Visión </h1>
         </div>
         <img src={imagen} className={styles.img} alt="Imagen de visión" />{" "}
         {/* Agregué el atributo alt para accesibilidad */}
