@@ -1,6 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Quienes-somos.module.css";
-import imagen from "../../../assets/img/Mision.jpeg";
+import imagen from "../../../assets/img/mision.jpeg";
 
 function Mision() {
     return (
@@ -24,6 +24,6 @@ function Mision() {
           </div>
           </div>
           );
-}
+        }
 
-export default Mision;
+        export default Mision;

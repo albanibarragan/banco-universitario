@@ -1,4 +1,39 @@
-/*SECCION SERVICES */
+.section-start{
+    flex-direction: row;
+    display: flex;
+    margin: 0 auto;
+    height: auto;
+}
+
+.text-section{
+    font-size: 80%;
+    width: 45%;
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 5%;
+    color:#085f63 ;
+}
+
+.text-section h1{
+    line-height: 70px;
+}
+
+hr{
+    width: 60%;
+    align-items: center;
+    border: 3px solid #000000 ;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+
+.img-section{
+    width: 55%;
+}
+
+.logo{
+    width: 80%;
+
+}
 
 .section-service{
     margin: 0 auto;
@@ -7,9 +42,18 @@
 
 .container-service{
     display: grid;
-    grid-template-columns: auto auto auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
     align-items: center;
+    justify-content: center;/* Espacio entre los elementos */
     justify-items: center;
+    gap: 25% 8%;
+    padding: 15px; /* Espaciado interno */ 
+    margin-bottom: 10%;
+    box-sizing: border-box;
 }
 
 .service {
@@ -17,7 +61,11 @@
     width: 250px;
     height: 250px;
     text-align: center;
-    margin:5%; 
+    align-items: center;
+    align-self: center;
+    position:relative;
+    margin: 5px; /* Espacio alrededor de cada ítem */
+    box-sizing: border-box;
 }
 
 .service-circle{
@@ -64,13 +112,6 @@
 
 /*SECCION QUIENES SOMOS*/
 
-.title-quienes{
-    text-align: center;
-    font-weight: 700;
-    font-size: 45px;
-    margin-bottom: 1rem;
-}
-
 .section-quienessomos{
     margin: 0 auto;
     height: auto;
@@ -84,22 +125,24 @@
     align-items: center;
     justify-content: center;/* Espacio entre los elementos */
     justify-items: center;
+    gap: 8% 3%;
     padding: 50px; /* Espaciado interno */ 
     margin-top: 1%;
+    margin-bottom: 10%;
     box-sizing: border-box;
 }
 
 .mision,
 .vision{
-    width: 500px;
-    height: 350px;
+    width: 400px;
+    height: 300px;
     background-color: #49beb7;
     border-radius: 15%;
     border: 2px solid #085f63;
     text-align: center;
+    align-items: center;
+    align-self: center;
     padding: 5%;
-    margin-bottom: 25px;
-    box-sizing: border-box;
 }
 
 .mision p,
@@ -112,6 +155,7 @@
 .objetivos{
     grid-column-start: 1;
     grid-column-end: 4;
+    /*grid-row-start: 1;*/
     grid-row-end: 3;
     width: 860px;
     height: 300px;
@@ -130,31 +174,43 @@
     line-height: 200%;
 }
 
-.sucursales{
-    margin: 5rem 0;
-    height: auto;
-}
+
+
+
+
 
 /* Media Queries for Responsiveness */
 
+/* For tablets and small screens */
 @media (max-width: 853px) {
-    /*servicios*/
+
+    /*/responsive seccion services para tablets*/
 
     .container-service {
         display: grid;
-        grid-template-columns: auto auto auto;
+        margin-left: 2%;
+        margin-right: 2%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         align-content: center;
         align-items: center;
-}
-    .service {
+        justify-content: center;/* Espacio entre los elementos */
+        justify-items: center;
+        gap: 4% 2%;
+        padding: 15px; /* Espaciado interno */ 
+        margin-bottom: 10%;
         box-sizing: border-box;
-        max-width: 250px;
-        max-height: 200px;
+    }
+
+    .service {
+        width: 100%;
+        max-width: 200px;
+        margin: 20px auto;
     }
 
     .service-circle {
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
     }
 
     .text-service {
@@ -166,13 +222,22 @@
         cursor: pointer;
     }
 
-     /*responsive seccion quenes somos pra tablets*/
+    /*responsive seccion quenes somos pra tablets*/
 
-     .container-quienes {
+    .container-quienes{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 8% 0%;
-      }
+        /*grid-auto-rows: 100px;*/
+        align-content: center;
+        align-items: center;
+        justify-content: center;/* Espacio entre los elementos */
+        justify-items: center;
+        gap: 5% 0%;
+        padding: 50px; /* Espaciado interno */ 
+        margin-top: 1%;
+        margin-bottom: 10%;
+        box-sizing: border-box;
+    }
 
     .mision,
     .vision{
@@ -181,7 +246,10 @@
         background-color: #49beb7;
         border-radius: 15%;
         border: 2px solid #085f63;
-        box-sizing: border-box;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        padding: 5%;
     }
 
     .mision p,
@@ -199,6 +267,7 @@
     .objetivos{
         grid-column-start: 1;
         grid-column-end: 4;
+        /*grid-row-start: 1;*/
         grid-row-end: 3;
         width: 660px;
         height: 200px;
@@ -222,34 +291,64 @@
         margin: 2%;
     }
 
+
 }
 
-
+/* For mobile (telefono convencional) screens */
 @media (max-width: 380px) {
-    
-    /*seccion de servicio-*/
-      /*RESPONSIVE SECCION SERVICES PARA TELEFONO*/
+    .mensajeCentral {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        font-family: 'Montserrat-Alternates';
+    }
 
+    .titulos {
+        text-align: center;
+        margin-top: 1%;
+        color:#085f63 
+    }
+
+    .imgPrincipal {
+        width: 90%;
+    }
+
+    /*responsive seccion services telefono*/
+    
     .container-service {
         display: grid;
-        grid-template-columns: auto auto ;
+        margin-left: 2%;
+        margin-right: 2%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         align-content: center;
         align-items: center;
+        justify-content: center;/* Espacio entre los elementos */
+        justify-items: center;
+        gap: 4% 3%;
+        padding: 15px; /* Espaciado interno */ 
+        margin-bottom: 10%;
+        box-sizing: border-box;
     }
 
     .service {
-        box-sizing: border-box;
-        max-width: 170px;
-        max-height: 170px;
+       width: 100%;
+       max-width: 150px;
+       margin: 5px auto;
+       padding: 2%;
     }
 
     .service-circle {
-        width:100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .text-service {
-        font-size: 15px;
+        font-size: 10px;
+        line-height: 1%;
     }
 
     .text-service:hover{
@@ -266,48 +365,43 @@
         transition: transform 0.1s;
     }
 
-    .title-service {
-        text-align: center;
-        font-weight: 700;
-        font-size: 30px;
-    }
-
-    /*RESPONSIVE SECCION QUIENES-SOMOS TELEFONO*/
+    /*responsive seccion quienes somos telefono*/
 
     .container-quienes{
         display: flex;
         flex-direction: column;
         align-content: center;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-around;/* Espacio entre los elementos */
         justify-items: center; 
-        margin-top: 0;
+        margin-top: 0%;
         margin-bottom: 10%;
         box-sizing: border-box;
     }
 
     .mision h2,
-    .vision h2,
-    .objetivos h2{
+    .vision h2{
         margin: 3%;
     }
 
     .mision,
     .vision{
-        width: 270px;
-        height: 250px;
+        display:flex;
+        flex-direction: column;
+        width: 250px;
+        height: 210px;
         background-color: #49beb7;
         border-radius: 8%;
         border: 2px solid #085f63;
         text-align: center;
-        padding: 5%;
-        margin-bottom: 25px;
-        box-sizing: border-box;
+        align-items: center;
+        align-self: center;
+        /*padding: 5%;*/
+        margin: 15px;
     }
 
     .mision p,
-    .vision p,
-    .objetivos p{
+    .vision p{
         font-weight: 500;
         font-size: 13px;
         margin-top: 1%;
@@ -316,15 +410,29 @@
     }
 
     .objetivos{
-        width: 270px;
-        height: 430px;
+        display:flex;
+        flex-direction: column;
+        width: 250px;
+        height: 240px;
         background-color: #49beb7;
         border-radius: 8%;
         border: 2px solid #085f63;
         text-align: center;
-        padding: 5%;
-        margin-bottom: 25px;
-        box-sizing: border-box;
+        align-items: center;
+        align-self: center;
+        /*padding: 5%;*/
+        margin: 15px;
     }
 
+    .objetivos h2{
+        margin: 3%;
+    }
+
+    .objetivos p{
+        font-weight: 500;
+        font-size: 10px;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        line-height: 150%;
+    }
 }
