@@ -4,7 +4,7 @@ import "./sucursal.css";
 const Sucursal = () => {
   return (
     <div className="container-sucursales">
-      <h1>Nuestras Sucursales</h1>
+      <h2 className="title-sucursal">Nuestras Sucursales</h2>
       <div className="sucursal-info">
         <div className="sucursal-info1">
           <p>
