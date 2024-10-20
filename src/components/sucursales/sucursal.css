@@ -4,7 +4,7 @@
 
 .sucursal-info{
     display: grid;
-    grid-template-columns: 500px 700px 500px;
+    grid-template-columns: 500px 500px 500px;
     align-items: center;
     grid-column-gap: 0;
     margin: 0;
@@ -13,7 +13,7 @@
 
 .sucursal-info1{
     text-align: end;
-    margin: 60px;
+    margin: 20%;
 }
 
 .sucursal-info2{
