@@ -1,6 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Quienes-somos.module.css";
-import imagen from "../../../assets/img/objetivo.jpg";
+import imagenObjetivo from "../../../assets/img/objetivo.jpg";
 
 function Objetivos() {
     return (
@@ -10,7 +10,7 @@ function Objetivos() {
         <div className={styles.title}>
             <h1>Objetivos</h1>
           </div>
-          <img src={imagen} className={styles.img}></img>
+          <img src={imagenObjetivo} className={styles.img}></img>
           <p className={styles.parrafo}>
           Brindar a los estudiantes universitarios un servicio eficiente y
                 de calidad en la gestión de sus recursos financieros, a través

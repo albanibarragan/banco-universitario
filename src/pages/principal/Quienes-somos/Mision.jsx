@@ -1,6 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Quienes-somos.module.css";
-import imagen from "../../../assets/img/Mision.jpeg";
+import imagenMision from "../../../assets/img/Mision.jpeg";
 
 function Mision() {
     return (
@@ -10,7 +10,7 @@ function Mision() {
         <div className={styles.title}>
             <h1> Misión </h1>
           </div>
-        <img src={imagen} className={styles.img}></img>
+        <img src={imagenMision} className={styles.img}></img>
         <p className={styles.parrafo}>
           Somos una institución financiera comprometida con apoyar el desarrollo académico y profesional de los estudiantes universitarios. 
           Nuestro objetivo es ofrecer soluciones financieras innovadoras, 

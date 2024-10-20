@@ -1,6 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Quienes-somos.module.css";
-import imagen from "../../../assets/img/Vision.jpeg";
+import imagenVision from "../../../assets/img/Vision.jpeg";
 
 function Vision() {
   return (
@@ -10,7 +10,7 @@ function Vision() {
         <div className={styles.title}>
           <h1> Vision </h1>
         </div>
-        <img src={imagen} className={styles.img} alt="Imagen de visión" /> {/* Agregué el atributo alt para accesibilidad */}
+        <img src={imagenVision} className={styles.img} alt="Imagen de visión" /> {/* Agregué el atributo alt para accesibilidad */}
         <p className={styles.parrafo}>
           Queremos consolidarnos como la mejor opción financiera para estudiantes universitarios en todo el país, 
           distinguiéndonos por nuestra capacidad de ofrecer soluciones innovadoras que realmente respondan a sus necesidades.

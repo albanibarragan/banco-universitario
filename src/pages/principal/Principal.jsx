@@ -1,4 +1,4 @@
-import "./principal.css";
+import "./Principal.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import icon1 from "../../assets/img/iconservice1.png";
