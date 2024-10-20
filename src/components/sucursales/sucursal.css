@@ -39,6 +39,7 @@
     padding: 10px;
 }
 
+
 @media (max-width: 853px) {
     .sucursal-info {
         grid-template-columns: auto 350px auto; 
