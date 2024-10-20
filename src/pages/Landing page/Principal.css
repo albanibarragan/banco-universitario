@@ -146,7 +146,7 @@
     .mision,
     .vision,
     .objetivos{
-    height: 250px;
+    height: auto;
     width: auto;
     padding: 15px;
     }
