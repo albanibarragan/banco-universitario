@@ -1,6 +1,6 @@
-import Navbar from "../../../components/Navbar/Navbar";
-import styles from "./Quienes-somos.module.css";
-import imagenVision from "../../../assets/img/Vision.jpeg";
+import Navbar from "../../components/Navbar/Navbar";
+import styles from "./Quienes-somos.module.css"
+import imagenVision from "../../assets/img/Vision.jpeg";
 
 function Vision() {
   return (

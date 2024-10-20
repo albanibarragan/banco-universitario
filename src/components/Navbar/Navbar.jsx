@@ -10,11 +10,11 @@ function Navbar() {
   const [menuMovil, SetMenuMovil] = useState(false);/*crear estado para funcion booleana RESPONSIVE*/
   const CambioMenuMovil = () => {
     SetMenuMovil(!menuMovil);
-  }; /*funcion para mostrar icono RESPONSIVE*/
+  }; 
   return (
     <header>
     <a className="header-logo" href="/">
-      <img className="logo-nav" src={logo} alt="logo-banco" />
+      <img className="logo-nav" src={logo} alt="logo del baco universitario" />
     </a>
     <a onClick={() => CambioMenuMovil()} className="IconMenuMovil">
         {menuMovil ? (

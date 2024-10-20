@@ -1,59 +1,63 @@
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;  
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem; /* Añadido para mayor espacio */
+    
 }
 
-.header-logo{
-    display: block;
+.header-logo {
     width: 600px;
-    margin: 7px;
 }
 
-.logo-nav{
+.logo-nav {
     width: 100%;
 }
 
-.icons-nav{
+.icons-nav {
     width: 30px;
 }
 
-.IconMenuMovil{
-    display: none;
+.IconMenuMovil {
+    display: none; /* Oculto por defecto, se mostrará en móvil */
+    cursor: pointer; /* Cambiar el cursor a pointer */
 }
 
-.nav-items{
+.nav-items {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-right: 1rem;
 }
 
-.nav-items > li a{
+.nav-items > li {
+    list-style: none; /* Aplicado a <li> para evitar estilos innecesarios */
+}
+
+.nav-items > li a {
     color: #000;
     font-size: 20px;
     font-weight: 700;
     padding: 0 8px;
-    list-style: none;
     margin: 0 10px;
-    justify-content: center;
     white-space: nowrap;
 }
 
-.nav-buttons{
+.nav-buttons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-right: 1%;
 }
 
-.nav-buttons > button{
+.nav-buttons > button {
     margin: 5px;
     padding: 10px 20px; 
     white-space: nowrap;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,159 +65,98 @@ header{
     margin-right: 5rem;
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
-.btn1{
+/* Botones */
+.btn1 {
     color: #085f63;
     border: 1px solid #085f63;
 }
 
-.btn2{
+.btn2 {
     background-color: #085f63;
     color: #fff;
 }
 
+/*responsive*/
+
 @media (max-width: 853px) {
-    .header-logo{
-        display: block;
-        width: 400px;
-        margin: 7px;
-    }
-    
-    .icons-nav{
-        width: 60px;
-    margin-right: 20px;
+    .header-logo {
+        width: 400px; 
     }
 
-    .IconMenuMovil{
-        display: flex;
-        margin: 0;
+    .icons-nav {
+        width: 50px; 
     }
 
-    .navbar {
-        display: flex;
-        color: #085f63;
-        margin: 0;
-        flex-direction: column;
+    .IconMenuMovil {
+        display: flex; 
     }
-    
+
+     .navbar {
+        flex-direction: column; 
+        margin: 0; 
+    }
     .nav-items {
         display: flex;
-        align-items: center;
         flex-direction: column;
+        align-items: flex-start;
+        margin: 0; 
     }
-
-    .nav-items > li a{
-        color: #000;
-        font-size: 18px;
-        padding: 0 8px;
-        list-style: none;
-        
-    }
-
-    .nav-buttons button{
-        background-color: #085f63;
-        color: #ffffff;
-        border-radius: 7px;
-        width: 100%;
-    }
-
-    .Navbar_items_open {
-        position: absolute;
-        padding-top: 1rem;
-        top: 5rem;
-        align-content: center;
-        background-color: #49beb7;
-        width: 100%;
-        height: 100%;
-      }
     
-    .nav-buttons{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+    .nav-items > li a {
+        font-size: 20px;
+        padding: 10px 0; 
+    }
+    
+
+    .nav-buttons {
+        flex-direction: column; 
+        width: 100%;
+    }
+    
+    .Navbar_items_open {
+        position: fixed;
+        top: 5rem;
+        left: 0;
+        right: 0; 
+        background-color: #49beb7;
+        padding: 1rem 0; 
+        height: 100vh;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        overflow: hidden;
+        z-index: 1000;
     }
 
-    .Navbar_items_close{
+    .Navbar_items_close {
         display: none;
     }
 }
 
 
 @media (max-width: 380px) {
-    .header-logo{
-        display: block;
-        width: 300px;
-        margin: 3px;
+    .header-logo {
+        width: 300px; 
     }
 
-    
-    .icons-nav{
-        width: 30px;
+    .icons-nav {
+        width: 30px; 
     }
 
-    .IconMenuMovil{
-        display: flex;
-        margin-right: 3px;
+    .nav-items > li a {
+        font-size: 16px; 
+        padding: 10px 0;
     }
-
-    .navbar{
-        display: flex;
-        color: #085f63;
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .nav-items {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .nav-items > li a{
-        color: #000;
-        font-size: 18px;
-        padding: 0 8px;
-        list-style: none;
-        
-    }
-
 
     .Navbar_items_open {
-        position: fixed;
-        padding-top: 1rem;
-        top: 3rem;
-        align-content: center;
+        top: 3rem; 
         background-color: #49beb7;
-        width: 90%;
-    }
-
-    .Navbar_items_close{
-        display: none;
-        /*para hacer que se desplace*/
-        /*display: block; /* se mantenga bloqueado */
-        /*max-height: 0; /* Inicialmente, la altura es cero */
-        /*overflow: hidden; /* Oculta el contenido */
-        /*transition: max-height 0.3s ease-out; */
-    }
-
-    
-    .nav-buttons{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .nav-buttons button{
-        background-color: #085f63;
-        color: #ffffff;
-        border-radius: 7px;
-        width: 100%;
-
+        width: 100%; 
     }
 }

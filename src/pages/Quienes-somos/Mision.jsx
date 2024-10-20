@@ -1,6 +1,6 @@
-import Navbar from "../../../components/Navbar/Navbar";
-import styles from "./Quienes-somos.module.css";
-import imagenMision from "../../../assets/img/Mision.jpeg";
+import Navbar from "../../components/Navbar/Navbar";
+import styles from "./Quienes-somos.module.css"
+import imagenMision from "../../assets/img/Mision.jpeg";
 
 function Mision() {
     return (

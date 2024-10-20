@@ -7,9 +7,9 @@ import icon3 from "../../assets/img/iconservice3.png";
 import icon4 from "../../assets/img/iconservice4.png";
 import icon5 from "../../assets/img/iconservice5.png";
 import icon6 from "../../assets/img/iconservice6.png";
-import { NavLink, /*Routes, Route*/ } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import Sucursal from "../../components/sucursales/Sucursal";
-import Start from "../../components/Secciones principales/Start";
+import Start from "../../components/Seccion start/Start";
 
 
 function Principal() {

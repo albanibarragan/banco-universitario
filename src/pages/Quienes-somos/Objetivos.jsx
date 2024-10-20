@@ -1,6 +1,6 @@
-import Navbar from "../../../components/Navbar/Navbar";
-import styles from "./Quienes-somos.module.css";
-import imagenObjetivo from "../../../assets/img/objetivo.jpg";
+import Navbar from "../../components/Navbar/Navbar";
+import styles from "./Quienes-somos.module.css"
+import imagenObjetivo from "../../assets/img/objetivo.jpg";
 
 function Objetivos() {
     return (
