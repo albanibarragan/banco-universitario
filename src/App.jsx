@@ -5,9 +5,10 @@ import Service2 from "./pages/Servicios/Service2";
 import Service3 from "./pages/Servicios/Service3";
 import Service4 from "./pages/Servicios/Service4";
 import Service5 from "./pages/Servicios/Service5";
-import Mision from "./pages/Quienes-somos/Mision"
-import Vision from "./pages/Quienes-somos/Vision"
-import Objetivos from "./pages/Quienes-somos/Objetivos"
+import Mision from "./pages/Quienes-somos/Mision";
+import Vision from "./pages/Quienes-somos/Vision";
+import Objetivos from "./pages/Quienes-somos/Objetivos";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (

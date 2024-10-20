@@ -4,7 +4,8 @@
 }
 
 .login-img{
-    background-color: aquamarine;
+    background: rgb(8,95,99);
+    background: linear-gradient(16deg, rgba(8,95,99,1) 18%, rgba(73,190,183,1) 99%);
     flex: 1;
 }
 

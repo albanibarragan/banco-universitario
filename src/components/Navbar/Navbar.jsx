@@ -39,7 +39,7 @@ function Navbar() {
       <li><a href="/#sucursales" className='menu-item'>Sucursales</a></li>   
       </ul>
       <div className="nav-buttons">
-        <button className="btn1">Iniciar sesión</button>
+        <button className="btn1" >Iniciar sesión</button>
         <button className="btn2">Registrar</button>
     </div>
         </nav>
