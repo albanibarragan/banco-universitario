@@ -76,7 +76,7 @@ function Principal() {
           <h2 className="title-quienes">¿Quienes somos?</h2>
           <div className="container-quienes">
             <div className="mision">
-              <h2>Mision</h2>
+              <h2>Misión</h2>
               <p>
                 Somos una institución financiera comprometida con los
                 estudiantes universitarios, brindando soluciones financieras
@@ -85,7 +85,7 @@ function Principal() {
               <NavLink to="Quienes-somos/Mision">ver mas...</NavLink>
             </div>
             <div className="vision">
-              <h2>Vision</h2>
+              <h2>Visión</h2>
               <p>
                 Queremos ser la mejor opción financiera para estudiantes
                 universitarios en el país. Deseamos ser reconocidos por nuestros

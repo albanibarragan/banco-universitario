@@ -1,0 +1,45 @@
+@font-face{
+    font-family: 'Montserrat-Alternates';
+    src: url('../../../assets/fonts/MontserratAlternatesRegular.ttf') format('truetype');
+}
+
+headerr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.header-logoo{
+    display: block;
+    width: 500px;
+    margin: 10px;
+    /*margin-left: 6%;*/
+}
+
+.logo-nave{
+    width: 100%;
+}
+
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*margin-right: 1%;*/
+}
+
+.inicio > a{
+    font-family: 'Montserrat-Alternates';
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 0 8px;
+    list-style: none;
+    margin: 0 10px;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.icon-inicio{
+    width: 60px;;
+}

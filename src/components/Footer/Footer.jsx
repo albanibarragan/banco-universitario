@@ -12,43 +12,64 @@ let year = now.getFullYear();
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer-principal">
       <h1>BANCO UNIVERSITARIO</h1>
       <div className="content">
         <section className="section-info">
           <ul className="info-list">
             <li>
-              <img src={iconodireccion} className="icono-info"></img><a href="">
-                Av. Universidad, Edificio Banco Universitario, piso 12, Caracas,
-                Venezuela.
-              </a>
+              <img
+                src={iconodireccion}
+                alt="Dirección"
+                className="icono-info"
+              ></img>
+              <address>
+                <a href="#">
+                  Av. Universidad, Edificio Banco Universitario, piso 12,
+                  Caracas, Venezuela.
+                </a>
+              </address>
             </li>
             <li>
-              <img src={iconotelefono} className="icono-info"></img>
+              <img
+                src={iconotelefono}
+                alt="Teléfono"
+                className="icono-info"
+              ></img>
               <a href="mailto:info@bancouniversitario.com.ve">
                 info@bancouniversitario.com.ve
               </a>
             </li>
             <li>
-              <img src={iconofax} className="icono-info"></img>
-              <a href="">@bancouniversitariove</a>
+              <img src={iconofax} alt="Fax" className="icono-info"></img>
+              <a href="#">@bancouniversitariove</a>
             </li>
             <li>
-              <img src={iconocorreo} className="icono-info"></img>
-              <a href="">+58 212-555-5555</a>
+              <img src={iconocorreo} alt="Correo" className="icono-info"></img>
+              <a href="tel:+582125555555">+58 212-555-5555</a>
             </li>
           </ul>
         </section>
         <section className="section-redes">
           <h2>¡CONTÁCTANOS!</h2>
           <div>
-            <img src={facebook} className="iconos-redes"></img>
-            <img src={instagram} className="iconos-redes"></img>
-            <img src={twitter} className="iconos-redes"></img>
+            <a href="#" aria-label="Facebook">
+              <img src={facebook} alt="Facebook" className="iconos-redes"></img>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img
+                src={instagram}
+                alt="Instagram"
+                className="iconos-redes"
+              ></img>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img src={twitter} alt="Twitter" className="iconos-redes"></img>
+            </a>
           </div>
         </section>
       </div>
-      <p>Copyrigth © Banco Universitario {year}</p>
+      <p>Copyright © Banco Universitario {year}</p>
     </footer>
   );
 }

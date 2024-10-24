@@ -1,6 +1,7 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Quienes-somos.module.css";
 import imagen from "../../../assets/img/Vision.jpeg";
+import Footer from "../../../components/Footer/Footer";
 
 function Vision() {
   return (
@@ -32,6 +33,7 @@ function Vision() {
           avanzadas.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

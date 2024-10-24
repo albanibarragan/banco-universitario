@@ -6,8 +6,9 @@ header{
 
 .header-logo{
     display: block;
-    width: 600px;
-    margin: 7px;
+    width: 500px;
+    margin: 10px;
+    margin-left: 6%;
 }
 
 .logo-nav{
@@ -49,8 +50,14 @@ header{
 
 .nav-buttons > button{
     margin: 5px;
-    padding: 10px 20px; 
+    padding: 9px 19px; /*10 20*/
     white-space: nowrap;
+    background-color: #49beb7;
+    border: 1px solid #085f63;
+}
+
+.nav-buttons > button a{
+    color: #ffffff;
 }
 
 .navbar{
@@ -67,15 +74,15 @@ ul{
     list-style: none;
 }
 
-.btn1{
+/*.btn1{
     color: #085f63;
     border: 1px solid #085f63;
-}
+}*/
 
-.btn2{
+/*.btn2{
     background-color: #085f63;
     color: #fff;
-}
+}*/
 
 @media (max-width: 853px) {
     .header-logo{

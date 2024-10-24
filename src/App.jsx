@@ -8,6 +8,8 @@ import Service5 from "./pages/principal/Services/Service5";
 import Mision from "./pages/principal/Quienes-somos/Mision";
 import Vision from "./pages/principal/Quienes-somos/Vision";
 import Objetivos from "./pages/principal/Quienes-somos/Objetivos";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/register";
 
 
 
@@ -24,6 +26,8 @@ function App() {
         <Route path="quienes-somos/mision" element={<Mision />}></Route>
         <Route path="quienes-somos/vision" element={<Vision />}></Route>
         <Route path="quienes-somos/objetivos" element={<Objetivos />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
       </Routes>
     </BrowserRouter>
   );

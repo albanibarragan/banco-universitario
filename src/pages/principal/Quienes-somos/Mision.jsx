@@ -1,6 +1,7 @@
 import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Quienes-somos.module.css";
 import imagen from "../../../assets/img/Mision.jpeg";
+import Footer from "../../../components/Footer/Footer";
 
 function Mision() {
     return (
@@ -22,6 +23,7 @@ function Mision() {
           brindando herramientas que contribuyan a una educación accesible y un futuro prometedor.
           </p>
           </div>
+          <Footer />
           </div>
           );
 }
