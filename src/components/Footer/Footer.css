@@ -1,11 +1,11 @@
-footer{
+.footer-principal{
     background-color: #085f63;
     color: #FFF;
-    padding: 10px;
+    padding: 20px 10px;
 }
 
-footer h1{
-    margin: 10px;
+.footer-principal h1{
+    margin: 10px 0;
 }
 
 .content{
@@ -14,78 +14,97 @@ footer h1{
     flex-wrap: wrap;
 }
 
-.section-info{
-    width: 65%;
-
+.section-info {
+    width: 60%;
 }
 
-.info-list li{
-    margin: 10px;
+.info-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.icono-info{
-    width: 28px;
-    margin-right: 10px;
+.info-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #fff;
 }
-
-.section-redes{
-    width: 35%;
-    text-align: center;
-}
-
-a{
-    font-size: 23px;
-    text-decoration: none;
+.info-list li a{
+    
     color: #fff;
 }
 
 
-.iconos-redes{
-    width: 65px;
-    margin: 10px;
+.icono-info {
+    width: 28px;
+    margin-right: 10px;
 }
 
-p{
+.section-redes {
+    width: 35%;
     text-align: center;
-    margin: 0;
+}
+
+.section-redes h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-redes a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.section-redes a:hover {
+    color: #ccc;
+}
+
+.iconos-redes {
+    width: 50px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.iconos-redes:hover {
+    transform: scale(1.1);
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/*responsive */
+
+@media (max-width: 853px) {
+    .section-info,
+    .section-redes {
+        width: 100%;
+    }
+
+    a {
+        font-size: 16px;
+    }
 }
 
 
 @media (max-width: 380px) {
 
-    h1{
-        font-size: 23px;
+    .footer-principal h1 {
+        font-size: 22px;
     }
 
-    .section-info{
-        width: 100%;
-        margin: 0;
+    .icono-info {
+        width: 22px;
     }
 
-    .info-list li{
-        margin: 5%;
-
-        margin-left: 1%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .iconos-redes {
+        width: 40px;
     }
 
-    a{
-        font-size: 15px;
-    }
-        
-    .section-redes{
-        width: 20%;
-        text-align: center;
-    }
-
-    .icono-info{
-        margin: 0;
-    }
-
-    .section-redes {
-        width: 100%;
-        text-align: center;
+    a {
+        font-size: 14px;
     }
 }

@@ -1,7 +1,7 @@
-import Navbar from "../../../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import styles from "./Services.module.css";
-import imagen from "../../../assets/img/5service5.jpeg";
-import Footer from "../../../components/Footer/Footer";
+import imagen from "../../assets/img/5service5.jpeg";
+import Footer from "../../components/Footer/Footer";
 
 function Service5() {
   return (
