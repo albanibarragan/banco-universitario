@@ -75,11 +75,8 @@ function Principal() {
           <h2 className="title-quienes">¿Quienes somos?</h2>
           <div className="container-quienes">
             <div className="mision">
-<<<<<<< HEAD:src/pages/principal/principal.jsx
               <h2>Misión</h2>
-=======
               <h3>Mision</h3>
->>>>>>> bc84bb35c027720e4ef002ddbd650a5e3a171cd6:src/pages/Landing page/Principal.jsx
               <p>
                 Somos una institución financiera comprometida con los
                 estudiantes universitarios, brindando soluciones financieras
@@ -88,11 +85,8 @@ function Principal() {
               <NavLink className="btn-somos" to="Quienes-somos/Mision">Ver mas...</NavLink>
             </div>
             <div className="vision">
-<<<<<<< HEAD:src/pages/principal/principal.jsx
               <h2>Visión</h2>
-=======
               <h3>Vision</h3>
->>>>>>> bc84bb35c027720e4ef002ddbd650a5e3a171cd6:src/pages/Landing page/Principal.jsx
               <p>
                 Queremos ser la mejor opción financiera para estudiantes
                 universitarios en el país. Deseamos ser reconocidos por nuestros
