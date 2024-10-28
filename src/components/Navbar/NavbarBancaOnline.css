@@ -1,0 +1,38 @@
+.header-banca{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+    background-color: #fff;
+    border: 2px solid #085f63;
+    border-top: none;
+    box-sizing: border-box;/*para que el border no se muestre mas que la linea divisoria*/
+}
+
+
+.logo-nave{
+    width: 100%;
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*margin-right: 1%;*/
+}
+
+.inicio > a{
+    font-family: 'Montserrat-Alternates';
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 0 8px;
+    list-style: none;
+    margin: 0 10px;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.icon-inicio{
+    width: 60px;;
+}

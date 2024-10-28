@@ -20,11 +20,97 @@
     display: block;
     width: 60%;
     margin: auto;
-    width: 400px;
+    width: 380px;
+    margin-bottom: 20px; /* Reduce el espacio debajo de la imagen */
 }
 
 .parrafo{
    font-family: 'Montserrat-Alternates';
-   text-align: center; 
+   text-align: justify; 
    font-size: 20px;
+   /*text-align: justify;*/
+   line-height: 150%; /*interlineado*/
+   padding: 7%;
 }
+
+.parrafoobjetivos{
+   font-family: 'Montserrat-Alternates';
+   text-align: justify; 
+   font-size: 18px;
+   /*text-align: justify;*/
+   line-height: 200%; /*interlineado*/
+   padding: 2%;
+}
+
+.parrafoobjetivos ul {
+    list-style-type: none; /* Elimina las viñetas por defecto */
+    padding-left: 50px; /* Ajusta el espacio para las viñetas */
+}
+.parrafoobjetivos ul li::before {
+    content: "◆ "; /* Usa un rombo como viñeta */
+    color: #085f63; /* Mismo color que ya usas */
+    font-weight: bold; /* Opcional, para darle más énfasis */
+    padding-right: 20px; /* Espacio entre el rombo y el texto */
+}
+
+
+/*Parte responsive de mision, vision y objetivos*/
+
+/* For tablets screem */
+ @media (max-width: 860px) {
+
+    .img{
+        display: block;
+        width: 50%;
+        margin: auto;
+        width: 250px;
+    }
+
+    .parrafo{
+        margin-top: 6%;
+        text-align: justify; 
+        font-size: 16px;
+        padding: 8%;
+    }
+
+    .parrafoobjetivos{ 
+        text-align: justify;
+        font-size: 15px;
+        line-height: 200%; /*interlineado*/
+        padding: 6%;
+    }
+
+    .parrafoobjetivos ul li::before {
+        font-size: 15px; /* Ajusta el tamaño del rombo en tablets */
+    }
+  }
+
+
+/* responsive telefonos */
+ @media (max-width: 380px) {
+
+    .img{
+        display: block;
+        width: 50%;
+        margin: auto;
+        width: 250px;
+    }
+
+    .parrafo{
+        margin-top: 6%;
+        text-align: justify; 
+        font-size: 16px;
+        padding: 8%;
+    }
+
+    .parrafoobjetivos{ 
+        text-align: justify;
+        font-size: 12px;
+        line-height: 180%; /*interlineado*/
+        padding: 7%;
+    }
+
+    .parrafoobjetivos ul li::before {
+        font-size: 12px; /* Ajusta el tamaño del rombo en teléfonos */
+    }
+  }

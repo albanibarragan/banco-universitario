@@ -3,7 +3,7 @@ import "./sucursal.css";
 
 const Sucursal = () => {
   return (
-    <div className="container-sucursales">
+    <div className="container-sucursales" id="sucursales">
       <h2 className="title-sucursal">Nuestras Sucursales</h2>
       <div className="sucursal-info">
         <div className="sucursal-info1">

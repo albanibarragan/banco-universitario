@@ -100,12 +100,11 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.mision h3,
-.vision h3,
-.objetivos h3 {
+.mision h2,
+.vision h2,
+.objetivos h2 {
     font-weight: 600;
     margin-bottom: 15px;
-    font-size: 2rem;
 }
 
 .mision p, .vision p, .objetivos p {
@@ -124,7 +123,6 @@
     line-height: 1.6;
     font-size: 1.5rem;
 }
-
 
 @media (max-width: 853px) {
     .container-service {
@@ -155,7 +153,6 @@
        margin: 0;
        font-size: 1.7rem;
     }
-
 }
 
 @media (max-width: 380px) {
@@ -164,7 +161,6 @@
         grid-template-columns: 1fr;
         gap: 0;
     }
-
 
     .service {
         max-width: 100%;

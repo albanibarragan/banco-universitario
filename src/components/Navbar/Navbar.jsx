@@ -12,7 +12,7 @@ function Navbar() {
     SetMenuMovil(!menuMovil);
   }; 
   return (
-    <header>
+    <header class="landing-header">
     <a className="header-logo" href="/">
       <img className="logo-nav" src={logo} alt="logo del baco universitario" />
     </a>
@@ -29,19 +29,37 @@ function Navbar() {
           /> /*si es false muestra icono menu en el responsive*/
         )}
       </a>
-      <div
-        className={menuMovil ? "Navbar_items_open" : "Navbar_items_close"}
-      >
+      <div className={menuMovil ? "Navbar_items_open" : "Navbar_items_close"}>
         <nav className="navbar">
-        <ul className="nav-items">
-      <li><a href="/#services" className='menu-item'>Servicios</a> </li>
-      <li><a href="/#quienes" className='menu-item'>¿Quienes somos?</a></li>
-      <li><a href="/#sucursales" className='menu-item'>Sucursales</a></li>   
-      </ul>
-      <div className="nav-buttons">
-        <button className="btn1" >Iniciar sesión</button>
-        <button className="btn2">Registrar</button>
-    </div>
+          <ul className="nav-items">
+            <li>
+              <a href="/#services" className="menu-item">
+                Servicios
+              </a>{" "}
+            </li>
+            <li>
+              <a href="/#quienes" className="menu-item">
+                ¿Quienes somos?
+              </a>
+            </li>
+            <li>
+              <a href="/#sucursales" className="menu-item">
+                Sucursales
+              </a>
+            </li>
+          </ul>
+          <div className="nav-buttons">
+            <button className="lan-btn1">
+              <a href="/login" >
+                Iniciar sesión
+              </a>
+            </button>
+            <button className="lan-btn2">
+              <a href="/register" >
+                Registrar
+              </a>
+            </button>
+          </div>
         </nav>
       </div>
     </header>

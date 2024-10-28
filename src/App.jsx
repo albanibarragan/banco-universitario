@@ -9,6 +9,7 @@ import Mision from "./pages/Quienes-somos/Mision";
 import Vision from "./pages/Quienes-somos/Vision";
 import Objetivos from "./pages/Quienes-somos/Objetivos";
 import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 function App() {
   return (
@@ -20,9 +21,11 @@ function App() {
         <Route path="services/service3" element={<Service3 />}></Route>
         <Route path="services/service4" element={<Service4 />}></Route>
         <Route path="services/service5" element={<Service5 />}></Route>
-        <Route path="Quienes-somos/Mision" element={<Mision />}></Route>
-        <Route path="Quienes-somos/Vision" element={<Vision />}></Route>
-        <Route path="Quienes-somos/Objetivos" element={<Objetivos />}></Route>
+        <Route path="Quienes-somos/mision" element={<Mision />}></Route>
+        <Route path="Quienes-somos/vision" element={<Vision />}></Route>
+        <Route path="Quienes-somos/objetivos" element={<Objetivos />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,45 @@
+.contenedor-register-page{
+    display: flex;
+    height: auto;
+    width: 100vw;
+}
+
+.form-box-register{
+    background: #ffffff;
+    width:500px;
+    height: auto;
+    padding: 2rem;
+    color: #010101;
+    content: box;
+}
+
+.tittle-register{
+    text-align: center;
+    margin-top:3rem;
+    font-size: 2.5rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+}
+
+.form-register{
+    margin-top: 4rem;
+}
+
+.buttonsgroup-register{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1%;
+}
+
+.buttonsgroup-register > button{
+    background-color: #085f63;
+    color: #f1f7fe;
+    margin-top:1.2rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin: 0.9rem;
+}

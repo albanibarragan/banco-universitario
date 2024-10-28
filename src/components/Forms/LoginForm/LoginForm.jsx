@@ -2,7 +2,7 @@ import "./LoginForm.css";
 
 const LoginForm = () => {
     return (
-        <div className="form-box">
+        <div className="form-box-login">
             <h2 className="tittle-login">Iniciar sesión</h2>
             <p className="sub-login">¡Bienvenido, ingrese sus credenciales!</p>
             <form className="form-login">
@@ -17,7 +17,7 @@ const LoginForm = () => {
                 <button className="button-login" type="submit">Ingresar</button>
                 <div className="register-link">
                     <p>¿No tienes cuenta? 
-                        <a href="#"> Registrarse</a>
+                        <a href="/register"> Registrarse</a>
                     </p>
                 </div>
             </form>

@@ -11,7 +11,6 @@ import { NavLink} from "react-router-dom";
 import Sucursal from "../../components/sucursales/Sucursal";
 import Start from "../../components/Seccion start/Start";
 
-
 function Principal() {
   return (
     <div>
@@ -75,7 +74,7 @@ function Principal() {
           <h2 className="title-quienes">¿Quienes somos?</h2>
           <div className="container-quienes">
             <div className="mision">
-              <h3>Mision</h3>
+              <h2>Misión</h2>
               <p>
                 Somos una institución financiera comprometida con los
                 estudiantes universitarios, brindando soluciones financieras
@@ -84,7 +83,7 @@ function Principal() {
               <NavLink className="btn-somos" to="Quienes-somos/Mision">Ver mas...</NavLink>
             </div>
             <div className="vision">
-              <h3>Vision</h3>
+              <h2>Visión</h2>
               <p>
                 Queremos ser la mejor opción financiera para estudiantes
                 universitarios en el país. Deseamos ser reconocidos por nuestros
