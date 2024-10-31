@@ -37,6 +37,7 @@ button {
   cursor: pointer;
   background-color: #fff;
   border: 1px solid transparent;
+  font-family: Montserrat-Alternates;
 }
 
 button:focus,

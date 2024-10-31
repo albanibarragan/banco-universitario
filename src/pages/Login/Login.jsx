@@ -1,17 +1,18 @@
 import LoginForm from "../../components/Forms/LoginForm/LoginForm";
-import "./Login.css";
+import Navbar from "../../components/Navbar/NavbarBancaOnline";
+import "./Login.css"
 
 const Login = () =>{
-    return(
-        <div className="container-login">
-            <div className="login-img">
-
-            </div>
-            <div className="login-formulario">
+  return(
+      <div className="contenedor-login-page">
+          <div className="login-left">
+          <Navbar />
+          </div>
+          <div className="login-right">
             <LoginForm />
-            </div>
-        </div>
-    );
+          </div>
+      </div>
+  );
 }
 
 export default Login;

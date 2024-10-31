@@ -6,8 +6,7 @@
 .sucursal-info{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 20px;
+     gap: 20px;
     margin: 0 auto;
 }
 
@@ -41,11 +40,11 @@
 
 
 @media (max-width: 853px) {
-    .sucursal-info {
+     .sucursal-info {
         grid-template-columns: auto 350px auto; 
     }
-    
-    .sucursal-info1,
+
+     .sucursal-info1,
     .sucursal-info2 {
         margin: 20px; 
     }
@@ -54,5 +53,5 @@
 @media (max-width: 580px) {
     .sucursal-info {
         grid-template-columns: auto;
-    }
+            }
 }
