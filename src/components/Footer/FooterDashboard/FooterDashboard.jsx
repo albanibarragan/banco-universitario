@@ -2,6 +2,7 @@ import "./FooterDashboard.css";
 import iconocorreo from "../../../assets/img/correo.png";
 import iconotelefono  from "../../../assets/img/telefono.png";
 
+
 let now = new Date();
 let year = now.getFullYear();
 

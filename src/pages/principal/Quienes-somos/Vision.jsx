@@ -1,7 +1,6 @@
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../../components/Navbar/Navbar";
 import styles from "./Quienes-somos.module.css";
-import imagen from "../../assets/img/Vision.jpeg";
-import Footer from "../../components/Footer/Footer";
+import imagen from "../../../assets/img/Vision.jpeg";
 
 function Vision() {
   return (
@@ -11,7 +10,7 @@ function Vision() {
         {" "}
         {/* Agregué un contenedor para wrappear el contenido */}
         <div className={styles.title}>
-          <h1> Vision </h1>
+          <h1> Visión </h1>
         </div>
         <img src={imagen} className={styles.img} alt="Imagen de visión" />{" "}
         {/* Agregué el atributo alt para accesibilidad */}
@@ -33,7 +32,6 @@ function Vision() {
           avanzadas.
         </p>
       </div>
-      <Footer />
     </div>
   );
 }
