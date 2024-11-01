@@ -1,7 +1,7 @@
 import "./Footer.css";
 import iconodireccion from "../../assets/img/direccion.png";
 import iconotelefono from "../../assets/img/telefono.png";
-import iconofax from "../../assets/img/fax.png";
+import iconofax from "../../assets/img/telegram.png";
 import iconocorreo from "../../assets/img/correo.png";
 import facebook from "../../assets/img/logofacebook.png";
 import instagram from "../../assets/img/logoinstagram.png";
@@ -36,8 +36,8 @@ function Footer() {
                 alt="Teléfono"
                 className="icono-info"
               ></img>
-              <a href="mailto:info@bancouniversitario.com.ve">
-                info@bancouniversitario.com.ve
+              <a href="tel:+582125555555">
+              +58 212-555-5555
               </a>
             </li>
             <li>
@@ -46,7 +46,7 @@ function Footer() {
             </li>
             <li>
               <img src={iconocorreo} alt="Correo" className="icono-info"></img>
-              <a href="tel:+582125555555">+58 212-555-5555</a>
+              <a href="mailto:info@bancouniversitario.com.ve">info@bancouniversitario.com.ve</a>
             </li>
           </ul>
         </section>
