@@ -13,9 +13,9 @@ function Objetivos() {
         </div>
         <img src={imagen} className={styles.img}></img>
         <div className={styles.parrafoobjetivos}>
-          <ul>
+        <ul>
           <li>
-            Brindar a los estudiantes universitarios un servicio eficiente y
+             Brindar a los estudiantes universitarios un servicio eficiente y
             de calidad en la gestión de sus recursos financieros, a través de
             nuestros canales digitales y nuestros puntos de atención presencial.
           </li>

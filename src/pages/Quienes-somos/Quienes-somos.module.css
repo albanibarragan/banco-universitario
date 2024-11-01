@@ -30,7 +30,8 @@
    font-size: 20px;
    /*text-align: justify;*/
    line-height: 150%; /*interlineado*/
-   padding: 7%;
+   padding: 3%;
+   margin-top: 0px; /* Mueve hacia arriba */
 }
 
 .parrafoobjetivos{
@@ -46,13 +47,13 @@
     list-style-type: none; /* Elimina las viñetas por defecto */
     padding-left: 50px; /* Ajusta el espacio para las viñetas */
 }
+
 .parrafoobjetivos ul li::before {
     content: "◆ "; /* Usa un rombo como viñeta */
     color: #085f63; /* Mismo color que ya usas */
     font-weight: bold; /* Opcional, para darle más énfasis */
     padding-right: 20px; /* Espacio entre el rombo y el texto */
 }
-
 
 /*Parte responsive de mision, vision y objetivos*/
 
@@ -71,6 +72,7 @@
         text-align: justify; 
         font-size: 16px;
         padding: 8%;
+        
     }
 
     .parrafoobjetivos{ 
