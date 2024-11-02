@@ -7,10 +7,9 @@ import RegisterForm from "../../components/Forms/RegisterForm/RegisterForm";
 function Register() {
   return (
     <div>
-      
       <div className="contenedor-register-page">
-        <div className="register-left">
         <Navbar />
+        <div className="register-left">
           <img src={imgform} className="imgform"></img>
         </div>
         <div className="register-rigth">

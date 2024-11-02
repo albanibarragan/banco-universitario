@@ -8,8 +8,8 @@ import Service5 from "./pages/Servicios/Service5";
 import Mision from "./pages/Quienes-somos/Mision";
 import Vision from "./pages/Quienes-somos/Vision";
 import Objetivos from "./pages/Quienes-somos/Objetivos";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/register";
 
 function App() {
   return (

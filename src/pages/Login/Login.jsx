@@ -3,15 +3,17 @@ import Navbar from "../../components/Navbar/NavbarBancaOnline";
 import "./Login.css"
 
 const Login = () =>{
-  return(
+  return (
+    <div>
+      {" "}
+      <Navbar />
       <div className="contenedor-login-page">
-          <div className="login-left">
-          <Navbar />
-          </div>
-          <div className="login-right">
-            <LoginForm />
-          </div>
+        <div className="login-left"></div>
+        <div className="login-right">
+          <LoginForm />
+        </div>
       </div>
+    </div>
   );
 }
 
