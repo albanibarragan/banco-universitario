@@ -1,7 +1,7 @@
 import "./Footer.css";
 import iconodireccion from "../../assets/img/direccion.png";
 import iconotelefono from "../../assets/img/telefono.png";
-import iconofax from "../../assets/img/telegram.png";
+import iconofax from "../../assets/img/fax.png";
 import iconocorreo from "../../assets/img/correo.png";
 import facebook from "../../assets/img/logofacebook.png";
 import instagram from "../../assets/img/logoinstagram.png";
@@ -42,7 +42,7 @@ function Footer() {
             </li>
             <li>
               <img src={iconofax} alt="Fax" className="icono-info"></img>
-              <a href="#">@bancouniversitariove</a>
+              <a href="#">+58 212-555-5556</a>
             </li>
             <li>
               <img src={iconocorreo} alt="Correo" className="icono-info"></img>
@@ -53,17 +53,17 @@ function Footer() {
         <section className="section-redes">
           <h2>¡CONTÁCTANOS!</h2>
           <div>
-            <a href="#" aria-label="Facebook">
+            <a href="https://facebook.com/bancouniversatariove" target="_blank" aria-label="Facebook">
               <img src={facebook} alt="Facebook" className="iconos-redes"></img>
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://instagram.com/bancouniversatariove" target="_blank" aria-label="Instagram">
               <img
                 src={instagram}
                 alt="Instagram"
                 className="iconos-redes"
               ></img>
             </a>
-            <a href="#" aria-label="Twitter">
+            <a href="https://twitter.com/bancouniversatariove" target="_blank" aria-label="Twitter">
               <img src={twitter} alt="Twitter" className="iconos-redes"></img>
             </a>
           </div>
