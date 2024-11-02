@@ -1,19 +1,37 @@
+import { useForm } from "react-hook-form";
 import "./LoginForm.css";
 
 const LoginForm = () => {
+
+    const { register, handleSubmit, formState:{errors} } = useForm();
+
+    const onSubmit = (data) =>{
+        console.log("Formulario enviado correctamente:", data);
+    }
+
     return (
         <div className="form-box-login">
             <h2 className="tittle-login">Iniciar sesión</h2>
             <p className="sub-login">¡Bienvenido, ingrese sus credenciales!</p>
-            <form className="form-login">
+            <form className="form-login" onSubmit={handleSubmit(onSubmit)}>
                 <div className="input-group">
                     <label htmlFor="email">Correo Electrónico</label>
-                    <input type="email" id="email" placeholder="correo@example.com" required />
+                    <input type="email" id="email" placeholder="correo@example.com" {...register('email', {
+                        required: true, 
+                        pattern: {
+                            value: /^\S+@\S+$/i,
+                            message: "Email no válido"
+                        }
+                    })}/>
                 </div>
+                {errors.email && <p class="error-message">{errors.email.message}</p>}
                 <div className="input-group">
                     <label htmlFor="password">Contraseña</label>
-                    <input type="password" name="password" id="password" placeholder="********" required />
+                    <input type="password" name="password" id="password" placeholder="********"{...register('password', {
+                        required: "Este campo es requerido",
+                    })}/>
                 </div>
+                {errors.password && <p class="error-message">{errors.password.message}</p>}
                 <button className="button-login" type="submit">Ingresar</button>
                 <div className="register-link">
                     <p>¿No tienes cuenta? 
