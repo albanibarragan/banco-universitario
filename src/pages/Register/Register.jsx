@@ -8,8 +8,8 @@ function Register() {
   return (
     <div>
       <div className="contenedor-register-page">
-        <Navbar />
         <div className="register-left">
+          <Navbar />
           <img src={imgform} className="imgform"></img>
         </div>
         <div className="register-rigth">

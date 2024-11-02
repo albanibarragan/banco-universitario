@@ -25,6 +25,11 @@
     margin-top: 4rem;
 }
 
+.input-group > p{
+    color: red;
+    font-weight: 90;
+}
+
 .buttonsgroup-register{
     display: flex;
     align-items: center;
