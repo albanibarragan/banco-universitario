@@ -56,7 +56,7 @@ function Footer() {
             <a href="#" aria-label="Facebook">
               <img src={facebook} alt="Facebook" className="iconos-redes"></img>
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://instagram.com/banconiversitariove" aria-label="Instagram">
               <img
                 src={instagram}
                 alt="Instagram"
@@ -69,7 +69,7 @@ function Footer() {
           </div>
         </section>
       </div>
-      <p>Copyright © Banco Universitario {year}</p>
+      <p class="copyringht">Copyright © Banco Universitario {year}</p>
     </footer>
   );
 }

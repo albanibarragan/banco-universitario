@@ -3,9 +3,19 @@ import './Navbar.css';
 import logomenu from "../../assets/img/menu.png";
 import equis from "../../assets/img/cerrar.png";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 
 function Navbar() {
+
+    const navigate = useNavigate();
+  
+    const handleLoginClick = () => {
+      navigate("/login");
+    };
+    const handleRegisterClick = () => {
+      navigate("/register");
+    };
 
   const [menuMovil, SetMenuMovil] = useState(false);/*crear estado para funcion booleana RESPONSIVE*/
   const CambioMenuMovil = () => {
@@ -49,15 +59,11 @@ function Navbar() {
             </li>
           </ul>
           <div className="nav-buttons">
-            <button className="lan-btn1">
-              <a href="/login" >
+            <button onClick={handleLoginClick} className="lan-btn1">
                 Iniciar sesión
-              </a>
             </button>
-            <button className="lan-btn2">
-              <a href="/register" >
+            <button onClick={handleRegisterClick} className="lan-btn2">
                 Registrar
-              </a>
             </button>
           </div>
         </nav>

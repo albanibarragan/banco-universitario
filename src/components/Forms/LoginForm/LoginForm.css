@@ -27,13 +27,13 @@
 }
 
 .input-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
 }
 
 .input-group input:focus {
-    border-color: #085f63; /* Borde en focus */
+    border-color: #085f63;
     outline: none;
 }
 
@@ -73,4 +73,11 @@
 
 .button-login:hover {
     background-color: #064a4e;
+}
+
+.error-message {
+    color: red;       
+    font-size: 0.8em;  
+    margin-top: 0.4em;
+    font-weight: 700;
 }
