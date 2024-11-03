@@ -30,6 +30,27 @@
     font-weight: 90;
 }
 
+.input-error {
+  border: 2px solid red;
+}
+
+.input-success {
+  border: 2px solid green;
+}
+
+.input-wrapper{
+    position: relative;
+}
+
+.icon{
+    width: 28px;
+    position: absolute;
+    top: 50%; 
+    right: 10px; 
+    transform: translateY(-50%); 
+    cursor: pointer; 
+}
+
 .buttonsgroup-register{
     display: flex;
     align-items: center;

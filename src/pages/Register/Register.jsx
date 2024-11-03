@@ -1,7 +1,7 @@
 import "./Register.css";
 import Navbar from "../../components/Navbar/NavbarBancaOnline";
-import Footer from "../../components/Footer/Footer";
-import imgform from "../../assets/img/imgform.jpg";
+import FooterDashboard from "../../components/Footer/FooterDashboard/FooterDashboard";
+import imgform from "../../assets/img/register.jpeg";
 import RegisterForm from "../../components/Forms/RegisterForm/RegisterForm";
 
 function Register() {
@@ -14,9 +14,9 @@ function Register() {
         </div>
         <div className="register-rigth">
           <RegisterForm />
+          <FooterDashboard />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

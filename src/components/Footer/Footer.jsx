@@ -36,9 +36,7 @@ function Footer() {
                 alt="Teléfono"
                 className="icono-info"
               ></img>
-              <a href="tel:+582125555555">
-              +58 212-555-5555
-              </a>
+              <a href="tel:+582125555555">+58 212-555-5555</a>
             </li>
             <li>
               <img src={iconofax} alt="Fax" className="icono-info"></img>
@@ -46,30 +44,44 @@ function Footer() {
             </li>
             <li>
               <img src={iconocorreo} alt="Correo" className="icono-info"></img>
-              <a href="mailto:info@bancouniversitario.com.ve">info@bancouniversitario.com.ve</a>
+              <a href="mailto:info@bancouniversitario.com.ve">
+                info@bancouniversitario.com.ve
+              </a>
             </li>
           </ul>
         </section>
         <section className="section-redes">
           <h2>¡CONTÁCTANOS!</h2>
           <div>
-            <a href="#" aria-label="Facebook">
+            <a
+              href="https://facebook.com/bancouniversatariove"
+              target="_blank"
+              aria-label="Facebook"
+            >
               <img src={facebook} alt="Facebook" className="iconos-redes"></img>
             </a>
-            <a href="https://instagram.com/banconiversitariove" aria-label="Instagram">
+            <a
+              href="https://instagram.com/bancouniversatariove"
+              target="_blank"
+              aria-label="Instagram"
+            >
               <img
                 src={instagram}
                 alt="Instagram"
                 className="iconos-redes"
               ></img>
             </a>
-            <a href="#" aria-label="Twitter">
+            <a
+              href="https://twitter.com/bancouniversatariove"
+              target="_blank"
+              aria-label="Twitter"
+            >
               <img src={twitter} alt="Twitter" className="iconos-redes"></img>
             </a>
           </div>
         </section>
       </div>
-      <p class="copyringht">Copyright © Banco Universitario {year}</p>
+      <p>Copyright © Banco Universitario {year}</p>
     </footer>
   );
 }

@@ -1,14 +1,33 @@
 import "./RegisterForm.css";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import visible from "../../../assets/img/visible.png";
+import oculto from "../../../assets/img/oculto.png";
+import swal from "sweetalert";
 
 const RegisterForm =() =>{
 
-  const {register, handleSubmit, formState:{errors} } = useForm();
+  const {register, handleSubmit, trigger, watch, formState:{errors} } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
   }
 
+  const [showPwd, setShowPwd] = useState(false);
+
+  const mostrarAlerta1=()=>{swal({
+    text:"¡Tus datos han sido registrados exitosamente!",
+    icon: "success",
+    button: "Aceptar"
+  });}
+
+  const mostrarAlerta2 = () => {
+    swal({
+      text: "¿Estas seguro que desea cancelar el proceso?",
+      icon: "info",
+      button: "Aceptar",
+    });
+  };
 
     return (
       <div className="form-box-register">
@@ -20,14 +39,19 @@ const RegisterForm =() =>{
               type="text"
               {...register("nombre", {
                 required: true,
-                validate: (value) => !/\d/.test(value),
+                pattern: {
+                  value: /^[^\d]*$/,
+                  message: "No puedes usar números en este campo",
+                },
               })}
+              onChange={() => trigger("nombre")}
+              className={errors.nombre ? "input-error" : "input-success"}
             />
             {errors.nombre?.type === "required" && (
               <p>El nombre es requerido</p>
             )}
-            {errors.nombre?.type === "validate" && (
-              <p>No puedes usar numeros en este campo</p>
+            {errors.nombre?.type === "pattern" && (
+              <p>{errors.nombre.message}</p>
             )}
           </div>
           <div className="input-group">
@@ -36,37 +60,63 @@ const RegisterForm =() =>{
               type="text"
               {...register("apellido", {
                 required: true,
-                validate: (value) => !/\d/.test(value),
+                pattern: {
+                  value: /^[^\d]*$/,
+                  message: "No puedes usar números en este campo",
+                },
               })}
+              onChange={() => trigger("apellido")}
+              className={errors.apellido ? "input-error" : "input-success"}
             />
-            {errors.nombre?.type === "required" && (
+            {errors.apellidp?.type === "required" && (
               <p>El apellido es requerido</p>
             )}
-            {errors.apellido?.type === "validate" && (
-              <p>No puedes usar numeros en este campo</p>
+            {errors.apellido?.type === "pattern" && (
+              <p>{errors.apellido.message}</p>
             )}
           </div>
           <div className="input-group">
             <label>Cedula</label>
-            <input type="text" {...register("cedula", { required: true })} />
+            <input
+              type="text"
+              {...register("cedula", { required: true })}
+              onChange={() => trigger("cedula")}
+              className={errors.cedula ? "input-error" : "input-success"}
+            />
             {errors.cedula?.type === "required" && (
               <p>La cedula es requerida</p>
             )}
           </div>
           <div className="input-group">
             <label>Fecha nacimiento</label>
-            <input type="date" {...register("fecha nacimiento")} />
+            <input
+              type="date"
+              {...register("fechanacimiento")}
+              className={
+                errors.fechanacimiento ? "input-error" : "input-success"
+              }
+            />
           </div>
           <div className="input-group">
             <label>Telefono</label>
             <input
               type="number"
               {...register("telefono", {
-                validate: (value) => /^\d+$/.test(value),
+                required: true,
+                pattern: {
+                  required: true,
+                  value: /^\d+$/,
+                  message: "No puedes utilizar letras",
+                },
               })}
+              onChange={() => trigger("telefono")}
+              className={errors.telefono ? "input-error" : "input-success"}
             />
-            {errors.telefono?.type === "validate" && (
-              <p>No puedes utilizar letras</p>
+            {errors.telefono?.type === "required" && (
+              <p>El telefono es requerido</p>
+            )}
+            {errors.telefono?.type === "pattern" && (
+              <p>{errors.telefono.message}</p>
             )}
           </div>
           <div className="input-group">
@@ -81,42 +131,88 @@ const RegisterForm =() =>{
                   message: "Email no válido",
                 },
               })}
+              onChange={() => trigger("email")}
+              className={errors.email ? "input-error" : "input-success"}
             />
+            {errors.email?.type === "required" && <p>El email es requerido</p>}
+            {errors.email?.type === "pattern" && <p>{errors.email.message}</p>}
           </div>
           <div className="input-group">
             <label>Contraseña</label>
-            <input
-              type="password"
-              id="password"
-              placeholder=""
-              {...register("contraseña", {
-                required: true,
-                validate: (value) =>
-                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/.test(value),
-              })}
-            />
+            <div className="input-wrapper">
+              <input
+                type={showPwd ? "text" : "password"}
+                id="password"
+                placeholder="password"
+                {...register("contraseña", {
+                  required: true,
+                  validate: (value) =>
+                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/.test(value),
+                })}
+                onChange={() => trigger("contraseña")}
+                className={errors.contraseña ? "input-error" : "input-success"}
+              />
+              <div onClick={() => setShowPwd(!showPwd)}>
+                {showPwd ? (
+                  <img src={visible} className="icon" />
+                ) : (
+                  <img src={oculto} className="icon" />
+                )}
+              </div>
+            </div>
             {errors.contraseña?.type === "required" && (
               <p>Defina una contraseña, es requerido</p>
             )}
-            {errors.contraseña?.type === "validate" &&
-              ((
-                <p>
-                  La contraseña debe contener al menos un caracter especial, debe contener mayusculas, minusculas y numeros
-                </p>
-              ))}
+            {errors.contraseña?.type === "validate" && (
+              <p>
+                La contraseña debe contener al menos un caracter especial, debe
+                contener mayusculas, minusculas y numeros
+              </p>
+            )}
           </div>
           <div className="input-group">
             <label>Confirmar contraseña</label>
-            <input
-              type="password"
-              id="password"
-              placeholder=""
-              {...register("confirmar contraseña", { required: true })}
-            />
+            <div className="input-wrapper">
+              <input
+                type={showPwd ? "text" : "password"}
+                id="password"
+                placeholder="password"
+                {...register("confirmarcontraseña", {
+                  required: true,
+                  validate: (value) =>
+                    value === watch("contraseña") ||
+                    "Las contraseñas no coinciden",
+                })}
+                onChange={() => trigger("confirmar ")}
+                className={
+                  errors.confirmarcontraseña ? "input-error" : "input-success"
+                }
+              />
+              <div onClick={() => setShowPwd(!showPwd)}>
+                {showPwd ? (
+                  <img src={visible} className="icon" />
+                ) : (
+                  <img src={oculto} className="icon" />
+                )}
+              </div>
+            </div>
+            {errors.confirmarcontraseña?.type === "required" && (
+              <p>Es requerida</p>
+            )}
+            {errors.confirmarcontraseña?.type === "validate" && (
+              <p>{errors.confirmarcontraseña.message}</p>
+            )}
           </div>
           <div className="buttonsgroup-register">
-            <button className="button-register">Registrar</button>
-            <button className="button-cancel">Cancelar</button>
+            <button
+              onClick={() => mostrarAlerta1()}
+              className="button-register"
+            >
+              Registrar
+            </button>
+            <button onClick={() => mostrarAlerta2()} className="button-cancel">
+              Cancelar
+            </button>
           </div>
         </form>
       </div>
