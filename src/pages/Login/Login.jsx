@@ -5,14 +5,17 @@ import "./Login.css";
 
 const Login = () => {
   return (
+  <div>
+     <Navbar />
     <div className="contenedor-login-page">
       <div className="login-left">
-        <Navbar />
+       
       </div>
       <div className="login-right">
         <LoginForm />
         <FooterDashboard />
       </div>
+    </div>
     </div>
   );
 };

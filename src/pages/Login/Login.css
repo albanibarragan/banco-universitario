@@ -5,20 +5,42 @@
 }
 
 .login-left{
-    background: rgb(8,95,99);
-    background: linear-gradient(16deg, rgba(8,95,99,1) 18%, rgba(73,190,183,1) 99%);
+    background-color: #49beb7;
     flex: 1;
+    background-image: url(../../assets/img/register.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .login-right{
     flex: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
     flex-direction: column;
-    
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
 
-footer {
-    width: 100%;
+.icon-nav1, .icon-nav2{
+    display: none;
+}
+
+@media (max-width: 853px) {
+    .contenedor-login-page{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    
+    
+   .login-left{
+    display: none;
+   }
+}
+
+@media (max-width: 380px) {
+    .contenedor-login-page{
+        width: auto;
+    }
+
 }

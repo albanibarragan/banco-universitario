@@ -6,7 +6,9 @@
     background-color: #fff;
     border: 2px solid #085f63;
     border-top: none;
-    box-sizing: border-box;/*para que el border no se muestre mas que la linea divisoria*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -18,7 +20,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*margin-right: 1%;*/
 }
 
 .inicio > a{

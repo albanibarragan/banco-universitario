@@ -5,6 +5,7 @@
     height: auto;
     padding: 2rem;
     color: #010101;
+    margin: 0;
 }
 
 .tittle-login{
@@ -35,6 +36,11 @@
 .input-group input:focus {
     border-color: #085f63;
     outline: none;
+}
+
+.error-message {
+    color: red; 
+    font-size: 14px;
 }
 
 .input-group label{
@@ -75,9 +81,11 @@
     background-color: #064a4e;
 }
 
-.error-message {
-    color: red;       
-    font-size: 0.8em;  
-    margin-top: 0.4em;
-    font-weight: 700;
+@media (max-width: 853px) {
+    .form-box-login{
+        width: auto;
+        height: auto;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
 }

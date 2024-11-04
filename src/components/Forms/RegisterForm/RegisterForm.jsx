@@ -176,7 +176,7 @@ const RegisterForm =() =>{
               <p>
                 La contraseña debe contener al menos un caracter especial, debe
                 contener mayusculas, minusculas y numeros
-              </p>
+              </p >
             )}
           </div>
           <div className="input-group">

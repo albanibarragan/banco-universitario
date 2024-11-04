@@ -4,6 +4,9 @@
     padding: 5px;
     text-align: center;
     margin-left: 10px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
 }
 
 .footer-reducido h1 {
@@ -47,10 +50,12 @@
 @media (max-width: 380px) {
     .footer-reducido h1 {
         font-size: 1.2rem;
+        
     }
-    
+   
     .contacto-reducido {
         flex-direction: column;
         gap: 8px;
+        margin: 2rem;
     }
 }

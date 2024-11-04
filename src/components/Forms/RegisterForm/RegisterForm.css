@@ -34,10 +34,6 @@
   border: 2px solid red;
 }
 
-.input-success {
-  border: 2px solid green;
-}
-
 .input-wrapper{
     position: relative;
 }
@@ -68,4 +64,26 @@
     font-weight: 600;
     transition: background-color 0.3s ease;
     margin: 0.9rem;
+}
+
+@media (max-width: 853px) {
+    .form-box-register{
+        width: auto;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .tittle-register {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 380px) {
+       .tittle-register {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+    }
 }
