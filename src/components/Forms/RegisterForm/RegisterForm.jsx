@@ -7,27 +7,36 @@ import swal from "sweetalert";
 
 const RegisterForm =() =>{
 
+  //funciones para hacer diferentes tipos de validacion
+
   const {register, handleSubmit, trigger, watch, formState:{errors} } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
+    mostrarAlerta1();
   }
 
   const [showPwd, setShowPwd] = useState(false);
 
   const mostrarAlerta1=()=>{swal({
-    text:"¡Tus datos han sido registrados exitosamente!",
+    text: "¡Tus datos han sido registrados exitosamente!",
     icon: "success",
-    button: "Aceptar"
-  });}
+    button: "Aceptar",
+  }).then((respuesta) => {
+    if (respuesta) {
+      window.location.href = "/login";
+    }
+  });;}
 
   const mostrarAlerta2 = () => {
     swal({
       text: "¿Estas seguro que desea cancelar el proceso?",
       icon: "info",
-      button: "Aceptar",
-    });
+      buttons: ["No", "Si"]
+    }).then(respuesta=>{if(respuesta){window.location.href = "/";}});
   };
+
+  //formulario de registro
 
     return (
       <div className="form-box-register">
@@ -205,7 +214,7 @@ const RegisterForm =() =>{
           </div>
           <div className="buttonsgroup-register">
             <button
-              onClick={() => mostrarAlerta1()}
+              type="submit"
               className="button-register"
             >
               Registrar
