@@ -1,6 +1,7 @@
 import logo from "../../assets/img/logo-no-background.png";
 import "./NavbarBancaOnline.css";
-import inicio from "../../assets/img/casa.png";
+import user from "../../assets/img/user.png";
+import salir from "../../assets/img/cerrar-sesion.png";
 
 function Navbar() {
   return (
@@ -11,9 +12,11 @@ function Navbar() {
       <nav className="navbar-banca">
         <div className="inicio">
           <a href="/">
-            <img className="icon-inicio" src={inicio} alt="icon-inicio"></img>
+            <img className="icon-nav1" src={user} alt="user"></img>
           </a>
-          <a href="/">Inicio</a>
+          <a href="/">
+            <img className="icon-nav2" src={salir} alt="salir"></img>
+          </a>
         </div>
       </nav>
     </header>

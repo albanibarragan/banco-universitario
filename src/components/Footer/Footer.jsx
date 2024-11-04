@@ -36,9 +36,7 @@ function Footer() {
                 alt="Teléfono"
                 className="icono-info"
               ></img>
-              <a href="tel:+582125555555">
-              +58 212-555-5555
-              </a>
+              <a href="tel:+582125555555">+58 212-555-5555</a>
             </li>
             <li>
               <img src={iconofax} alt="Fax" className="icono-info"></img>
@@ -46,7 +44,9 @@ function Footer() {
             </li>
             <li>
               <img src={iconocorreo} alt="Correo" className="icono-info"></img>
-              <a href="mailto:info@bancouniversitario.com.ve">info@bancouniversitario.com.ve</a>
+              <a href="mailto:info@bancouniversitario.com.ve">
+                info@bancouniversitario.com.ve
+              </a>
             </li>
           </ul>
         </section>
@@ -69,7 +69,7 @@ function Footer() {
           </div>
         </section>
       </div>
-      <p class="copyringht">Copyright © Banco Universitario {year}</p>
+      <p>Copyright © Banco Universitario {year}</p>
     </footer>
   );
 }
