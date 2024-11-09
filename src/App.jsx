@@ -1,34 +1,31 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Principal from "./pages/Landing page/Principal";
-import Service1 from "./pages/Servicios/Service1";
-import Service2 from "./pages/Servicios/Service2";
-import Service3 from "./pages/Servicios/Service3";
-import Service4 from "./pages/Servicios/Service4";
-import Service5 from "./pages/Servicios/Service5";
-import Mision from "./pages/Quienes-somos/Mision";
-import Vision from "./pages/Quienes-somos/Vision";
-import Objetivos from "./pages/Quienes-somos/Objetivos";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import HomePage from "./pages/HomePage"
+import ContainerBank from "./components/ContainerBank"
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Principal />}></Route>
-        <Route path="services/service1" element={<Service1 />}></Route>
-        <Route path="services/service2" element={<Service2 />}></Route>
-        <Route path="services/service3" element={<Service3 />}></Route>
-        <Route path="services/service4" element={<Service4 />}></Route>
-        <Route path="services/service5" element={<Service5 />}></Route>
-        <Route path="Quienes-somos/mision" element={<Mision />}></Route>
-        <Route path="Quienes-somos/vision" element={<Vision />}></Route>
-        <Route path="Quienes-somos/objetivos" element={<Objetivos />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-      </Routes>
-    </BrowserRouter>
-  );
-}
+    {/*Componente principal encargado del enrutamiento de la aplicación. */}
+    return (
+     <Router>
+        <nav>
+            <li><Link to="/">Principal</Link></li>
+            <li><Link to="/Home">Container</Link></li>
+        </nav>
+         {/* Contenedor para definir las diferentes rutas de la aplicación.*/}
+     <Routes>
+     <Route path="/" element={<Principal />} />
+       {/* Rutas de la banca en línea (con Header y Footer fijos) */}
+     <Route element={<ContainerBank />}>
+          <Route path="/Home" element={<HomePage />} />       {/* Principal de la banca en linea */}
+         
+         </Route>
 
-export default App;
+
+    </Routes>
+     </Router>
+    );
+  }
+  
+  export default App;

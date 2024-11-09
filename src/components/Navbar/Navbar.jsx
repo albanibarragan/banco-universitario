@@ -22,7 +22,7 @@ function Navbar() {
     SetMenuMovil(!menuMovil);
   }; 
   return (
-    <header class="landing-header">
+    <header className="landing-header">
     <a className="header-logo" href="/">
       <img className="logo-nav" src={logo} alt="logo del baco universitario" />
     </a>
