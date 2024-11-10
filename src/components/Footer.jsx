@@ -1,10 +1,10 @@
-import iconemail from "../../assets/img/correo.png";
-import icondirection from "../../assets/img/direccion.png";
-import iconFax from "../../assets/img/fax.png";
-import facebook from "../../assets/img/logofacebook.png";
-import instagram from "../../assets/img/logoinstagram.png";
-import twitter from "../../assets/img/logotwitter.png";
-import iconPhone from "../../assets/img/telefono.png";
+import iconemail from "../assets/img/correo.png";
+import icondirection from "../assets/img/direccion.png";
+import iconFax from "../assets/img/fax.png";
+import facebook from "../assets/img/logofacebook.png";
+import instagram from "../assets/img/logoinstagram.png";
+import twitter from "../assets/img/logotwitter.png";
+import iconPhone from "../assets/img/telefono.png";
 import "./styles/Footer.css";
 
 let now = new Date();
