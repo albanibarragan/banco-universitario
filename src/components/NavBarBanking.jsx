@@ -23,18 +23,20 @@ const NavBarBanking = () => {
   return (
     <div className="nav-banking">
         <header className="header-banking">
+            <Link to="/">
             <img className="navbar-logo" src={logo} alt="logo del baco universitario" />
+            </Link>
             <div className="navbar-date">
             <span>{currentDate}</span>
             <button className="logout-button" onClick={handleLogoutClick}>Salir</button>
             </div>
         </header>
         <nav className="navbar-links">
-            <Link to ="">Posición consolidada</Link>
-            <Link to ="">Movimientos</Link>
-            <Link to ="">Realizar transferencia</Link>
-            <Link to ="">Contactos</Link>
-            <Link to ="">Nuevo contacto</Link>
+            <Link to ="Home/Posicion">Posición consolidada</Link>
+            <Link to ="Home/Movimientos">Movimientos</Link>
+            <Link to ="Home/Transferencia">Realizar transferencia</Link>
+            <Link to ="Home/Contactos">Contactos</Link>
+            <Link to ="Home/Agregar-Contacto">Nuevo contacto</Link>
         </nav>
     </div>
     
