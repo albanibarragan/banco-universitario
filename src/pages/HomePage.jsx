@@ -1,17 +1,33 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import imgLady from "../assets/img/lady.png";
+import AccountBox from '../components/AccountBox';
+import ButtonsBox from '../components/ButtonsBox';
 import './HomePage.css';
 
 function HomePage() {
-  const { id } = useParams(); 
+
+  let usuario = "Albani";
+
   return (
     <div className="home-page">
-      <h1>¡Buenas noches estimada Albani!</h1>
-      <p>Bienvenida a BNCNET</p>
-      <div className="app-invitation">
-        <h2>¡Actívate y descarga ya la App BNC!</h2>
-        <p>Te invitamos a descargar y hacer uso de la App BNC, el futuro de nuestra banca en línea ha llegado, brindándote la rapidez y seguridad que mereces. ¡Gracias por preferirnos!</p>
+      <header className='header-home'>
+        Bienvenidos a la banca en Linea.
+      </header>
+     <main className='main-home'>
+     <section className='welcome-section'>
+      <div className="welcome-text">
+        <h1>¡Buenas noches, {usuario}!</h1>
+        <div className="app-invitation">
+        <h2>¡Ahora puedes usar la Banca desde tu Telefono!</h2>
+        <p>Te invitamos a hacer uso en la web, el futuro de nuestra banca en línea ha llegado, brindándote la rapidez y seguridad que mereces. ¡Gracias por preferirnos!</p>
       </div>
+      </div>
+      <div className="welcome-img">
+        <img className="welcome-img-lady" src={imgLady} alt="Imagen de una mujer" />
+      </div>
+     </section>
+      <AccountBox />
+      <ButtonsBox />
+     </main>
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.header-home{
+		background-color: #085f63;
+		padding: 1rem 1rem;
+		font-size: 20px;
+		color: #fff;
+		margin: 0;
+}
+
+.welcome-section {
+		display: flex;
+		flex-direction: row;
+	}
+
+.welcome-text{
+			 width: 45%;
+			 padding: 1.2em;
+}
+
+.welcome-section h1 {
+		font-size: 1.8rem;
+		color: #072146;
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	.app-invitation{
+		background-color: #072146;
+		color: #fff;
+		padding: 15px;
+		border-radius: 8px;
+		margin: 0;
+		margin-top: 7rem;
+		text-align: center;
+	}
+
+	.app-invitation h2 {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+	}
+
+	.app-invitation p {
+		font-size: 0.9rem;
+	}
+
+.welcome-img{
+		width: 55%;
+		display: flex;
+		justify-content: center;
+		box-sizing: border-box;
+}
+
+.welcome-img-lady{
+		width: 55%;
+}
+

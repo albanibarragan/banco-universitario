@@ -1,36 +1,38 @@
-.footer-reducido {
+.footer-banking{
     background-color: #085f63;
     color: #FFF;
-    padding: 5px;
+    padding: 0.5rem;
     text-align: center;
-    margin-left: 10px;
     width: 100%;
     margin: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: space-around;
 }
 
-.footer-reducido h1 {
+.footer-banking h1 {
     margin: 5px 0;
     font-size: 1rem;
 }
 
-.footer-reducido p {
+.footer-banking p {
     margin: 5px 0;
     font-size: 1rem;
 }
 
-.contacto-reducido {
+.banking-contact {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 10px 0;
+    flex-direction: column;
+    margin: 1rem 0;
+    
 }
 
-.contacto-reducido li {
+.banking-contact li {
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .icono-reducido {
@@ -38,22 +40,23 @@
     margin-right: 5px;
 }
 
-.contacto-reducido a {
+.banking-contact a {
     color: #fff;
     text-decoration: none;
+    font-size: 1rem;
 }
 
-.contacto-reducido a:hover {
+.banking-contact a:hover {
     color: #ccc;
 }
 
 @media (max-width: 380px) {
-    .footer-reducido h1 {
+    .footer-banking h1 {
         font-size: 1.2rem;
         
     }
    
-    .contacto-reducido {
+    .banking-contact {
         flex-direction: column;
         gap: 8px;
         margin: 2rem;

@@ -1,9 +1,9 @@
-import logo from '../../assets/img/logo-no-background.png';
-import './Navbar.css';
-import logomenu from "../../assets/img/menu.png";
-import equis from "../../assets/img/cerrar.png";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import x from "../assets/img/cerrar.png";
+import logo from '../assets/img/logo-no-background.png';
+import logomenu from "../assets/img/menu.png";
+import './styles/Navbar.css';
 
 
 function Navbar() {
@@ -17,8 +17,8 @@ function Navbar() {
       navigate("/register");
     };
 
-  const [menuMovil, SetMenuMovil] = useState(false);/*crear estado para funcion booleana RESPONSIVE*/
-  const CambioMenuMovil = () => {
+  const [menuMovil, SetMenuMovil] = useState(false);
+  const ToggleMobileMenu = () => {
     SetMenuMovil(!menuMovil);
   }; 
   return (
@@ -26,10 +26,10 @@ function Navbar() {
     <a className="header-logo" href="/">
       <img className="logo-nav" src={logo} alt="logo del baco universitario" />
     </a>
-    <a onClick={() => CambioMenuMovil()} className="IconMenuMovil">
+    <a onClick={() => ToggleMobileMenu()} className="IconMenuMovil">
         {menuMovil ? (
           <img
-            src={equis}
+            src={x}
             className="icons-nav"
           /> /*si es true muestra icono cerrar en el responsive*/
         ) : (

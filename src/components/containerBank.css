@@ -1,6 +1,0 @@
-.route-container {
-    width: 100%;
-    min-height: 100vh; /* Asegúrate de que ocupe toda la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-  }

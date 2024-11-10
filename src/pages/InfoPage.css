@@ -1,0 +1,45 @@
+.container-infopage{
+    padding: 20px;
+    margin: auto;
+}
+
+.info-title{
+    text-align: center;
+    font-weight: bold;
+    color: #085f63;
+}
+
+.infopage-img{
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+  .info-title h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .infopage-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin:0 8rem;
+  }
+
+  .infopage-description ul {
+    padding-left: 0;  
+    list-style-type: disc; 
+    
+  }
+  
+  li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .error-page{
+    text-align: center;
+  }
