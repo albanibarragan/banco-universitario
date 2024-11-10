@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;  
     border: 1px solid #ccc;
-    padding: 0.5rem 1rem;
+    padding: 0rem rem;
 }
 
 .header-logo{
@@ -167,3 +167,4 @@ ul {
         height: auto;
     }
 }
+

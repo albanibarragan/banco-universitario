@@ -1,11 +1,11 @@
-.footer-principal{
+.footer-landing{
     background-color: #085f63;
     color: #FFF;
-    padding: 20px 10px;
+    padding: 0.4rem;
 }
 
-.footer-principal h1{
-    margin: 10px 0;
+.footer-landing h1{
+    margin: 2px 0;
 }
 
 .content{
@@ -27,63 +27,62 @@
 .info-list li {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 5px 0;
     color: #fff;
 }
 .info-list li a{
-    
     color: #fff;
 }
 
-.icono-info {
+.icon-info {
     width: 28px;
     margin-right: 10px;
 }
 
-.section-redes {
+.section-socialMedia {
     width: 35%;
 }
-.section-redes {
+.section-socialMedia {
     width: 20%;
     text-align: center;
 }
 
-.section-redes h2 {
+.section-socialMedia h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    margin: 0;
 }
 
-.section-redes a {
+.section-socialMedia a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s;
 }
 
-.section-redes a:hover {
+.section-socialMedia a:hover {
     color: #ccc;
 }
 
-.iconos-redes {
+.icon-media {
     width: 50px;
     margin: 10px;
     transition: transform 0.3s ease;
 }
 
-.iconos-redes:hover {
+.icon-media:hover {
     transform: scale(1.1);
 }
 
 .copyringht{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
-
 
 /*responsive */
 
 @media (max-width: 853px) {
     .section-info,
-    .section-redes {
+    .section-socialMedia {
         width: 100%;
     }
 
@@ -113,7 +112,7 @@
         align-items: center;
     }
 
-    .section-redes a {
+    .section-socialMedia a {
         font-size: 14px;
     }
 }

@@ -1,15 +1,11 @@
-import Navbar from "../../../components/Navbar/Navbar";
-import styles from "./Quienes-somos.module.css";
 import imagen from "../../../assets/img/objetivo.jpg";
+import styles from "./Quienes-somos.module.css";
 
 function Objetivos() {
   return (
     <div>
-      <Navbar />
       <div>
-        <div className={styles.title}>
-          <h1>Objetivos</h1>
-        </div>
+        
         <img src={imagen} className={styles.img}></img>
         <div className={styles.parrafoobjetivos}>
         <ul>

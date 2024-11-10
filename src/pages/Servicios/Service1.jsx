@@ -5,13 +5,11 @@ import Footer from "../../components/Footer/Footer";
 
 function Service1() {
   return (
-    <div>
-      <Navbar />
       <div className={styles.container}>
         <div className={styles.title}>
           <h1>Transferencias entre estudiantes sin comision</h1>
         </div>
-        <img src={imagen} className={styles.img}></img>
+        <img src={imagen} className={styles.img} alt="Servicio 1" />
         <p className={styles.parrafo}>
           El Banco Universitario ofrece un servicio de transferencias entre
           estudiantes sin costo alguno, con el objetivo de facilitar el
@@ -20,8 +18,6 @@ function Service1() {
           eficiente, lo que permite a los estudiantes contar con una alternativa
           más para realizar sus pagos y transacciones.
         </p>
-      </div>
-      <Footer />
     </div>
   );
 }

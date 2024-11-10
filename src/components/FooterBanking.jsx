@@ -1,17 +1,21 @@
-import "./FooterDashboard.css";
-import iconocorreo from "../../../assets/img/correo.png";
-import iconotelefono  from "../../../assets/img/telefono.png";
+import iconocorreo from "../assets/img/correo.png";
+import iconotelefono from "../assets/img/telefono.png";
+import "./styles/FooterBanking.css";
 
 
 let now = new Date();
 let year = now.getFullYear();
 
-function FooterDashboard() {
+function FooterBanking() {
   return (
-    <footer className="footer-reducido">
+    <footer className="footer-banking">
+      <div className="banking-left">
       <h1>BANCO UNIVERSITARIO</h1>
       <p>Si tienes más dudas, contáctanos por los siguientes medios:</p>
-      <ul className="contacto-reducido">
+      <p>© {year} Banco Universitario</p>
+      </div>
+      <div className="banking-right">
+      <ul className="banking-contact">
         <li>
           <img src={iconocorreo} alt="Correo" className="icono-reducido" />
           <a href="mailto:info@bancouniversitario.com.ve">
@@ -23,9 +27,10 @@ function FooterDashboard() {
           <a href="tel:+582125555555">+58 212-555-5555</a>
         </li>
       </ul>
-      <p>© {year} Banco Universitario</p>
+      </div>
+      
     </footer>
   );
 }
 
-export default FooterDashboard;
+export default FooterBanking;

@@ -1,0 +1,61 @@
+.navbar-banking {
+    align-items: center;
+    background-color: #072146;
+    color: #fff;
+  }
+
+  .header-banking{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+  }
+  
+  .navbar-logo {
+    height: 50px;
+  }
+
+  .navbar-links{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.809);
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0.1rem 5rem;
+    border: 1px solid #ccc;
+  }
+
+.navbar-links a {
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+}
+  
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar-date {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-date span {
+    margin-right: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .logout-button {
+    background-color: #f45d48;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .logout-button:hover {
+    background-color: #d1463b;
+  }
+  

@@ -29,7 +29,7 @@ const LoginForm = () => {
                         }
                     })}/>
                 </div>
-                {errors.email && <p class="error-message">{errors.email.message}</p>}
+                {errors.email && <p className="error-message">{errors.email.message}</p>}
             <div className="input-group">
             <label>Contraseña</label>
             <div className="input-wrapper">
