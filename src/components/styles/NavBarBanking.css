@@ -59,3 +59,22 @@
     background-color: #d1463b;
   }
   
+
+.button-user{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: #b0e908;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 3em;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+  outline: 0.125em solid transparent;
+  outline-offset: 0;
+  margin: 0 .4rem;
+  padding: 0.5rem;
+}
