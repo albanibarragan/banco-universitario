@@ -36,18 +36,29 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-
-
 # Correcciones y pendientes en el proyecto
 
-
-- [ ] Cambiar los nombres de las clases y funciones a Ingles
-- [ ] Page: Posicion consolidada
-- [ ] Page Movimientos
-- [ ] Page: Realizar una transaccion
+### Jennifer
+- [ ] Contenedor para Login y registrar (Jennifer)
 - [ ] Page: lista de contactos 
 - [ ] Page: Agregar un contacto
+- [ ] filtrar contacto por alias
+
+### Joe
+- [ ] Page de servicios (Parecida a la de objetivos, mision y vision) (Joe)
+- [ ] Page: Posicion consolidada
 - [ ] Page: Configurar perfil
 - [ ] Page: Perfil usuario
-- [ ] Contenedor para Login y registrar
-- [ ] Page de servicios (Parecida a la de objetivos, mision y vision)
+
+### Albani
+- [X] Home page
+- [ ] Page Movimientos
+- [ ] Modificar tabla para demostrar cual es un ingreso o no.
+- [ ] Page: Realizar una Transferencia
+- [ ] Opcion de guardar contacto con alias y la descripcion
+
+### General
+- [ ] Cambiar los nombres de las clases y funciones a Ingles
+- [ ] Responsive 
+- [ ] Mostrar informacion completa del contacto
+- [ ] Modificar contacto 

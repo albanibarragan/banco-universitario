@@ -19,10 +19,7 @@ function App() {
        {/* Rutas de la banca en línea (con Header y Footer fijos) */}
      <Route element={<HomeContent />}>
           <Route path="/Home" element={<HomePage />} />       {/* Principal de la banca en linea */}
-         
-       </Route>
-
-
+    </Route>
     </Routes>
      </Router>
     );

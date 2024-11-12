@@ -1,13 +1,11 @@
-import Navbar from "../../components/Navbar/Navbar";
-import styles from "./Services.module.css";
 import imagen from "../../assets/img/1service1.jpg";
-import Footer from "../../components/Footer/Footer";
+import styles from "./Services.module.css";
 
 function Service1() {
   return (
       <div className={styles.container}>
         <div className={styles.title}>
-          <h1>Transferencias entre estudiantes sin comision</h1>
+          <h1></h1>
         </div>
         <img src={imagen} className={styles.img} alt="Servicio 1" />
         <p className={styles.parrafo}>

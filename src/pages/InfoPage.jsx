@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
+import servicio1Img from "../assets/img/1service1.jpg";
 import missionimg from "../assets/img/Mision.jpeg";
-import visionImg from "../assets/img/Vision.jpeg";
 import objectivesImg from "../assets/img/objetivo.jpg";
+import visionImg from "../assets/img/Vision.jpeg";
 import "./InfoPage.css";
 
 // Hago un array con la informacion que se muestra en la pagina web de mision, vision y objetivos
@@ -26,7 +27,12 @@ const infoData = {
         <li>Promover la educación financiera a través de talleres y cursos.</li>
       </ul>
     )
-  }
+  },
+  Servicio1: {
+    title: "Transferencias entre estudiantes sin comision",
+    img: servicio1Img,
+    content: "El Banco Universitario ofrece un servicio de transferencias entre estudiantes sin costo alguno,"
+  },
 };
 
 function InfoPage() {

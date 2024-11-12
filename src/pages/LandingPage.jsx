@@ -13,7 +13,7 @@ import "./LandingPage.css";
 function LandingPage() {
 
     const services = [
-        { icon: icon1, link: "services/service1", text: "Transferencias entre estudiantes sin comisión" },
+        { icon: icon1, link: "/Service1", text: "Transferencias entre estudiantes sin comisión" },
         { icon: icon2, link: "services/service2", text: "Depósitos en efectivo" },
         { icon: icon3, link: "services/service3", text: "Retiros en efectivo" },
         { icon: icon4, link: "services/service4", text: "Pago de matrícula estudiantil" },
@@ -54,7 +54,7 @@ function LandingPage() {
                 estudiantes universitarios, brindando soluciones financieras
                 ágiles y eficientes.
               </p>
-              <NavLink className="about-button" to="Mission">Ver mas...</NavLink>
+              <NavLink className="about-button" to="/Mission">Ver mas...</NavLink>
             </div>
             <div className="vision">
               <h2>Visión</h2>
@@ -66,7 +66,7 @@ function LandingPage() {
               <NavLink className="about-button" to="/Vision">Ver mas...</NavLink>
             </div>
             <div className="objectives">
-              <h3>Objetivos</h3>
+              <h2>Objetivos</h2>
               <p>
                 Brindar a los estudiantes universitarios un servicio eficiente y
                 de calidad en la gestión de sus recursos financieros, a través
