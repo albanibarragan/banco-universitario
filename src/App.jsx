@@ -4,6 +4,7 @@ import LandingContent from './components/LandingContent';
 import HomePage from "./pages/HomePage";
 import InfoPage from './pages/InfoPage';
 import LandingPage from './pages/LandingPage';
+import TransactionsPage from './pages/TransactionsPage';
 
 function App() {
     {/*Componente principal encargado del enrutamiento de la aplicación. */}
@@ -19,6 +20,7 @@ function App() {
        {/* Rutas de la banca en línea (con Header y Footer fijos) */}
      <Route element={<HomeContent />}>
           <Route path="/Home" element={<HomePage />} />       {/* Principal de la banca en linea */}
+          <Route path="/Home/Movimientos" element={<TransactionsPage />} /> 
     </Route>
     </Routes>
      </Router>
