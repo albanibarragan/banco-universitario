@@ -1,17 +1,15 @@
-import Navbar from "../../components/Navbar/Navbar";
 import styles from "./Services.module.css";
 import imagen from "../../assets/img/3service3.jpeg";
-import Footer from "../../components/Footer/Footer";
+
 
 function Service3() {
   return (
-    <div>
-      <Navbar />
-      <div className={styles.container}>
+    
+        <div className={styles.container}>
         <div className={styles.title}>
           <h1>Retiros en efectivo</h1>
         </div>
-        <img src={imagen} className={styles.img}></img>
+        <img src={imagen} className={styles.img} alt="Servicio 3" />
         <p className={styles.parrafo}>
           El Banco Universitario también permite a los estudiantes realizar
           retiros en efectivo de manera rápida y segura. Los estudiantes pueden
@@ -19,8 +17,8 @@ function Service3() {
           tranquilidad de que sus fondos están seguros y protegidos.
         </p>
       </div>
-      <Footer />
-    </div>
+      
+    
   );
 }
 

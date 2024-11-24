@@ -5,7 +5,7 @@ function Service1() {
   return (
       <div className={styles.container}>
         <div className={styles.title}>
-          <h1></h1>
+          <h1>Transferencias entre estudiantes sin comision</h1>
         </div>
         <img src={imagen} className={styles.img} alt="Servicio 1" />
         <p className={styles.parrafo}>

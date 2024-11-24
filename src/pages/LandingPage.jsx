@@ -14,10 +14,10 @@ function LandingPage() {
 
     const services = [
         { icon: icon1, link: "/Service1", text: "Transferencias entre estudiantes sin comisión" },
-        { icon: icon2, link: "services/service2", text: "Depósitos en efectivo" },
-        { icon: icon3, link: "services/service3", text: "Retiros en efectivo" },
-        { icon: icon4, link: "services/service4", text: "Pago de matrícula estudiantil" },
-        { icon: icon5, link: "services/service5", text: "Cobro de beca estudiantil" },
+        { icon: icon2, link: "/Service2", text: "Depósitos en efectivo" },
+        { icon: icon3, link: "/Service3", text: "Retiros en efectivo" },
+        { icon: icon4, link: "/Service4", text: "Pago de matrícula estudiantil" },
+        { icon: icon5, link: "/Service5", text: "Cobro de beca estudiantil" },
         { icon: icon6, link: null, text: "Consulta de movimientos y ¡mucho más!" },
       ];
       

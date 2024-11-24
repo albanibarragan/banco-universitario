@@ -45,7 +45,7 @@ Currently, two official plugins are available:
 - [ ] filtrar contacto por alias
 
 ### Joe
-- [ ] Page de servicios (Parecida a la de objetivos, mision y vision) (Joe)
+- [X] Page de servicios (Parecida a la de objetivos, mision y vision) (Joe)
 - [ ] Page: Posicion consolidada
 - [ ] Page: Configurar perfil
 - [ ] Page: Perfil usuario
