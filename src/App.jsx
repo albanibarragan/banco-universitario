@@ -8,6 +8,7 @@ import LandingPage from './pages/LandingPage';
 import Login from './pages/login/Login';
 import Register from './pages/register/register';
 import TransferPage from './pages/TransferPage';
+import TransactionsPage from './pages/TransactionsPage';
 
 function App() {
     {/*Componente principal encargado del enrutamiento de la aplicación. */}
@@ -22,13 +23,14 @@ function App() {
      </Route>
           {/* Rutas de la banca en línea (con Header y Footer fijos) */}
           <Route element={<HomeContent />}>
-            <Route path="/Home" element={<HomePage />} />{" "}
+            <Route path="/Home" element={<HomePage />} />
             <Route path="/transferencia" element={<TransferPage />} /> 
+               <Route path="/Home/Movimientos" element={<TransactionsPage />} /> 
             {/* Principal de la banca en linea */}
           </Route>
           <Route element={<InitContent />}>
-          <Route path="/login" element={<Login />} />{" "}
-          <Route path="/register" element={<Register />} />{" "}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           </Route>
         </Routes>
       </Router>
