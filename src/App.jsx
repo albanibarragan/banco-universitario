@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import HomeContent from "./components/HomeContent";
+import InitContent from './components/InitContent';
 import LandingContent from './components/LandingContent';
 import HomePage from "./pages/HomePage";
 import InfoPage from './pages/InfoPage';
@@ -18,16 +19,16 @@ function App() {
             {" "}
             {/* Contenedor principal de la landing page  */}
             <Route path="/" element={<LandingPage />} />{" "}
-            {/* Contenido de la landing page  */}
             <Route path="/:page" element={<InfoPage />} />{" "}
-            {/* Contenedor del contenido de las paginas de servicios, mision y demás cambia dependiendo el parametro  */}
-            <Route path="/login" element={<Login />} />{" "}
-            <Route path="/register" element={<Register />} />{" "}
           </Route>
           {/* Rutas de la banca en línea (con Header y Footer fijos) */}
           <Route element={<HomeContent />}>
             <Route path="/Home" element={<HomePage />} />{" "}
             {/* Principal de la banca en linea */}
+          </Route>
+          <Route element={<InitContent />}>
+          <Route path="/login" element={<Login />} />{" "}
+          <Route path="/register" element={<Register />} />{" "}
           </Route>
         </Routes>
       </Router>
