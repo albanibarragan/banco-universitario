@@ -1,0 +1,70 @@
+.form-box-transfer{
+    background: #fff;
+    border: none;
+    width:400px;
+    height: auto;
+    padding: 1rem;
+    color: #010101;
+    margin: 0;
+    border-radius: 3%;
+    outline: 1px solid #ccc;
+}
+
+.tittle-transfer{
+    line-height: 1.5rem; 
+    font-size: 2rem; 
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.input-group input:focus {
+    border-color: #085f63;
+    outline: none;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.buttons-transfer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons-transfer > button{
+    background-color: #085f63;
+    color: #fff;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 853px) {
+    .form-box-login{
+        width: auto;
+        height: auto;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+.trans-select-contact{
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  color: #333;
+  font-size: 0.875rem;
+  width: 100%;
+  cursor: pointer;
+}

@@ -1,8 +1,8 @@
-import { useForm } from "react-hook-form";
 import { useState } from "react";
-import "./LoginForm.css";
-import visible from "../../../assets/img/visible.png";
+import { useForm } from "react-hook-form";
 import oculto from "../../../assets/img/oculto.png";
+import visible from "../../../assets/img/visible.png";
+import "./LoginForm.css";
 
 const LoginForm = () => {
 
