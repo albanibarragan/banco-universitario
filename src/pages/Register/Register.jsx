@@ -4,7 +4,7 @@ import RegisterForm from "../../components/Forms/RegisterForm/RegisterForm";
 function Register() {
   return (
     <div>
-      <div className="contenedor-register-page">
+      <div className="contend-register-page">
         <div className="register-left">
      </div>
         <div className="register-rigth">

@@ -6,6 +6,7 @@ import InfoPage from './pages/InfoPage';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/login/Login';
 import Register from './pages/register/register';
+import Contacts from './pages/ContactsPage';
 
 function App() {
     {/*Componente principal encargado del enrutamiento de la aplicación. */}
@@ -27,6 +28,7 @@ function App() {
           {/* Rutas de la banca en línea (con Header y Footer fijos) */}
           <Route element={<HomeContent />}>
             <Route path="/Home" element={<HomePage />} />{" "}
+            <Route path="/Contacts" element={<Contacts />} />{" "}
             {/* Principal de la banca en linea */}
           </Route>
         </Routes>
