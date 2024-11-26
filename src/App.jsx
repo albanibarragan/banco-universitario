@@ -5,10 +5,10 @@ import LandingContent from './components/LandingContent';
 import HomePage from "./pages/HomePage";
 import InfoPage from './pages/InfoPage';
 import LandingPage from './pages/LandingPage';
-import Login from './pages/login/Login';
+import Login from './pages/Login/Login';
 import Register from './pages/register/register';
-import TransferPage from './pages/TransferPage';
 import TransactionsPage from './pages/TransactionsPage';
+import TransferPage from './pages/TransferPage';
 
 function App() {
     {/*Componente principal encargado del enrutamiento de la aplicación. */}
