@@ -1,4 +1,4 @@
-import TransactionTable from "../components/TransactionTable";
+import MovementTable from "../components/MovementTable";
 import "./TransactionsPage.css";
 
 const TransactionsPage = () => {
@@ -6,7 +6,7 @@ const TransactionsPage = () => {
     <div className="transactions-page">
       <h1>Movimientos</h1>
       <div className="transactions-table">
-      <TransactionTable />
+      <MovementTable />
       </div>
     </div>
   );
