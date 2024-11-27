@@ -1,59 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-import { loginAPI } from '../../../api/modules/user';
 import oculto from "../../../assets/img/oculto.png";
 import visible from "../../../assets/img/visible.png";
+import { login, selectIsLogged, selectUserErrorMessage, selectUserLoading } from "../../../redux/user/userSlice"; // Asegúrate de tener estos imports correctos
 import "./LoginForm.css";
 
 const LoginForm = () => {
-    // Manejo del formulario con react-hook-form
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    // Estado para mostrar/ocultar contraseña
+    
     const [showPwd, setShowPwd] = useState(false);
+    
+    // Obtener estado global de Redux
+    const loginError = useSelector(selectUserErrorMessage);   // Error de login
+    const isLogged = useSelector(selectIsLogged);              // Estado si el usuario está logueado
+    const userLoading = useSelector(selectUserLoading);        // Estado de carga del login
 
-    // Estado para manejar mensajes de error o éxito
-    const [loginError, setLoginError] = useState('');
-    const [loginSuccess, setLoginSuccess] = useState('');
-
-    // Función que se ejecuta al enviar el formulario
-    const onSubmit = async (data) => {
-        // Imprimir los datos enviados para verificar
-        console.log("Formulario enviado correctamente:", data);
-
-        /* Configuración de Axios
-        let config = {
-            method: 'post',
-            maxBodyLength: Infinity,
-            url: 'http://localhost:3000/v1/public/client/user/login',
-            headers: { 
-                'Accept-Language': 'es', 
-                'Content-Type': 'application/json'
-            },
-            data: JSON.stringify(data) // Enviar el email y password del formulario
-        };*/
-
-        try {
-            const response = await loginAPI(data); // Llamada a la función loginAPI
-            console.log("Respuesta del servidor:", response);
-
-            if (response.message && response.message === "Usuario logueado con éxito") {
-                localStorage.setItem("jwt_token", response.data.token);  // Guarda el token si está presente
-                setLoginSuccess("Inicio de sesión exitoso");
-                setLoginError("");  // Limpia cualquier mensaje de error previo
-                navigate("/Home");
-            } else {
-                setLoginError("Credenciales incorrectas.");
-                setLoginSuccess("");  // Limpia cualquier mensaje de éxito previo
-            }
-       } catch (error) {
-            console.error("Error al iniciar sesión:", error);
-            setLoginError("Error al conectar con el servidor.");
-            setLoginSuccess("");
-        }
+    const onSubmit = (data) => {
+        dispatch(login(data)); // Llamar al login con los datos del formulario
     };
+
+    useEffect(() => {
+        if (isLogged) {
+            navigate("/home"); 
+        }
+    }, [isLogged, navigate]);
 
     return (
         <div className="form-box-login">
@@ -101,11 +75,14 @@ const LoginForm = () => {
                 </div>
                 {errors.password && <p className="error-message">{errors.password.message}</p>}
 
-                {/* Mostrar mensajes de éxito o error */}
+                {/* Mostrar mensajes de error o éxito */}
                 {loginError && <p className="error-message">{loginError}</p>}
-                {loginSuccess && <p className="success-message">{loginSuccess}</p>}
-
-                <button className="button-login" type="submit">Ingresar</button>
+                {userLoading && <p className="loading-message">Cargando...</p>}  {/* Mostrar el estado de carga */}
+                
+                <button className="button-login" type="submit" disabled={userLoading}>
+                    Ingresar
+                </button>
+                
                 <div className="register-link">
                     <p>¿No tienes cuenta? 
                         <a href="/register"> Registrarse</a>
@@ -114,6 +91,6 @@ const LoginForm = () => {
             </form>
         </div>
     );
-}
+};
 
 export default LoginForm;

@@ -45,11 +45,11 @@ const NavBarBanking = () => {
             </div>
         </header>
         <nav className="navbar-links">
-            <Link to ="Home/Posicion">Posición consolidada</Link>
-            <Link to ="Home/Movimientos">Movimientos</Link>
-            <Link to ="Home/Transferencia">Realizar transferencia</Link>
-            <Link to ="Home/Contactos">Contactos</Link>
-            <Link to ="Home/Agregar-Contacto">Nuevo contacto</Link>
+            <Link to ="Posicion">Posición consolidada</Link>
+            <Link to ="Movimientos">Movimientos</Link>
+            <Link to ="Transferencia">Realizar transferencia</Link>
+            <Link to ="Contactos">Contactos</Link>
+            <Link to ="Agregar-Contacto">Nuevo contacto</Link>
         </nav>
     </div>
     
