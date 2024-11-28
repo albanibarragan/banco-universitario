@@ -1,4 +1,4 @@
-/*
+
 
 export function hasEmptyField(form, fieldsExcluded = []) {
     let binaryAnd = 1;
@@ -109,4 +109,4 @@ export function hasArrayOfFieldsErrors(arrayfields, validators) {
 
 export function isArrayOfObjNotEmpty(arrayObj) {
     return arrayObj.some(isObjNotEmpty)
-}*/
+}
