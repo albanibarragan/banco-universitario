@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import oculto from "../../../assets/img/oculto.png";
 import visible from "../../../assets/img/visible.png";
-import { login, selectIsLogged, selectUserErrorMessage, selectUserLoading } from "../../../redux/user/userSlice"; // Asegúrate de tener estos imports correctos
+import { login, selectIsLogged, selectUserErrorMessage, selectUserLoading } from "../../../redux/user/userSlice";
 import "./LoginForm.css";
 
 const LoginForm = () => {
@@ -14,13 +14,12 @@ const LoginForm = () => {
     
     const [showPwd, setShowPwd] = useState(false);
     
-    // Obtener estado global de Redux
-    const loginError = useSelector(selectUserErrorMessage);   // Error de login
-    const isLogged = useSelector(selectIsLogged);              // Estado si el usuario está logueado
-    const userLoading = useSelector(selectUserLoading);        // Estado de carga del login
+    const loginError = useSelector(selectUserErrorMessage);  
+    const isLogged = useSelector(selectIsLogged);             
+    const userLoading = useSelector(selectUserLoading);       
 
     const onSubmit = (data) => {
-        dispatch(login(data)); // Llamar al login con los datos del formulario
+        dispatch(login(data)); 
     };
 
     useEffect(() => {
@@ -75,9 +74,8 @@ const LoginForm = () => {
                 </div>
                 {errors.password && <p className="error-message">{errors.password.message}</p>}
 
-                {/* Mostrar mensajes de error o éxito */}
                 {loginError && <p className="error-message">{loginError}</p>}
-                {userLoading && <p className="loading-message">Cargando...</p>}  {/* Mostrar el estado de carga */}
+                {userLoading && <p className="loading-message">Cargando...</p>}  
                 
                 <button className="button-login" type="submit" disabled={userLoading}>
                     Ingresar

@@ -1,12 +1,21 @@
-import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
+import { registerAPI } from "../../../api/modules/user";
 import oculto from "../../../assets/img/oculto.png";
 import visible from "../../../assets/img/visible.png";
+import { selectIsLogged } from "../../../redux/user/userSlice";
 import "./RegisterForm.css";
 
 const RegisterForm = () => {
+
+  const isLogged = useSelector(selectIsLogged);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  const [loading, setLoading] = useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [showPwd, setShowPwd] = useState(false);
 
@@ -17,7 +26,7 @@ const RegisterForm = () => {
       button: "Aceptar",
     }).then((respuesta) => {
       if (respuesta) {
-        window.location.href = "/login";
+        window.location.href = "/home";
       }
     });
   };
@@ -48,20 +57,19 @@ const RegisterForm = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/v1/public/client/user/register', adjustedData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
+      setLoading(true);
+      const response = await registerAPI(adjustedData);
+      setLoading(false)
       console.log("Respuesta del servidor:", response.data);
-
+      if (response.errors.length) {
+        console.error("API Errors:", response.errors);
+        return;
+    }
       if (response.status === 201) {
-        mostrarAlerta1(); // Mostrar mensaje de éxito
+        mostrarAlerta1();
       }
     } catch (error) {
       if (error.response) {
-        // Error recibido del servidor
         console.error("Respuesta del servidor con error:", error.response.data);
         swal({
           text: "Error en el registro: " + (error.response.data.errors[0]?.message || "Datos inválidos"),
@@ -69,7 +77,6 @@ const RegisterForm = () => {
           button: "Aceptar",
         });
       } else if (error.request) {
-        // No se recibió respuesta del servidor
         console.error("No se recibió respuesta del servidor:", error.request);
         swal({
           text: "No se pudo conectar con el servidor. Intenta nuevamente.",
@@ -77,7 +84,6 @@ const RegisterForm = () => {
           button: "Aceptar",
         });
       } else {
-        // Error desconocido
         console.error("Error desconocido:", error.message);
         swal({
           text: "Ocurrió un error inesperado: " + error.message,
@@ -87,6 +93,7 @@ const RegisterForm = () => {
       }
     }
   };
+  
 
   return (
     <div className="form-box-register">
@@ -201,8 +208,8 @@ const RegisterForm = () => {
         </div>
 
         {/* Botones */}
-        <div className="buttonsgroup-register">
-          <button type="submit" className="button-register">
+        <div className="buttonsgroup-register"> 
+          <button type="submit" className="button-register"  onClick={mostrarAlerta1}>
             Registrar
           </button>
           <button type="button" onClick={mostrarAlerta2} className="button-cancel">

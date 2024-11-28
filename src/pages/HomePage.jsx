@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import imgLady from "../assets/img/lady.png";
 import AccountBox from '../components/AccountBox';
 import ButtonsBox from '../components/ButtonsBox';
+import { selectUserLogged } from "../redux/user/userSlice";
 import './HomePage.css';
 
 function HomePage() {
+
+  const userLogged  = useSelector(selectUserLogged);
   
   return (
     <div className="home-page">
@@ -13,7 +17,7 @@ function HomePage() {
      <main className='main-home'>
      <section className='welcome-section'>
       <div className="welcome-text">
-        <h1>¡Buenas noches,!</h1>
+        <h1>¡Bienvenida, {userLogged.first_name} {userLogged.last_name}!</h1>
         <div className="app-invitation">
         <h2>¡Ahora puedes usar la Banca desde tu Telefono!</h2>
         <p>Te invitamos a hacer uso en la web, el futuro de nuestra banca en línea ha llegado, brindándote la rapidez y seguridad que mereces. ¡Gracias por preferirnos!</p>
