@@ -1,34 +1,50 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useState, useEffect /*, DEFAULT_FORM*/ } from "react";
+/*import { useNavigate } from "react-router-dom";*/
+import { /*Link as RouterLink,*/ useNavigate } from "react-router-dom";
+import { DEFAULT_TYPES } from "../../../constant";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import swal from "sweetalert";
+import { useSnackbar } from "notistack";
+import { login, selectIsLogged } from "../../../redux/user/userSlice";
 import { registerAPI } from "../../../api/modules/user";
-import oculto from "../../../assets/img/oculto.png";
+import { hasFieldsErrors, isObjNotEmpty } from "../../../utils/formValidation";
+import { getAPIError } from "../../../utils/helpers";
 import visible from "../../../assets/img/visible.png";
-import { selectIsLogged } from "../../../redux/user/userSlice";
+import oculto from "../../../assets/img/oculto.png";
 import "./RegisterForm.css";
 
-const RegisterForm = () => {
+const DEFAULT_FORM = {
+  document_type: DEFAULT_TYPES[0],
+  document_number: "",
+  first_name: "",
+  last_name: "",
+  birth_date: "",
+  phone_number: "",
+  email: "",
+  password: "",
+  repeatPassword: "",
+};
 
+export default function SignUp() {
+  const { enqueueSnackbar } = useSnackbar();
   const isLogged = useSelector(selectIsLogged);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-  
-  const [loading, setLoading] = useState(false)
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const dispatch = useDispatch();
+
   const [showPwd, setShowPwd] = useState(false);
 
-  const mostrarAlerta1 = () => {
-    swal({
-      text: "¡Tus datos han sido registrados exitosamente!",
-      icon: "success",
-      button: "Aceptar",
-    }).then((respuesta) => {
-      if (respuesta) {
-        window.location.href = "/home";
-      }
-    });
+  const [form, setForm] = useState(DEFAULT_FORM);
+  const [loading, setLoading] = useState(false);
+  const [formErrors, setFormErrors] = useState(DEFAULT_FORM);
+
+  const FORM_VALIDATORS = {
+    document_number: ["required", { maxLength: 20 }],
+    first_name: ["required", { maxLength: 40 }],
+    last_name: ["required", { maxLength: 40 }],
+    birth_date: ["required"],
+    phone_number: ["required", { maxLength: 20 }],
+    email: ["required", "email"],
+    password: ["required", { maxLength: 16 }, { minLength: 8 }],
+    repeatPassword: ["required", { sameAs: form.password }],
   };
 
   const handleChangeForm = (event) => {
@@ -36,54 +52,14 @@ const RegisterForm = () => {
     setFormErrors({ ...formErrors, [event.target.name]: null });
   };
 
-  // Enviar datos al backend
-  const onSubmit = async (data) => {
-    console.log("Formulario enviado con los datos:", data);
+  const handleSubmit = async (event) => {
 
-    // Ajustar los datos antes de enviarlos
-    const adjustedData = {
-      ...data,
-      birth_date: new Date(data.birth_date).toISOString(),
-      phone_number: data.phone_number.startsWith("+")
-        ? data.phone_number
-        : `+${data.phone_number}`, 
-    };
+    event.preventDefault();
 
-    try {
-      setLoading(true);
-      const response = await registerAPI(adjustedData);
-      setLoading(false)
-      console.log("Respuesta del servidor:", response.data);
-      if (response.errors.length) {
-        console.error("API Errors:", response.errors);
-        return;
-    }
-      if (response.status === 201) {
-        mostrarAlerta1();
-      }
-    } catch (error) {
-      if (error.response) {
-        console.error("Respuesta del servidor con error:", error.response.data);
-        swal({
-          text: "Error en el registro: " + (error.response.data.errors[0]?.message || "Datos inválidos"),
-          icon: "error",
-          button: "Aceptar",
-        });
-      } else if (error.request) {
-        console.error("No se recibió respuesta del servidor:", error.request);
-        swal({
-          text: "No se pudo conectar con el servidor. Intenta nuevamente.",
-          icon: "error",
-          button: "Aceptar",
-        });
-      } else {
-        console.error("Error desconocido:", error.message);
-        swal({
-          text: "Ocurrió un error inesperado: " + error.message,
-          icon: "error",
-          button: "Aceptar",
-        });
-      }
+    const errors = hasFieldsErrors(form, FORM_VALIDATORS);
+    if (isObjNotEmpty(errors)) {
+      setFormErrors(errors);
+      return;
     }
     let apiValues = {
       ...form,
@@ -94,9 +70,10 @@ const RegisterForm = () => {
     console.log("Respuesta de la API:", response);
     setLoading(false);
     if (response.errors.length) {
-      return enqueueSnackbar(getAPIError(response.errors), {
+      enqueueSnackbar(getAPIError(response.errors), {
         variant: "error",
       });
+      return; // No reseteamos el formulario si hay errores
     }
     const loginForm = {
       email: form.email,
@@ -104,11 +81,10 @@ const RegisterForm = () => {
     };
     dispatch(login(loginForm));
   };
-  
 
   useEffect(() => {
     if (isLogged) {
-      navigate("/checkout/1");
+      navigate("/login");
     }
   }, [isLogged]);
 
@@ -233,11 +209,9 @@ const RegisterForm = () => {
           </div>
           {formErrors.repeatPassword && <p>{formErrors.repeatPassword}</p>}
         </div>
-
-        {/* Botones */}
-        <div className="buttonsgroup-register"> 
-          <button type="submit" className="button-register"  onClick={mostrarAlerta1}>
-            Registrar
+        <div className="buttonsgroup-register">
+          <button type="submit" className="button-register" disabled={loading}>
+            {loading ? "Registrando..." : "Registrar"}
           </button>
           <button
             type="button"
