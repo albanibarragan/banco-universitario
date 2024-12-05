@@ -10,6 +10,8 @@ import Login from './pages/Login/Login';
 import Register from './pages/register/register';
 import TransactionsPage from './pages/TransactionsPage';
 import TransferPage from './pages/TransferPage';
+import Contacts from './pages/ContactsPage';
+import CreateContact from './pages/CreateContact';
 import { selectIsLogged } from './redux/user/userSlice';
 import { getJWT } from './utils/localStorage';
 
@@ -46,28 +48,34 @@ function KeepLogged({ children }) {
 function App() {
     {/*Componente principal encargado del enrutamiento de la aplicación. */}
     return (
-       <Router>
-         {/* Contenedor para definir las diferentes rutas de la aplicación.*/}
-      <KeepLogged>
-     <Routes>
-      {/* Rutas de la Landing page (con Header y Footer fijos) */}
-     <Route element={<LandingContent />}>  {/* Contenedor principal de la landing page  */}
-          <Route path="/" element={<LandingPage />} />  {/* Contenido de la landing page  */}
-          <Route path="/:page" element={<InfoPage />} />      {/* Contenedor del contenido de las paginas de servicios, mision y demás cambia dependiendo el parametro  */}  
-     </Route>
-          {/* Rutas de la banca en línea (con Header y Footer fijos) */}
-          <Route element={<HomeContent />}>
-            <Route path="/Home" element={<HomePage />} />
-            <Route path="/Transferencia" element={<TransferPage />} /> 
-               <Route path="/Movimientos" element={<TransactionsPage />} /> 
-            {/* Principal de la banca en linea */}
-          </Route>
-          <Route element={<InitContent />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          </Route>
-        </Routes>
-      </KeepLogged>
+      <Router>
+        {/* Contenedor para definir las diferentes rutas de la aplicación.*/}
+        <KeepLogged>
+          <Routes>
+            {/* Rutas de la Landing page (con Header y Footer fijos) */}
+            <Route element={<LandingContent />}>
+              {" "}
+              {/* Contenedor principal de la landing page  */}
+              <Route path="/" element={<LandingPage />} />{" "}
+              {/* Contenido de la landing page  */}
+              <Route path="/:page" element={<InfoPage />} />{" "}
+              {/* Contenedor del contenido de las paginas de servicios, mision y demás cambia dependiendo el parametro  */}
+            </Route>
+            {/* Rutas de la banca en línea (con Header y Footer fijos) */}
+            <Route element={<HomeContent />}>
+              <Route path="/Home" element={<HomePage />} />
+              <Route path="/Transferencia" element={<TransferPage />} />
+              <Route path="/Movimientos" element={<TransactionsPage />} />
+              <Route path="/Contacts" element={<Contacts />} />{" "}
+              <Route path="/Agregar-Contacto" element={<CreateContact />} />
+              {/* Principal de la banca en linea */}
+            </Route>
+            <Route element={<InitContent />}>
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </Route>
+          </Routes>
+        </KeepLogged>
       </Router>
     );
   }
