@@ -22,6 +22,8 @@ export const apiHttp = async (method, endpoint, data = null, params = null, opti
         options.headers["Authorization"] = `Bearer ${jwt}`
     }
 
+    console.log("errorsito: " +jwt)
+
     let serviceResponse = {}
     const url = `${API_URL_BACKEND}${endpoint}`
 
