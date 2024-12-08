@@ -10,7 +10,7 @@ import "./TransferFrom.css";
 
 const TransferFrom = () => {
   const [isUsingContacts, setIsUsingContacts] = useState(false); 
-  const userLogged = useSelector(selectUserLogged);
+  const userLogged  = useSelector(selectUserLogged);
   const [accountNumber, setAccountNumber] = useState('');
   const [selectedContact, setSelectedContact] = useState('');
   const [contacts, setContacts] = useState([]);
@@ -118,21 +118,14 @@ const TransferFrom = () => {
     <div className="form-box-transfer">
       <h2 className="tittle-transfer">Realizar transferencia</h2>
       <form className="form-transfer" onSubmit={handleSubmit(onSubmit)}>
-        <div className="input-group">
-          <label htmlFor="cardNumber">Número de cuenta</label>
+      <div className="input-group">
+          <label htmlFor="userAccountNumber">Tu Número de Cuenta</label>
           <input
             type="text"
-            id="cardNumber"
-            {...register("account_number", {
-              required: "El número de cuenta es obligatorio",
-              validate: isUsingContacts ? value => true : value => value.trim() !== '' || "El número de cuenta es obligatorio"
-            })}
-            value={accountNumber}
-            onChange={handleAccountChange}
-            placeholder="4242 **** **** ****"
-            disabled={isUsingContacts}
+            id="userAccountNumber"
+            value={userLogged.account_number}
+            disabled
           />
-          {errors.account_number && <span>{errors.account_number.message}</span>}
         </div>
 
         <div className="input-group transfer-contact">
@@ -162,14 +155,19 @@ const TransferFrom = () => {
          </select>
           ) : (
             <div className="input-group">
-              <label>Número de cuenta</label>
+              <label htmlFor="recipientAccountNumber">Número de cuenta del destinatario</label>
               <input
-                value={accountNumber}
-                onChange={handleAccountChange}
                 type="text"
-                name="account_number"
-                placeholder="9012 **** **** 5678"
+                id="recipientAccountNumber"
+                {...register("account_number", {
+                  required: "El número de cuenta es obligatorio",
+                  validate: value => !isUsingContacts || value.trim() !== '' || "El número de cuenta es obligatorio"
+                })}
+                onChange={handleAccountChange}
+                placeholder="4242 **** **** ****"
+                disabled={isUsingContacts}
               />
+              {errors.account_number && <span>{errors.account_number.message}</span>}
             </div>
           )}
         </div>

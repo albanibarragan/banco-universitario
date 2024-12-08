@@ -72,7 +72,7 @@ export default function SignUp() {
       enqueueSnackbar(getAPIError(response.errors), {
         variant: "error",
       });
-      return; // No reseteamos el formulario si hay errores
+      return;
     }
     const loginForm = {
       email: form.email,

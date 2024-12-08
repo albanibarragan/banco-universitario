@@ -1,4 +1,6 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Box, CircularProgress } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { Navigate, Route, BrowserRouter as Router, Routes, useLocation, useNavigate } from 'react-router-dom';
 import HomeContent from "./components/HomeContent";
 import InitContent from './components/InitContent';
 import LandingContent from './components/LandingContent';
@@ -10,12 +12,58 @@ import Login from './pages/login/Login';
 import Register from './pages/register/register';
 import TransactionsPage from './pages/TransactionsPage';
 import TransferPage from './pages/TransferPage';
+import { selectIsLogged, whoAmI } from './redux/user/userSlice';
+import { getJWT } from './utils/localStorage';
+
+
+function RequireAuth({ children }) {
+  const isLogged = useSelector(selectIsLogged);
+  let location = useLocation();
+
+  if (!isLogged) {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  return children;
+}
+
+function KeepLogged({ children }) {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const isLogged = useSelector(selectIsLogged);
+  const jwt = getJWT()
+
+  if (jwt && !isLogged) { 
+    dispatch(whoAmI())
+    .unwrap()
+    .catch(() => {
+      navigate("/login")
+    })
+
+
+    return <Box sx={{ display: 'flex', justifyContent: "center", mt: 5 }}>
+      <CircularProgress size={100} />
+    </Box>
+  }
+  return children
+}
+
+function NotFound() {
+  const isLogged = useSelector(selectIsLogged);
+
+  if (isLogged) {
+    return <Navigate replace to="/Movimientos" />
+  }
+  return <Navigate replace to="/login" />
+}
+
 
 function App() {
     {/*Componente principal encargado del enrutamiento de la aplicación. */}
     return (
        <Router>
          {/* Contenedor para definir las diferentes rutas de la aplicación.*/}
+    <KeepLogged>
      <Routes>
       {/* Rutas de la Landing page (con Header y Footer fijos) */}
      <Route element={<LandingContent />}>  {/* Contenedor principal de la landing page  */}
@@ -24,18 +72,20 @@ function App() {
      </Route>
           {/* Rutas de la banca en línea (con Header y Footer fijos) */}
           <Route element={<HomeContent />}>
-            <Route path="/Home" element={<HomePage />} />{" "}
-            <Route path="/Posicion" element={<TransferPage />} /> 
-            <Route path="/Transferencia" element={<TransferPage />} /> 
-            <Route path="/Movimientos" element={<TransactionsPage />} /> 
-            <Route path="/Contactos" element={<ContactsPage />} /> 
+            <Route path="/Home" element={<RequireAuth><HomePage /></RequireAuth>} />{" "}
+            <Route path="/Posicion" element={<RequireAuth><TransferPage /></RequireAuth>} /> 
+            <Route path="/Transferencia" element={<RequireAuth><TransferPage /></RequireAuth>} /> 
+            <Route path="/Movimientos" element={<RequireAuth><TransactionsPage /></RequireAuth>} /> 
+            <Route path="/Contactos" element={<RequireAuth><ContactsPage /></RequireAuth>} /> 
             {/* Principal de la banca en linea */}
           </Route>
           <Route element={<InitContent />}>
           <Route path="/login" element={<Login />} />{" "}
           <Route path="/register" element={<Register />} />{" "}
           </Route>
+          <Route path="*" element={<NotFound/>} />
         </Routes>
+        </KeepLogged>
       </Router>
     );
   }
