@@ -1,15 +1,14 @@
-import { useState, useEffect /*, DEFAULT_FORM*/ } from "react";
+import { useEffect /*, DEFAULT_FORM*/, useState } from "react";
 /*import { useNavigate } from "react-router-dom";*/
-import { /*Link as RouterLink,*/ useNavigate } from "react-router-dom";
-import { DEFAULT_TYPES } from "../../../constant";
 import { useDispatch, useSelector } from "react-redux";
-import { useSnackbar } from "notistack";
-import { login, selectIsLogged } from "../../../redux/user/userSlice";
+import { /*Link as RouterLink,*/ useNavigate } from "react-router-dom";
 import { registerAPI } from "../../../api/modules/user";
+import oculto from "../../../assets/img/oculto.png";
+import visible from "../../../assets/img/visible.png";
+import { DEFAULT_TYPES } from "../../../constant";
+import { login, selectIsLogged } from "../../../redux/user/userSlice";
 import { hasFieldsErrors, isObjNotEmpty } from "../../../utils/formValidation";
 import { getAPIError } from "../../../utils/helpers";
-import visible from "../../../assets/img/visible.png";
-import oculto from "../../../assets/img/oculto.png";
 import "./RegisterForm.css";
 
 const DEFAULT_FORM = {

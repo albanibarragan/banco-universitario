@@ -1,9 +1,8 @@
 import { useState } from "react";
-import DataTable from "react-data-table-component";
-import lupa from "../assets/img/lupa.png";
-import see from "../assets/img/visible.png";
 import edit from "../assets/img/editar.png";
 import delet from "../assets/img/eliminar.png";
+import lupa from "../assets/img/lupa.png";
+import see from "../assets/img/visible.png";
 import "./../components/styles/ContactsTable.css";
 
 function ContactsTable() {
@@ -85,7 +84,7 @@ function ContactsTable() {
         <img className="icon" src={lupa}></img>
       </div>
       <div className="transaction-table">
-        <DataTable
+       {/* <DataTable
           columns={columns}
           data={records}
           customStyles={customStyles}
@@ -94,7 +93,7 @@ function ContactsTable() {
           paginationPerPage={10}
           onSelectedRowsChange={(data) => console.log(data)}
           fixedHeader
-        />
+        />*/}
       </div>
     </div>
   );

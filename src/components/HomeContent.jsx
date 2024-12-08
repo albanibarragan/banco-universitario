@@ -8,7 +8,7 @@ function HomeContent() {
     <div className="bank-container">
       <NavBarBanking />
      <main className='bank-main'>
-       <Outlet /> {/* Aquí se renderizarán las rutas */}
+       <Outlet /> 
      </main>
       <FooterBanking />
     </div>

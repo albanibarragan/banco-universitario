@@ -52,8 +52,8 @@ Currently, two official plugins are available:
 
 ### Albani
 - [X] Home page
-- [ ] Page Movimientos
-- [ ] Modificar tabla para demostrar cual es un ingreso o no.
+- [X] Page Movimientos
+- [X] Modificar tabla para demostrar cual es un ingreso o no.
 - [ ] Page: Realizar una Transferencia
 - [ ] Opcion de guardar contacto con alias y la descripcion
 
