@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import DataTable from "react-data-table-component";
+import { getContactListAPI } from "../api/modules";
 import edit from "../assets/img/editar.png";
 import delet from "../assets/img/eliminar.png";
 import lupa from "../assets/img/lupa.png";
@@ -6,22 +8,26 @@ import see from "../assets/img/visible.png";
 import "./../components/styles/ContactsTable.css";
 
 function ContactsTable() {
+
+  const [contacts, setContacts] = useState([]);
+  const [filteredContacts, setFilteredContacts] = useState([]);
+
   const columns = [
     { name: "Alias", selector: (row) => row.alias },
-    { name: "Cuenta", selector: (row) => row.cuenta },
-    { name: "Descripcion", selector: (row) => row.descripcion },
+    { name: "Cuenta", selector: (row) => row.account_number},
+    { name: "Descripcion", selector: (row) => row.description},
     {
       name: "Acciones",
       cell: (row) => (
         <div className="section-start">
           <button onClick={() => handleView(row)}>
-            <img src={see} className="icon-info" />
+            <img src={see} className="icon-info" alt="Ver" />
           </button>
           <button onClick={() => handleEdit(row)}>
-            <img src={edit} className="icon-info" />
+            <img src={edit} className="icon-info" alt="Editar" />
           </button>
           <button onClick={() => handleDelete(row)}>
-            <img src={delet} className="icon-info" />
+            <img src={delet} className="icon-info" alt="Eliminar" />
           </button>
         </div>
       ),
@@ -40,23 +46,33 @@ function ContactsTable() {
     },
   };
 
-  const data = [
-    { alias: "chela", cuenta: "123456789", descripcion: "cantina" },
-    { alias: "lucia", cuenta: "123456889", descripcion: "panaaa" },
-    { alias: "lucas", cuenta: "123456789", descripcion: "copias" },
-    { alias: "marcos", cuenta: "123456889", descripcion: "panitaa" },
-  ];
-
-  const [records, setRecords] = useState(data);
-
-  const handleChange = (e) => {
-    const filteredRecords = data.filter((record) => {
-      return record.alias.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-    setRecords(filteredRecords);
+  const getContactList = async () => {
+    try {
+      const response = await getContactListAPI();
+      console.log("Datos recibidos:", response.data);
+      if (response?.data) {
+        setContacts(response.data);
+        setFilteredContacts(response.data);
+      } else {
+        console.error("No se pudieron obtener los contactos.");
+      }
+    } catch (error) {
+      console.error("Error al obtener los contactos:", error);
+    }
   };
 
-  /* eventos de las acciones*/
+  const handleChange = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filteredRecords = contacts.filter((record) =>
+      record.alias.toLowerCase().includes(searchTerm)
+    );
+    setFilteredContacts(filteredRecords);
+  };
+
+  useEffect(() => {
+    getContactList();
+  }, []);
+
 
   const handleView = (row) => {
     alert(`Ver: ${row.alias}`);
@@ -67,8 +83,9 @@ function ContactsTable() {
   };
 
   const handleDelete = (row) => {
-    const updatedRecords = records.filter((record) => record !== row);
-    setRecords(updatedRecords);
+    const updatedContacts = contacts.filter((record) => record !== row);
+    setContacts(updatedContacts);
+    setFilteredContacts(updatedContacts);
     alert(`Eliminar: ${row.alias}`);
   };
 
@@ -79,21 +96,20 @@ function ContactsTable() {
           className="input-transaction-table"
           type="text"
           onChange={handleChange}
-          placeholder="alias"
+          placeholder="Buscar por alias"
         />
-        <img className="icon" src={lupa}></img>
+        <img className="icon" src={lupa} alt="Buscar" />
       </div>
       <div className="transaction-table">
-       {/* <DataTable
+        <DataTable
           columns={columns}
-          data={records}
+          data={filteredContacts}
           customStyles={customStyles}
           selectableRows
           pagination
           paginationPerPage={10}
-          onSelectedRowsChange={(data) => console.log(data)}
           fixedHeader
-        />*/}
+        />
       </div>
     </div>
   );
