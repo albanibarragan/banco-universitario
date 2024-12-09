@@ -68,7 +68,8 @@ const LoginForm = () => {
                                 <img src={visible} className="icon" alt="Mostrar" />
                             ) : (
                                 <img src={oculto} className="icon" alt="Ocultar" />
-                            )}
+                            )
+                            }
                         </div>
                     </div>
                 </div>
