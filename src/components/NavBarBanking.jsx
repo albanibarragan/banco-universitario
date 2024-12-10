@@ -10,9 +10,13 @@ const NavBarBanking = () => {
   const dispatch = useDispatch();
   const [currentDate, setCurrentDate] = useState("");
 
+  const handleProfileClick = () => {
+    navigate("/Perfil");  // Redirige al login
+  };
+
   const handleLogoutClick = () => {
-    dispatch(logout());  // Cierra la sesión
-    navigate("/login");  // Redirige al login
+    dispatch(logout()); 
+    navigate("/login"); 
   };
 
   useEffect(() => {
@@ -29,7 +33,7 @@ const NavBarBanking = () => {
         </Link>
 
         <div className="navbar-date">
-          <button className="button-user" aria-label="Perfil de usuario">
+          <button className="button-user" aria-label="Perfil de usuario" onClick={handleProfileClick}>
             <svg
               viewBox="0 0 24 24"
               fill="white"
