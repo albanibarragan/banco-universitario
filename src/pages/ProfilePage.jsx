@@ -1,102 +1,107 @@
-import React, { useState, useEffect } from "react";
-import { apiHttp, API_URL_BACKEND } from "../apiAxios";
+import { enqueueSnackbar } from "notistack";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { changePasswordAPI } from "../api/modules";
+import { selectUserLogged } from "../redux/user/userSlice";
 import "./ProfilePage.css";
 
 const ProfilePage = () => {
-  const [profileData, setProfileData] = useState({
-    nombre: "",
-    apellido: "",
-    cedula: "",
-    telefono: "",
-    cuenta: "",
-    correo: "",
-  });
-  const [password, setPassword] = useState("********");
-  const [showAccountNumber, setShowAccountNumber] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
+  const userLogged = useSelector(selectUserLogged); 
+  const [password, setPassword] = useState(""); 
+  const [newPassword, setNewPassword] = useState(""); 
+  const [repeatPassword, setRepeatPassword] = useState("");
 
-  // Cargar datos del perfil desde el backend
-  useEffect(() => {
-    const fetchProfileData = async () => {
-      try {
-        const response = await apiHttp("GET", `${API_URL_BACKEND}/perfil`);
-        setProfileData(response.data);
-      } catch (error) {
-        console.error("Error al cargar los datos del perfil:", error);
+  const handleChangePassword = async () => {
+    try {
+      if (!password || !newPassword || !repeatPassword) {
+        enqueueSnackbar("Todos los campos son obligatorios", { variant: "error" });
+        return;
       }
-    };
 
-    fetchProfileData();
-  }, []);
-
-  // Manejar actualización de contraseña
-  const handlePasswordChange = async () => {
-    const newPassword = prompt("Ingrese la nueva contraseña:");
-    if (newPassword) {
-      try {
-        await apiHttp("PUT", `${API_URL_BACKEND}/perfil/cambiar-contraseña`, {
-          nuevaContraseña: newPassword,
-        });
-        alert("Contraseña actualizada con éxito");
-        setPassword("********"); // Restablecer la visualización protegida
-      } catch (error) {
-        console.error("Error al cambiar la contraseña:", error);
-        alert("No se pudo actualizar la contraseña");
+      if (newPassword.length < 8) {
+        enqueueSnackbar("La nueva contraseña debe tener al menos 8 caracteres", { variant: "error" });
+        return;
       }
+
+      if (newPassword !== repeatPassword) {
+        enqueueSnackbar("Las nuevas contraseñas no coinciden", { variant: "error" });
+        return;
+      }
+
+      const data = {
+        password: password,
+        new_password: newPassword,
+      };
+
+      const response = await changePasswordAPI(data);
+
+      if (response?.errors?.length) {
+        enqueueSnackbar("Error al cambiar la contraseña, inténtelo de nuevo", { variant: "error" });
+        return;
+      }
+
+      enqueueSnackbar("Contraseña cambiada exitosamente", { variant: "success" });
+      setPassword("");
+      setNewPassword("");
+      setRepeatPassword("");
+    } catch (error) {
+      console.error("Error al cambiar la contraseña:", error);
+      enqueueSnackbar("Ocurrió un error al cambiar la contraseña", { variant: "error" });
     }
   };
 
-  // Mostrar u ocultar número de cuenta
-  const toggleAccountNumberVisibility = () =>
-    setShowAccountNumber(!showAccountNumber);
-
-  // Mostrar u ocultar contraseña
-  const togglePasswordVisibility = () => setShowPassword(!showPassword);
-
   return (
     <div className="profile-page">
-      <h1>Perfil</h1>
+      <h1 className="profile-title">Perfil</h1>
       <div className="profile-data">
         <div className="profile-row">
           <label>Nombre:</label>
-          <span>{profileData.nombre}</span>
+          <input type="text" value={userLogged.first_name}  className="input-profile" disabled />
         </div>
         <div className="profile-row">
           <label>Apellido:</label>
-          <span>{profileData.apellido}</span>
-        </div>
-        <div className="profile-row">
-          <label>Cédula:</label>
-          <span>{profileData.cedula}</span>
-        </div>
-        <div className="profile-row">
-          <label>Teléfono:</label>
-          <span>{profileData.telefono}</span>
-        </div>
-        <div className="profile-row">
-          <label>Número de Cuenta:</label>
-          <span>
-            {showAccountNumber ? profileData.cuenta : "**** **** **** 1234"}
-            <button onClick={toggleAccountNumberVisibility}>
-              {showAccountNumber ? "Ocultar" : "Mostrar"}
-            </button>
-          </span>
+          <input type="text" value={userLogged.last_name}  className="input-profile" disabled />
         </div>
         <div className="profile-row">
           <label>Correo:</label>
-          <span>{profileData.correo}</span>
+          <input type="email" value={userLogged.email}  className="input-profile" disabled />
         </div>
         <div className="profile-row">
-          <label>Contraseña:</label>
-          <span>
-            {showPassword ? "miContraseña123" : password}
-            <button onClick={togglePasswordVisibility}>
-              {showPassword ? "Ocultar" : "Mostrar"}
-            </button>
-          </span>
+          <label>Numero de cuenta:</label>
+          <input type="text" value={userLogged.account_number}  className="input-profile" disabled />
         </div>
         <div className="profile-row">
-          <button className="change-password-btn" onClick={handlePasswordChange}>
+          <label>Contraseña actual:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Ingrese su contraseña actual"
+             className="input-profile"
+          />
+        </div>
+        <div className="profile-row">
+          <label>Nueva contraseña:</label>
+          <input
+            type="password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+            placeholder="Ingrese su nueva contraseña"
+            className="input-profile"
+          />
+        </div>
+        <div className="profile-row">
+          <label>Repetir nueva contraseña:</label>
+          <input
+            type="password"
+            value={repeatPassword}
+            onChange={(e) => setRepeatPassword(e.target.value)}
+            placeholder="Confirme su nueva contraseña"
+             className="input-profile"
+          />
+        </div>
+        <div className="profile-row">
+          <button className="change-password-btn" onClick={handleChangePassword}>
             Modificar Contraseña
           </button>
         </div>

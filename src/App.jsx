@@ -9,8 +9,8 @@ import HomePage from "./pages/HomePage";
 import InfoPage from './pages/InfoPage';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/login/Login';
-import Register from './pages/register/register';
 import ProfilePage from './pages/ProfilePage';
+import Register from './pages/register/register';
 import TransactionsPage from './pages/TransactionsPage';
 import TransferPage from './pages/TransferPage';
 import { selectIsLogged, whoAmI } from './redux/user/userSlice';
@@ -79,13 +79,13 @@ function App() {
             <Route path="/Movimientos" element={<RequireAuth><TransactionsPage /></RequireAuth>} /> 
             <Route path="/Contactos" element={<RequireAuth><ContactsPage /></RequireAuth>} />
             <Route path="/Perfil" element={<RequireAuth><ProfilePage /></RequireAuth>} /> 
+            <Route path="*" element={<NotFound/>} />
             {/* Principal de la banca en linea */}
           </Route>
           <Route element={<InitContent />}>
           <Route path="/login" element={<Login />} />{" "}
           <Route path="/register" element={<Register />} />{" "}
           </Route>
-          <Route path="*" element={<NotFound/>} />
         </Routes>
         </KeepLogged>
       </Router>

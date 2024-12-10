@@ -7,3 +7,5 @@ export const whoAmIAPI = () => apiHttp("GET", `/v1/client/user/whoami`)
 export const registerAPI = (registrValues) => apiHttp("POST", `/v1/public/client/user/register`, registrValues)
 
 export const getBalanceAPI = () => apiHttp("GET", `/v1/client/user/balance`, null)
+
+export const changePasswordAPI =(passwords) => apiHttp('PATCH','/v1/client/user/password',passwords )
