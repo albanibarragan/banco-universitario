@@ -63,6 +63,17 @@ const TransferFrom = () => {
     }
   };
 
+  const handleUnregisteredAccount = (accountNumber) => {
+    swal({
+      text: "El destinatario no está agendado. ¿Deseas agregarlo a tus contactos?",
+      icon: "info",
+      buttons: ["No", "Sí"]
+    }).then((respuesta) => {
+      if (respuesta) {
+        window.location.href = `/Agregar-Contacto?account_number=${accountNumber}`; 
+      }
+    });
+  };
   const handleContactChange = (event) => {
     const selectedId = event.target.value;
     setSelectedContact(selectedId);
@@ -80,9 +91,17 @@ const TransferFrom = () => {
   };
 
   const onSubmit = async (data) => {
-    console.log(data);
     if (!data.account_number || !data.amount || !data.description) {
       swal("Error", "Todos los campos son obligatorios", "error");
+      return;
+    }
+  
+    const isContactRegistered = contacts.some(
+      contact => contact.account_number === data.account_number
+    );
+  
+    if (!isContactRegistered) {
+      handleUnregisteredAccount(data.account_number);
       return;
     }
 
@@ -113,6 +132,8 @@ const TransferFrom = () => {
       setContacts([]); 
     }
   }, [isUsingContacts]);
+
+
 
   return (
     <div className="form-box-transfer">
