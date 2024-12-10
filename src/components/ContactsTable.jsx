@@ -1,7 +1,7 @@
 import { enqueueSnackbar } from "notistack";
 import { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
-import { deleteContactAPI, getContactListAPI, getUserAPI } from "../api/modules";
+import { deleteContactAPI, getContactListAPI, getUserAPI, ContactUpdateAPI } from "../api/modules";
 import edit from "../assets/img/editar.png";
 import delet from "../assets/img/eliminar.png";
 import lupa from "../assets/img/lupa.png";
@@ -168,7 +168,7 @@ function ContactsTable() {
 
   return (
     <div>
-      {isEditing && confirmationMessage && (
+      {confirmationMessage && (
         <div className="confirmation-message">{confirmationMessage}</div>
       )}
       {isEditing && (
