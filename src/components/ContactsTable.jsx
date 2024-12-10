@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import { getContactListAPI } from "../api/modules";
+import { ContactUpdateAPI } from "../api/modules";
 import edit from "../assets/img/editar.png";
 import delet from "../assets/img/eliminar.png";
 import lupa from "../assets/img/lupa.png";
 import see from "../assets/img/visible.png";
 import "./../components/styles/ContactsTable.css";
+import EditContact from "../components/Forms/ContactsForm/EditContact";
 
 function ContactsTable() {
-
   const [contacts, setContacts] = useState([]);
   const [filteredContacts, setFilteredContacts] = useState([]);
+  const [isEditing, setIsEditing] = useState(false); 
+  const [selectedContact, setSelectedContact] = useState(null); 
+  const [confirmationMessage, setConfirmationMessage] = useState("");
 
   const columns = [
     { name: "Alias", selector: (row) => row.alias },
-    { name: "Cuenta", selector: (row) => row.account_number},
-    { name: "Descripcion", selector: (row) => row.description},
+    { name: "Cuenta", selector: (row) => row.account_number },
+    { name: "Descripcion", selector: (row) => row.description },
     {
       name: "Acciones",
       cell: (row) => (
@@ -34,12 +38,12 @@ function ContactsTable() {
     },
   ];
 
-  /*estilos de la cabecera */
+  /* Estilos de la cabecera */
   const customStyles = {
     headCells: {
       style: {
-        backgroundColor: "#085f63", 
-        color: "white", 
+        backgroundColor: "#085f63",
+        color: "white",
         fontWeight: "bold",
         fontSize: "16px",
       },
@@ -69,17 +73,43 @@ function ContactsTable() {
     setFilteredContacts(filteredRecords);
   };
 
-  useEffect(() => {
-    getContactList();
-  }, []);
-
-
   const handleView = (row) => {
     alert(`Ver: ${row.alias}`);
   };
 
   const handleEdit = (row) => {
-    alert(`Editar: ${row.alias}`);
+    setSelectedContact(row); 
+    setIsEditing(true); 
+  };
+
+  const handleSave = async (updatedContact) => {
+      try {
+    // Llamada a la API para actualizar el contacto
+    const response = await ContactUpdateAPI(updatedContact.id, updatedContact);
+    if (response?.data) {
+      setContacts(
+        contacts.map((contact) =>
+          contact.id === updatedContact.id ? updatedContact : contact
+        )
+      );
+      setFilteredContacts(
+        filteredContacts.map((contact) =>
+          contact.id === updatedContact.id ? updatedContact : contact
+        )
+      );
+      setIsEditing(false); 
+
+      setConfirmationMessage("¡Contacto actualizado correctamente!");
+       setTimeout(() => {
+         setConfirmationMessage(""); // El mensaje se limpia después de 3 segundos
+       }, 3000);
+
+    } else {
+      console.error("No se pudo actualizar el contacto.");
+    }
+  } catch (error) {
+    console.error("Error al guardar los cambios:", error);
+  }
   };
 
   const handleDelete = (row) => {
@@ -89,8 +119,23 @@ function ContactsTable() {
     alert(`Eliminar: ${row.alias}`);
   };
 
+  useEffect(() => {
+    getContactList();
+  }, []);
+
   return (
     <div>
+      {isEditing && confirmationMessage && (
+        <div className="confirmation-message">{confirmationMessage}</div>
+      )}
+      {isEditing && (
+        <EditContact
+          contact={selectedContact}
+          handleSave={handleSave}
+          setIsEditing={setIsEditing}
+        />
+      )}
+
       <div className="input">
         <input
           className="input-transaction-table"
