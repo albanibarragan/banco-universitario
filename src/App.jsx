@@ -14,6 +14,7 @@ import TransactionsPage from './pages/TransactionsPage';
 import TransferPage from './pages/TransferPage';
 import { selectIsLogged, whoAmI } from './redux/user/userSlice';
 import { getJWT } from './utils/localStorage';
+import CreateContact from './pages/CreateContact';
 
 
 function RequireAuth({ children }) {
@@ -76,7 +77,8 @@ function App() {
             <Route path="/Posicion" element={<RequireAuth><TransferPage /></RequireAuth>} /> 
             <Route path="/Transferencia" element={<RequireAuth><TransferPage /></RequireAuth>} /> 
             <Route path="/Movimientos" element={<RequireAuth><TransactionsPage /></RequireAuth>} /> 
-            <Route path="/Contactos" element={<RequireAuth><ContactsPage /></RequireAuth>} /> 
+            <Route path="/Contactos" element={<RequireAuth><ContactsPage /></RequireAuth>} />
+            <Route path="/Agregar-Contacto" element={<RequireAuth><CreateContact/></RequireAuth>} />
             {/* Principal de la banca en linea */}
           </Route>
           <Route element={<InitContent />}>
