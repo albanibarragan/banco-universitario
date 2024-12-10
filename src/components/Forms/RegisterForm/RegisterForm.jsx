@@ -11,6 +11,7 @@ import { login, selectIsLogged } from "../../../redux/user/userSlice";
 import { hasFieldsErrors, isObjNotEmpty } from "../../../utils/formValidation";
 import { getAPIError } from "../../../utils/helpers";
 import "./RegisterForm.css";
+import { useSnackbar } from "notistack";
 
 const DEFAULT_FORM = {
   document_type: DEFAULT_TYPES[0],
