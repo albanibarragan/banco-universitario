@@ -1,13 +1,13 @@
 import { enqueueSnackbar } from "notistack";
 import { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
-import { deleteContactAPI, getContactListAPI, getUserAPI, ContactUpdateAPI } from "../api/modules";
+import { ContactUpdateAPI, deleteContactAPI, getContactListAPI, getUserAPI } from "../api/modules";
 import edit from "../assets/img/editar.png";
 import delet from "../assets/img/eliminar.png";
 import lupa from "../assets/img/lupa.png";
 import see from "../assets/img/visible.png";
-import "./../components/styles/ContactsTable.css";
 import EditContact from "../components/Forms/ContactsForm/EditContact";
+import "./../components/styles/ContactsTable.css";
 
 function ContactsTable() {
   const [contacts, setContacts] = useState([]);
@@ -136,7 +136,7 @@ function ContactsTable() {
 
       setConfirmationMessage("¡Contacto actualizado correctamente!");
        setTimeout(() => {
-         setConfirmationMessage(""); // El mensaje se limpia después de 3 segundos
+         setConfirmationMessage("");
        }, 3000);
 
     } else {

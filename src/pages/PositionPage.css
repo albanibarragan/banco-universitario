@@ -37,3 +37,55 @@
     color: #000;
     font-size: 16px;
   }
+
+
+@media (max-width: 768px) {
+    .title-position {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .value {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-position {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .info-item {
+        padding: 8px;
+    }
+
+    .value {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .title-position {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .info-item {
+        padding: 6px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .value {
+        font-size: 10px;
+    }
+}

@@ -5,17 +5,18 @@ import HomeContent from "./components/HomeContent";
 import InitContent from './components/InitContent';
 import LandingContent from './components/LandingContent';
 import ContactsPage from './pages/ContactsPage';
+import CreateContact from './pages/CreateContact';
 import HomePage from "./pages/HomePage";
 import InfoPage from './pages/InfoPage';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/login/Login';
+import PositionPage from './pages/PositionPage';
 import ProfilePage from './pages/ProfilePage';
 import Register from './pages/register/register';
 import TransactionsPage from './pages/TransactionsPage';
 import TransferPage from './pages/TransferPage';
 import { selectIsLogged, whoAmI } from './redux/user/userSlice';
 import { getJWT } from './utils/localStorage';
-import CreateContact from './pages/CreateContact';
 
 
 function RequireAuth({ children }) {
@@ -75,7 +76,7 @@ function App() {
           {/* Rutas de la banca en línea (con Header y Footer fijos) */}
           <Route element={<HomeContent />}>
             <Route path="/Home" element={<RequireAuth><HomePage /></RequireAuth>} />{" "}
-            <Route path="/Posicion" element={<RequireAuth><TransferPage /></RequireAuth>} /> 
+            <Route path="/Posicion" element={<RequireAuth><PositionPage /></RequireAuth>} /> 
             <Route path="/Transferencia" element={<RequireAuth><TransferPage /></RequireAuth>} /> 
             <Route path="/Movimientos" element={<RequireAuth><TransactionsPage /></RequireAuth>} /> 
             <Route path="/Contactos" element={<RequireAuth><ContactsPage /></RequireAuth>} />
