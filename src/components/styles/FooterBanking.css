@@ -1,64 +1,121 @@
-.footer-banking{
+.footer-banking {
     background-color: #085f63;
     color: #FFF;
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
     width: 100%;
     margin: 0;
-    overflow: hidden;
     display: flex;
-    justify-content: space-around;
-}
-
-.footer-banking h1 {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+  .footer-banking h1 {
     margin: 5px 0;
-    font-size: 1rem;
-}
-
-.footer-banking p {
+    font-size: 1.5rem; 
+    flex: 1 100%;
+    text-align: center; 
+  }
+  
+  .footer-banking p {
     margin: 5px 0;
-    font-size: 1rem;
-}
-
-.banking-contact {
+    font-size: 1rem; 
+    flex: 1 100%; 
+    text-align: center; 
+  }
+  
+  .banking-contact {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-    
-}
-
-.banking-contact li {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap; 
+  }
+  
+  .banking-contact li {
     display: flex;
     align-items: center;
-    flex-direction: row;
-}
-
-.icono-reducido {
+  }
+  
+  .icono-reducido {
     width: 24px;
-    margin-right: 5px;
-}
-
-.banking-contact a {
+    margin-right: 8px;
+  }
+  
+  .banking-contact a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-}
-
-.banking-contact a:hover {
+    transition: color 0.3s ease;
+  }
+  
+  .banking-contact a:hover {
     color: #ccc;
-}
-
-@media (max-width: 380px) {
-    .footer-banking h1 {
-        font-size: 1.2rem;
-        
+  }
+  
+  @media (max-width: 768px) {
+    .footer-banking {
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start; 
     }
-   
+  
+    .footer-banking h1,
+    .footer-banking p {
+      font-size: 1.2rem; 
+      text-align: left; 
+  
     .banking-contact {
-        flex-direction: column;
-        gap: 8px;
-        margin: 2rem;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 1rem;
     }
+  
+    .banking-contact a {
+      font-size: 0.9rem;
+    }
+  
+    .icono-reducido {
+      width: 20px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .footer-banking {
+      padding: 0.5rem; 
+      flex-direction: column;
+      align-items: center; 
+    }
+  
+    .footer-banking h1 {
+      font-size: 1.1rem; 
+      margin-bottom: 0.5rem; 
+    }
+  
+    .footer-banking p {
+      font-size: 0.9rem; 
+      margin-bottom: 0.5rem; 
+    }
+  
+    .banking-contact {
+      gap: 8px; 
+      margin-top: 1rem;
+      align-items: center; 
+    }
+  
+    .banking-contact li {
+      text-align: center; 
+    }
+  
+    .banking-contact a {
+      font-size: 0.85rem;
+    }
+  
+    .icono-reducido {
+      width: 20px; 
+    }
+  }
 }
